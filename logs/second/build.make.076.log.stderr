@@ -1,0 +1,6 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter2.cpp:16:20:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+ class ImageResults() {
+[01;32m[K                    ^[m[K
+make[2]: *** [CMakeFiles/image_converter2.dir/src/image_converter2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter2.dir/all] Error 2
+make: *** [all] Error 2

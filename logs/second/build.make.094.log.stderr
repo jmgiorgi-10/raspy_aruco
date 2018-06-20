@@ -1,0 +1,142 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:57:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMat[m[K’ was not declared in this scope
+     Mat cameraMatrix(1, 12, CV_32F, data0);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:57:5:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:740:18:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’
+ class CV_EXPORTS Mat
+[01;32m[K                  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:58:9:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[KdistCoeffs[m[K’
+     Mat distCoeffs(1, 5, CV_32F, data1);
+[01;32m[K         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:60:9:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kimage[m[K’
+     Mat image = cv_ptr->image;
+[01;32m[K         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:61:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+     vector<int> markerIds;
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:61:5:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/5/vector:64:0[m[K,
+                 from [01m[K/usr/include/c++/5/bits/random.h:34[m[K,
+                 from [01m[K/usr/include/c++/5/random:49[m[K,
+                 from [01m[K/usr/include/c++/5/bits/stl_algo.h:66[m[K,
+                 from [01m[K/usr/include/c++/5/algorithm:62[m[K,
+                 from [01m[K/usr/include/boost/math/tools/config.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:13[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/stl_vector.h:214:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector[m[K’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/vector.hpp:46[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:19[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:22:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::vector[m[K’
+ struct vector;
+[01;32m[K        ^[m[K
+In file included from [01m[K/usr/include/boost/lexical_cast/detail/converter_lexical.hpp:51:0[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast/try_lexical_convert.hpp:34[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:32[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/node_handle.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:1[m[K:
+[01m[K/usr/include/boost/container/container_fwd.hpp:92:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::container::vector[m[K’
+ class vector;
+[01;32m[K       ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:61:12:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+     vector<int> markerIds;
+[01;32m[K            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:62:20:[m[K [01;31m[Kerror: [m[K‘[01m[KPoint2f[m[K’ was not declared in this scope
+     vector< vector<Point2f> > markerCorners;
+[01;32m[K                    ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:62:20:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:58:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/types.hpp:181:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Point2f[m[K’
+ typedef Point_<float> Point2f;
+[01;32m[K                       ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:62:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+     vector< vector<Point2f> > markerCorners;
+[01;32m[K                             ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:62:31:[m[K [01;31m[Kerror: [m[K‘[01m[KmarkerCorners[m[K’ was not declared in this scope
+     vector< vector<Point2f> > markerCorners;
+[01;32m[K                               ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:63:5:[m[K [01;31m[Kerror: [m[K‘[01m[KPtr[m[K’ was not declared in this scope
+     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:63:5:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/base.hpp:58:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.hpp:280:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Ptr[m[K’
+ struct Ptr
+[01;32m[K        ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Karuco[m[K’ has not been declared
+     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
+[01;32m[K         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:63:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kdictionary[m[K’ was not declared in this scope
+     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
+[01;32m[K                            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:63:41:[m[K [01;31m[Kerror: [m[K‘[01m[Karuco[m[K’ has not been declared
+     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
+[01;32m[K                                         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:63:72:[m[K [01;31m[Kerror: [m[K‘[01m[Karuco[m[K’ has not been declared
+     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
+[01;32m[K                                                                        ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Karuco[m[K’ has not been declared
+     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:64:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage[m[K’ was not declared in this scope
+     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:64:60:[m[K [01;31m[Kerror: [m[K‘[01m[KmarkerIds[m[K’ was not declared in this scope
+     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
+[01;32m[K                                                            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:65:12:[m[K [01;31m[Kerror: [m[K‘[01m[KVec3d[m[K’ was not declared in this scope
+     vector<Vec3d> rvecs, tvecs;
+[01;32m[K            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:65:12:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:57:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/matx.hpp:387:24:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Vec3d[m[K’
+ typedef Vec<double, 3> Vec3d;
+[01;32m[K                        ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:65:19:[m[K [01;31m[Kerror: [m[K‘[01m[Krvecs[m[K’ was not declared in this scope
+     vector<Vec3d> rvecs, tvecs;
+[01;32m[K                   ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:65:26:[m[K [01;31m[Kerror: [m[K‘[01m[Ktvecs[m[K’ was not declared in this scope
+     vector<Vec3d> rvecs, tvecs;
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Karuco[m[K’ has not been declared
+     aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:66:59:[m[K [01;31m[Kerror: [m[K‘[01m[KcameraMatrix[m[K’ was not declared in this scope
+     aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                                           ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:66:73:[m[K [01;31m[Kerror: [m[K‘[01m[KdistCoeffs[m[K’ was not declared in this scope
+     aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                                                         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:74:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub[m[K’ was not declared in this scope
+     pub.publish(array);
+[01;32m[K     ^[m[K
+make[2]: *** [CMakeFiles/image_converter2.dir/src/image_converter3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter2.dir/all] Error 2
+make: *** [all] Error 2

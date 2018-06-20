@@ -1,0 +1,8 @@
+prefix=/home/joaquin/catkin_ws/install
+
+Name: test_mavros
+Description: Description of test_mavros
+Version: 0.26.0
+Cflags: -I/usr/include
+Libs: -L/home/joaquin/catkin_ws/install/lib -l:/usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: mavros mavros_extras roscpp std_msgs geometry_msgs tf2_ros eigen_conversions control_toolbox

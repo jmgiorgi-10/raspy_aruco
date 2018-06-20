@@ -1,0 +1,46 @@
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[ 10%] Built target node0
+[ 20%] Built target mavros1
+[ 30%] Built target cv_node
+[ 40%] Built target controller
+[35m[1mScanning dependencies of target image_converter3[0m
+[ 50%] Built target cv_node2
+[ 60%] Built target cv_node3
+[ 75%] [32mBuilding CXX object CMakeFiles/image_converter3.dir/src/image_converter3.cpp.o[0m
+[ 75%] Built target image_aruco_test
+[ 85%] Built target velocity_test
+[ 95%] Built target test_control
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:42:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMarkerDetector[m[K’ is not a member of ‘[01m[Kcv::aruco[m[K’
+     aruco::MarkerDetector Detector;
+[01;32m[K     ^[m[K
+CMakeFiles/image_converter3.dir/build.make:62: recipe for target 'CMakeFiles/image_converter3.dir/src/image_converter3.cpp.o' failed
+make[2]: *** [CMakeFiles/image_converter3.dir/src/image_converter3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter3.dir/all] Error 2
+CMakeFiles/Makefile2:1321: recipe for target 'CMakeFiles/image_converter3.dir/all' failed
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

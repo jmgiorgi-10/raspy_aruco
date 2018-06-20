@@ -1,0 +1,10 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter2.cpp:42:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kn2[m[K’ is not a type
+  image_transport::ImageTransport it(n2);
+[01;32m[K                                     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter2.cpp:[m[K In constructor ‘[01m[KImageResults::ImageResults()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter2.cpp:21:15:[m[K [01;31m[Kerror: [m[K‘[01m[K((ImageResults*)this)->ImageResults::it[m[K’ does not have class type
+   image_sub = it.subscribe("iris/camera_red_iris/image_raw", 1, image_callback);
+[01;32m[K               ^[m[K
+make[2]: *** [CMakeFiles/image_converter2.dir/src/image_converter2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter2.dir/all] Error 2
+make: *** [all] Error 2

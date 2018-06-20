@@ -1,0 +1,29 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:[m[K In function ‘[01m[Kvoid ar_callback(const Float32MultiArray&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:230:14:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst Float32MultiArray {aka const std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’
+     if (array->data.size() != 0) {  // Check if any marker detected.
+[01;32m[K              ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:231:19:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst Float32MultiArray {aka const std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’
+         if ((array->data)[0] > 0) {
+[01;32m[K                   ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:233:25:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst Float32MultiArray {aka const std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’
+         } else if (array->data[0] < 0) {
+[01;32m[K                         ^[m[K
+In file included from [01m[K/usr/include/boost/function/detail/maybe_include.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/function/detail/function_iterate.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:52[m[K,
+                 from [01m[K/usr/include/boost/function.hpp:64[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/forwards.h:40[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:207[m[K:
+/usr/include/boost/function/function_template.hpp: In instantiation of ‘[01m[Kstatic void boost::detail::function::void_function_invoker1<FunctionPtr, R, T0>::invoke(boost::detail::function::function_buffer&, T0) [with FunctionPtr = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&][m[K’:
+[01m[K/usr/include/boost/function/function_template.hpp:940:38:[m[K   required from ‘[01m[Kvoid boost::function1<R, T1>::assign_to(Functor) [with Functor = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&][m[K’
+[01m[K/usr/include/boost/function/function_template.hpp:728:7:[m[K   required from ‘[01m[Kboost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int][m[K’
+[01m[K/usr/include/boost/function/function_template.hpp:1077:16:[m[K   required from ‘[01m[Kboost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int][m[K’
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:253:97:[m[K   required from here
+[01m[K/usr/include/boost/function/function_template.hpp:118:11:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std_msgs::Float32MultiArray_<std::allocator<void> >&[m[K’ from expression of type ‘[01m[Kconst boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >[m[K’
+           BOOST_FUNCTION_RETURN(f(BOOST_FUNCTION_ARGS));
+[01;32m[K           ^[m[K
+make[2]: *** [CMakeFiles/node0.dir/src/node0.cpp.o] Error 1
+make[1]: *** [CMakeFiles/node0.dir/all] Error 2
+make: *** [all] Error 2

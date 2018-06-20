@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -std=c++14  -shared -Wl,-soname,libmavconn.so -o /home/joaquin/catkin_ws/devel/.private/libmavconn/lib/libmavconn.so CMakeFiles/mavconn.dir/src/mavlink_helpers.cpp.o CMakeFiles/mavconn.dir/src/interface.cpp.o CMakeFiles/mavconn.dir/src/serial.cpp.o CMakeFiles/mavconn.dir/src/udp.cpp.o CMakeFiles/mavconn.dir/src/tcp.cpp.o -lboost_system -lconsole_bridge 

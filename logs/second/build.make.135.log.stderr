@@ -1,0 +1,6 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/velocity_test.cpp:15:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_pub[m[K’ does not name a type
+  vel_pub = n.advertise<geometry_msgs::TwistStamped>("mavros/setpoint_attitude/cmd_vel",100);
+[01;32m[K  ^[m[K
+make[2]: *** [CMakeFiles/velocity_test.dir/src/velocity_test.cpp.o] Error 1
+make[1]: *** [CMakeFiles/velocity_test.dir/all] Error 2
+make: *** [all] Error 2

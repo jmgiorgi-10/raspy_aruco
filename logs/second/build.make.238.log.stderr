@@ -1,0 +1,14 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[KMarkerDetector[m[K’ is not a member of ‘[01m[Kcv::aruco[m[K’
+     aruco::MarkerDetector Detector;
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:71:59:[m[K [01;31m[Kerror: [m[K‘[01m[KcameraMatrix[m[K’ was not declared in this scope
+     aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                                           ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:71:73:[m[K [01;31m[Kerror: [m[K‘[01m[KdistCoeffs[m[K’ was not declared in this scope
+     aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                                                         ^[m[K
+make[2]: *** [CMakeFiles/image_converter3.dir/src/image_converter3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter3.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,22 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:26:21:[m[K [01;31m[Kerror: [m[Kfunction definition does not declare parameters
+   ImageConverter(nh_)
+[01;32m[K                     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:21:26:[m[K [01;31m[Kerror: [m[K‘[01m[Knh_[m[K’ was not declared in this scope
+   ros::Publisher t_pub = nh_.advertise<std_msgs::Float32MultiArray>("array", 100);
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:21:67:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   ros::Publisher t_pub = nh_.advertise<std_msgs::Float32MultiArray>("array", 100);
+[01;32m[K                                                                   ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:78:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KImageConverter::ImageConverter(ros::NodeHandle&)[m[K’
+   ImageConverter ic(n);
+[01;32m[K                      ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:18:7:[m[K [01;36m[Knote: [m[Kcandidate: ImageConverter::ImageConverter(const ImageConverter&)
+ class ImageConverter
+[01;32m[K       ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:18:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::NodeHandle[m[K’ to ‘[01m[Kconst ImageConverter&[m[K’
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:18:7:[m[K [01;36m[Knote: [m[Kcandidate: ImageConverter::ImageConverter(ImageConverter&&)
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:18:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kros::NodeHandle[m[K’ to ‘[01m[KImageConverter&&[m[K’
+make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
+make: *** [all] Error 2

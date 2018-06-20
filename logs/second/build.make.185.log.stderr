@@ -1,0 +1,13 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::t_callback(const ConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:25:42:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kconst value_type {aka const float}[int][m[K’ for array subscript
+     float x_err = (arr_msg->data.at(0))[0];
+[01;32m[K                                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:26:9:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kint x_err[m[K’
+     int x_err = 5;
+[01;32m[K         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:25:11:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kfloat x_err[m[K’
+     float x_err = (arr_msg->data.at(0))[0];
+[01;32m[K           ^[m[K
+make[2]: *** [CMakeFiles/controller.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/controller.dir/all] Error 2
+make: *** [all] Error 2

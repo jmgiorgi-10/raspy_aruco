@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:76:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub[m[K’ was not declared in this scope
+     pub.publish(array);
+[01;32m[K     ^[m[K
+make[2]: *** [CMakeFiles/image_converter2.dir/src/image_converter3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter2.dir/all] Error 2
+make: *** [all] Error 2

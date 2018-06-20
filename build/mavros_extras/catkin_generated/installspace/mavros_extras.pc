@@ -1,0 +1,8 @@
+prefix=/home/joaquin/catkin_ws/install
+
+Name: mavros_extras
+Description: Description of mavros_extras
+Version: 0.26.0
+Cflags: -I/usr/include
+Libs: -L/home/joaquin/catkin_ws/install/lib -l:/usr/lib/x86_64-linux-gnu/libboost_system.so
+Requires: mavros mavros_msgs roscpp sensor_msgs geometry_msgs

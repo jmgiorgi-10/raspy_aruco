@@ -1,0 +1,14 @@
+CMakeFiles/cv_node.dir/src/cv_node.cpp.o: In function `main':
+cv_node.cpp:(.text+0x87): undefined reference to `cv::imread(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)'
+cv_node.cpp:(.text+0xe0): undefined reference to `cv::_InputArray::_InputArray(cv::Mat const&)'
+cv_node.cpp:(.text+0x123): undefined reference to `cv::imshow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::_InputArray const&)'
+CMakeFiles/cv_node.dir/src/cv_node.cpp.o: In function `cv::Mat::~Mat()':
+cv_node.cpp:(.text._ZN2cv3MatD2Ev[_ZN2cv3MatD5Ev]+0x39): undefined reference to `cv::fastFree(void*)'
+CMakeFiles/cv_node.dir/src/cv_node.cpp.o: In function `cv::Mat::operator=(cv::Mat const&)':
+cv_node.cpp:(.text._ZN2cv3MataSERKS0_[_ZN2cv3MataSERKS0_]+0x111): undefined reference to `cv::Mat::copySize(cv::Mat const&)'
+CMakeFiles/cv_node.dir/src/cv_node.cpp.o: In function `cv::Mat::release()':
+cv_node.cpp:(.text._ZN2cv3Mat7releaseEv[_ZN2cv3Mat7releaseEv]+0x47): undefined reference to `cv::Mat::deallocate()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/joaquin/catkin_ws/devel/.private/second/lib/second/cv_node] Error 1
+make[1]: *** [CMakeFiles/cv_node.dir/all] Error 2
+make: *** [all] Error 2

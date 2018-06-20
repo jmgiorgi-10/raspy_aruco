@@ -1,0 +1,23 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In function ‘[01m[Kvoid imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:54:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt_pub[m[K’ was not declared in this scope
+     t_pub.publish(array);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:8:[m[K [01;31m[Kerror: [m[K‘[01m[KImageConverter[m[K’ has not been declared
+       &ImageConverter::imageCb, this);
+[01;32m[K        ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:33:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+       &ImageConverter::imageCb, this);
+[01;32m[K                                 ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:68:18:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kros::Publisher t_pub[m[K’
+   ros::Publisher t_pub = n.advertise<std_msgs::Float32MultiArray>("array", 100);
+[01;32m[K                  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:63:18:[m[K [01;36m[Knote: [m[K‘[01m[Kros::Publisher t_pub[m[K’ previously declared here
+   ros::Publisher t_pub = n.advertise<std_msgs::Float32MultiArray>("array", 100);
+[01;32m[K                  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:69:3:[m[K [01;31m[Kerror: [m[K‘[01m[KImageConverter[m[K’ was not declared in this scope
+   ImageConverter ic(n);
+[01;32m[K   ^[m[K
+make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
+make: *** [all] Error 2

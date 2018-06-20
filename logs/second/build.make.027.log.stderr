@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt_pub[m[K’ was not declared in this scope
+     t_pub = it_.advertise("tvecs", 1);
+[01;32m[K     ^[m[K
+make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
+make: *** [all] Error 2

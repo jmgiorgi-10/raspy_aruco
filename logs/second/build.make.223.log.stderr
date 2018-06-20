@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:313:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+ }
+[01;32m[K ^[m[K
+make[2]: *** [CMakeFiles/node0.dir/src/node0.cpp.o] Error 1
+make[1]: *** [CMakeFiles/node0.dir/all] Error 2
+make: *** [all] Error 2

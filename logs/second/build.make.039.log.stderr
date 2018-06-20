@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:65:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass cv::Vec<double, 3>[m[K’ has no member named ‘[01m[Ksize[m[K’
+     for (int i = 0; i < tvecs.at(0).size(); i++) {
+[01;32m[K                                     ^[m[K
+make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
+make: *** [all] Error 2

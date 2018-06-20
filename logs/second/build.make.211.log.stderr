@@ -1,0 +1,10 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:265:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msg[m[K’ has not been declared
+     geometry_msg::TwistStamped vel_msg;
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:288:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_msg[m[K’ was not declared in this scope
+             vel_pub.publish(vel_msg);  // After 5 seconds, switch to publish velocity message.
+[01;32m[K                             ^[m[K
+make[2]: *** [CMakeFiles/node0.dir/src/node0.cpp.o] Error 1
+make[1]: *** [CMakeFiles/node0.dir/all] Error 2
+make: *** [all] Error 2

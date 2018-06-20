@@ -1,0 +1,102 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:29:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt_pub[m[K’ was not declared in this scope
+     t_pub = it_advertise0("tvecs", 1);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:29:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kit_advertise0[m[K’ was not declared in this scope
+     t_pub = it_advertise0("tvecs", 1);
+[01;32m[K                                     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:60:25:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+     Mat cameraMatrix = [476.7030836014194, 0.0, 400.5, -0.0, 0.0, 476.7030836014194, 400.5, 0.0, 0.0, 0.0, 1.0, 0.0];
+[01;32m[K                         ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:60:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+     Mat cameraMatrix = [476.7030836014194, 0.0, 400.5, -0.0, 0.0, 476.7030836014194, 400.5, 0.0, 0.0, 0.0, 1.0, 0.0];
+[01;32m[K                                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In lambda function:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:60:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:60:42:[m[K [01;35m[Kwarning: [m[Klambda expressions only available with -std=c++11 or -std=gnu++11
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:60:42:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[KImageConverter::imageCb(const ImageConstPtr&)::<lambda()>[m[K’ to non-scalar type ‘[01m[Kcv::Mat[m[K’ requested
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:60:44:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+     Mat cameraMatrix = [476.7030836014194, 0.0, 400.5, -0.0, 0.0, 476.7030836014194, 400.5, 0.0, 0.0, 0.0, 1.0, 0.0];
+[01;32m[K                                            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:61:23:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+     Mat distCoeffs = [0.0, 0.0, 0.0, 0.0, 0.0];
+[01;32m[K                       ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:61:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K][m[K’ before ‘[01m[K,[m[K’ token
+     Mat distCoeffs = [0.0, 0.0, 0.0, 0.0, 0.0];
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In lambda function:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:61:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K,[m[K’ token
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:61:26:[m[K [01;35m[Kwarning: [m[Klambda expressions only available with -std=c++11 or -std=gnu++11
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:61:26:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[KImageConverter::imageCb(const ImageConstPtr&)::<lambda()>[m[K’ to non-scalar type ‘[01m[Kcv::Mat[m[K’ requested
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:61:28:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+     Mat distCoeffs = [0.0, 0.0, 0.0, 0.0, 0.0];
+[01;32m[K                            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ was not declared in this scope
+     vector<int> markerIds;
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:64:5:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/5/vector:64:0[m[K,
+                 from [01m[K/usr/include/boost/format.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/stl_vector.h:214:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector[m[K’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+[01;32m[K           ^[m[K
+In file included from [01m[K/usr/include/boost/mpl/aux_/include_preprocessed.hpp:37:0[m[K,
+                 from [01m[K/usr/include/boost/mpl/vector.hpp:46[m[K,
+                 from [01m[K/usr/include/boost/math/policies/policy.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:19[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/boost/mpl/aux_/preprocessed/gcc/vector.hpp:22:8:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::mpl::vector[m[K’
+ struct vector;
+[01;32m[K        ^[m[K
+In file included from [01m[K/usr/include/boost/lexical_cast/detail/converter_lexical.hpp:51:0[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast/try_lexical_convert.hpp:34[m[K,
+                 from [01m[K/usr/include/boost/lexical_cast.hpp:32[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/transport_hints.h:34[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/subscribe_options.h:33[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/node_handle.h:41[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/boost/container/container_fwd.hpp:92:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kboost::container::vector[m[K’
+ class vector;
+[01;32m[K       ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:64:12:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+     vector<int> markerIds;
+[01;32m[K            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:65:26:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>>[m[K’ token
+     vector<vector<Point2f>> markerCorners;
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:65:29:[m[K [01;31m[Kerror: [m[K‘[01m[KmarkerCorners[m[K’ was not declared in this scope
+     vector<vector<Point2f>> markerCorners;
+[01;32m[K                             ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:67:26:[m[K [01;31m[Kerror: [m[K‘[01m[KinputImage[m[K’ was not declared in this scope
+     aruco::detectMarkers(inputImage, dictionary, markerCorners, markerIds);
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:67:65:[m[K [01;31m[Kerror: [m[K‘[01m[KmarkerIds[m[K’ was not declared in this scope
+     aruco::detectMarkers(inputImage, dictionary, markerCorners, markerIds);
+[01;32m[K                                                                 ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:68:17:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+     vector<Vec3d> rvecs, tvecs;
+[01;32m[K                 ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:68:19:[m[K [01;31m[Kerror: [m[K‘[01m[Krvecs[m[K’ was not declared in this scope
+     vector<Vec3d> rvecs, tvecs;
+[01;32m[K                   ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:68:26:[m[K [01;31m[Kerror: [m[K‘[01m[Ktvecs[m[K’ was not declared in this scope
+     vector<Vec3d> rvecs, tvecs;
+[01;32m[K                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:71:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt_pub[m[K’ was not declared in this scope
+     t_pub.publish(tvecs);
+[01;32m[K     ^[m[K
+make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
+make: *** [all] Error 2

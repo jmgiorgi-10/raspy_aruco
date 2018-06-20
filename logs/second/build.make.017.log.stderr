@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:15:23:[m[K [01;31m[Kerror: [m[K‘[01m[K>>[m[K’ should be ‘[01m[K> >[m[K’ within a nested template argument list
+  vector<vector<Point2f>> markerCorners, rejectedCandidates;
+[01;32m[K                       ^[m[K
+make[2]: *** [CMakeFiles/cv_node2.dir/src/cv_node2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cv_node2.dir/all] Error 2
+make: *** [all] Error 2

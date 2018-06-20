@@ -1,0 +1,62 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:[m[K In function ‘[01m[Kvoid t_callback(const Float32MultiArray&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:24:13:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand type is ‘[01m[Kconst Float32MultiArray {aka const std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’)
+     t_vec = *arr_msg;
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/config/no_tr1/complex.hpp:21:0[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:15[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:7[m[K:
+[01m[K/usr/include/c++/5/complex:404:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const _Tp&, const std::complex<_Tp>&)
+     operator*(const _Tp& __x, const complex<_Tp>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/complex:404:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:24:14:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+     t_vec = *arr_msg;
+[01;32m[K              ^[m[K
+In file included from [01m[K/usr/include/boost/config/no_tr1/complex.hpp:21:0[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:15[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:7[m[K:
+[01m[K/usr/include/c++/5/complex:395:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const _Tp&)
+     operator*(const complex<_Tp>& __x, const _Tp& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/complex:395:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:24:14:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Float32MultiArray {aka const std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+     t_vec = *arr_msg;
+[01;32m[K              ^[m[K
+In file included from [01m[K/usr/include/boost/config/no_tr1/complex.hpp:21:0[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:15[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:7[m[K:
+[01m[K/usr/include/c++/5/complex:386:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::complex<_Tp> std::operator*(const std::complex<_Tp>&, const std::complex<_Tp>&)
+     operator*(const complex<_Tp>& __x, const complex<_Tp>& __y)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/complex:386:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:24:14:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Float32MultiArray {aka const std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+     t_vec = *arr_msg;
+[01;32m[K              ^[m[K
+In file included from [01m[K/usr/include/boost/function/detail/maybe_include.hpp:18:0[m[K,
+                 from [01m[K/usr/include/boost/function/detail/function_iterate.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:52[m[K,
+                 from [01m[K/usr/include/boost/function.hpp:64[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/forwards.h:40[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:7[m[K:
+/usr/include/boost/function/function_template.hpp: In instantiation of ‘[01m[Kstatic void boost::detail::function::void_function_invoker1<FunctionPtr, R, T0>::invoke(boost::detail::function::function_buffer&, T0) [with FunctionPtr = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&][m[K’:
+[01m[K/usr/include/boost/function/function_template.hpp:940:38:[m[K   required from ‘[01m[Kvoid boost::function1<R, T1>::assign_to(Functor) [with Functor = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&][m[K’
+[01m[K/usr/include/boost/function/function_template.hpp:728:7:[m[K   required from ‘[01m[Kboost::function1<R, T1>::function1(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int][m[K’
+[01m[K/usr/include/boost/function/function_template.hpp:1077:16:[m[K   required from ‘[01m[Kboost::function<R(T0)>::function(Functor, typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type) [with Functor = void (*)(const std_msgs::Float32MultiArray_<std::allocator<void> >&); R = void; T0 = const boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >&; typename boost::enable_if_c<boost::type_traits::ice_not<boost::is_integral<Functor>::value>::value, int>::type = int][m[K’
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:42:94:[m[K   required from here
+[01m[K/usr/include/boost/function/function_template.hpp:118:11:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst std_msgs::Float32MultiArray_<std::allocator<void> >&[m[K’ from expression of type ‘[01m[Kconst boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >[m[K’
+           BOOST_FUNCTION_RETURN(f(BOOST_FUNCTION_ARGS));
+[01;32m[K           ^[m[K
+make[2]: *** [CMakeFiles/node0.dir/src/node0.cpp.o] Error 1
+make[1]: *** [CMakeFiles/node0.dir/all] Error 2
+make: *** [all] Error 2

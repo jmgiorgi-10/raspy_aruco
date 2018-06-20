@@ -1,0 +1,11 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node3.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node3.cpp:16:49:[m[K [01;31m[Kerror: [m[Kin C++98 ‘[01m[Ktest[m[K’ must be initialized by constructor, not by ‘[01m[K{...}[m[K’
+  vector<Vec3d> test = {{0,0,0}, {1,1,1}, {2,2,2}};
+[01;32m[K                                                 ^[m[K
+/home/joaquin/catkin_ws/src/second/src/cv_node3.cpp: In substitution of ‘[01m[Ktemplate<class _InputIterator> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&) [with _InputIterator = <missing>][m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node3.cpp:16:49:[m[K   required from here
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node3.cpp:16:49:[m[K [01;35m[Kwarning: [m[Kextended initializer lists only available with -std=c++11 or -std=gnu++11
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node3.cpp:16:49:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{{0, 0, 0}, {1, 1, 1}, {2, 2, 2}}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’
+make[2]: *** [CMakeFiles/cv_node3.dir/src/cv_node3.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cv_node3.dir/all] Error 2
+make: *** [all] Error 2

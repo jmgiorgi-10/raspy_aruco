@@ -1,0 +1,1116 @@
+[35m[1mScanning dependencies of target uAvionix.xml-v2.0[0m
+[35m[1mScanning dependencies of target uAvionix.xml-v1.0[0m
+[35m[1mScanning dependencies of target standard.xml-v1.0[0m
+[  4%] [34m[1mGenerating uAvionix-v2.0-cxx-stamp[0m
+[  9%] [34m[1mGenerating include/v1.0/uAvionix/uAvionix.h[0m
+[ 13%] [34m[1mGenerating include/v1.0/standard/standard.h[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/standard.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/standard.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Ignoring MAVLink2 message UAVIONIX_ADSB_OUT_CFG
+Ignoring MAVLink2 message UAVIONIX_ADSB_OUT_DYNAMIC
+Ignoring MAVLink2 message UAVIONIX_ADSB_TRANSCEIVER_HEALTH_REPORT
+Found 0 MAVLink message types in 1 XML files
+Generating C implementation in directory include/v1.0/uAvionix
+Found 3 MAVLink message types in 1 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/uAvionix
+Copying fixed headers for protocol 1.0 to include/v1.0
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/uAvionix
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[ 13%] Built target uAvionix.xml-v1.0
+[35m[1mScanning dependencies of target matrixpilot.xml-v1.0[0m
+[ 18%] [34m[1mGenerating include/v1.0/matrixpilot/matrixpilot.h[0m
+[ 18%] Built target uAvionix.xml-v2.0
+[35m[1mScanning dependencies of target standard.xml-v2.0[0m
+[ 22%] [34m[1mGenerating standard-v2.0-cxx-stamp[0m
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 137 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/standard
+Generating C implementation in directory include/v1.0/common
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/matrixpilot.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/matrixpilot.xml
+Note: message FLEXIFUNCTION_BUFFER_FUNCTION is longer than 64 bytes long (66 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F2_A is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F2_B is longer than 64 bytes long (116 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F15 is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F16 is longer than 64 bytes long (118 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/standard.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/standard.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 164 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/matrixpilot
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 164 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/standard
+Generating C implementation in directory include/v2.0/common
+Generating C implementation in directory include/v1.0/common
+Copying fixed headers for protocol 1.0 to include/v1.0
+[ 22%] Built target standard.xml-v1.0
+[35m[1mScanning dependencies of target slugs.xml-v2.0[0m
+[ 27%] [34m[1mGenerating slugs-v2.0-cxx-stamp[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/slugs.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/slugs.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Copying fixed headers for protocol 1.0 to include/v1.0
+[ 27%] Built target matrixpilot.xml-v1.0
+[35m[1mScanning dependencies of target ardupilotmega.xml-v2.0[0m
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/standard
+Generating C++ implementation in directory include/v2.0/common
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+[ 31%] [34m[1mGenerating ardupilotmega-v2.0-cxx-stamp[0m
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Found 184 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/slugs
+Generating C implementation in directory include/v2.0/common
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ardupilotmega.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ardupilotmega.xml
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+Note: message DATA64 is longer than 64 bytes long (74 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DATA96 is longer than 64 bytes long (106 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message REMOTE_LOG_DATA_BLOCK is longer than 64 bytes long (214 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DEVICE_OP_READ_REPLY is longer than 64 bytes long (143 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DEVICE_OP_WRITE is longer than 64 bytes long (187 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+[ 31%] Built target standard.xml-v2.0
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+[35m[1mScanning dependencies of target ASLUAV.xml-v2.0[0m
+[ 36%] [34m[1mGenerating ASLUAV-v2.0-cxx-stamp[0m
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ASLUAV.xml
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ASLUAV.xml
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ASLCTRL_DATA is longer than 64 bytes long (106 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FW_SOARING_DATA is longer than 64 bytes long (110 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Merged enum MAV_CMD
+Found 226 MAVLink message types in 4 XML files
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Generating C headers
+Generating C implementation in directory include/v2.0/ardupilotmega
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Found 176 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/ASLUAV
+Generating C implementation in directory include/v2.0/common
+Generating C implementation in directory include/v2.0/common
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/slugs
+Generating C++ implementation in directory include/v2.0/common
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[ 36%] Built target slugs.xml-v2.0
+[35m[1mScanning dependencies of target paparazzi.xml-v2.0[0m
+[ 40%] [34m[1mGenerating paparazzi-v2.0-cxx-stamp[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/paparazzi.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/paparazzi.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Generating C implementation in directory include/v2.0/uAvionix
+Generating C implementation in directory include/v2.0/icarous
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/ardupilotmega
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/ASLUAV
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Generating C++ implementation in directory include/v2.0/common
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Generating C++ implementation in directory include/v2.0/common
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 169 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/paparazzi
+Generating C implementation in directory include/v2.0/common
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/uAvionix
+[ 40%] Built target ASLUAV.xml-v2.0
+Generating C++ implementation in directory include/v2.0/icarous
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[35m[1mScanning dependencies of target autoquad.xml-v2.0[0m
+[ 45%] [34m[1mGenerating autoquad-v2.0-cxx-stamp[0m
+[ 45%] Built target ardupilotmega.xml-v2.0
+[35m[1mScanning dependencies of target icarous.xml-v2.0[0m
+[ 50%] [34m[1mGenerating icarous-v2.0-cxx-stamp[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/autoquad.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/autoquad.xml
+Note: message AQ_TELEMETRY_F is longer than 64 bytes long (90 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Found 2 MAVLink message types in 1 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/icarous
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/icarous
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[ 50%] Built target icarous.xml-v2.0
+[35m[1mScanning dependencies of target matrixpilot.xml-v2.0[0m
+[ 54%] [34m[1mGenerating matrixpilot-v2.0-cxx-stamp[0m
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Merged enum MAV_DATA_STREAM
+Note: An enum value was auto-generated: AQ_MAVLINK_DEFS_VERSION_1 = 1
+Note: An enum value was auto-generated: MAV_DATA_STREAM_PROPULSION = 13
+Found 166 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/autoquad
+Generating C implementation in directory include/v2.0/common
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/matrixpilot.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/matrixpilot.xml
+Note: message FLEXIFUNCTION_BUFFER_FUNCTION is longer than 64 bytes long (66 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F2_A is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F2_B is longer than 64 bytes long (116 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F15 is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_UDB_EXTRA_F16 is longer than 64 bytes long (118 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/paparazzi
+Generating C++ implementation in directory include/v2.0/common
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Found 191 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/matrixpilot
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+Generating C implementation in directory include/v2.0/common
+[ 54%] Built target paparazzi.xml-v2.0
+[35m[1mScanning dependencies of target ualberta.xml-v2.0[0m
+[ 59%] [34m[1mGenerating ualberta-v2.0-cxx-stamp[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ualberta.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ualberta.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/autoquad
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Generating C++ implementation in directory include/v2.0/common
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: An enum value was auto-generated: MODE_MANUAL_DIRECT = 1
+Note: An enum value was auto-generated: MODE_MANUAL_SCALED = 2
+Note: An enum value was auto-generated: MODE_AUTO_PID_ATT = 3
+Note: An enum value was auto-generated: MODE_AUTO_PID_VEL = 4
+Note: An enum value was auto-generated: MODE_AUTO_PID_POS = 5
+Note: An enum value was auto-generated: NAV_AHRS_INIT = 1
+Note: An enum value was auto-generated: NAV_AHRS = 2
+Note: An enum value was auto-generated: NAV_INS_GPS_INIT = 3
+Note: An enum value was auto-generated: NAV_INS_GPS = 4
+Note: An enum value was auto-generated: PILOT_MANUAL = 1
+Note: An enum value was auto-generated: PILOT_AUTO = 2
+Note: An enum value was auto-generated: PILOT_ROTO = 3
+Found 167 MAVLink message types in 2 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/ualberta
+Generating C implementation in directory include/v2.0/common
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[ 59%] Built target autoquad.xml-v2.0
+[35m[1mScanning dependencies of target paparazzi.xml-v1.0[0m
+[ 63%] [34m[1mGenerating include/v1.0/paparazzi/paparazzi.h[0m
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/matrixpilot
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/paparazzi.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/paparazzi.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Generating C++ implementation in directory include/v2.0/common
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 142 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/paparazzi
+Generating C implementation in directory include/v1.0/common
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[ 63%] Built target matrixpilot.xml-v2.0
+[35m[1mScanning dependencies of target slugs.xml-v1.0[0m
+[ 68%] [34m[1mGenerating include/v1.0/slugs/slugs.h[0m
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/ualberta
+Generating C++ implementation in directory include/v2.0/common
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/slugs.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/slugs.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[ 68%] Built target ualberta.xml-v2.0
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Found 157 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/slugs
+[35m[1mScanning dependencies of target ASLUAV.xml-v1.0[0m
+[ 72%] [34m[1mGenerating include/v1.0/ASLUAV/ASLUAV.h[0m
+Copying fixed headers for protocol 1.0 to include/v1.0
+[ 72%] Built target paparazzi.xml-v1.0
+Generating C implementation in directory include/v1.0/common
+[35m[1mScanning dependencies of target autoquad.xml-v1.0[0m
+[ 77%] [34m[1mGenerating include/v1.0/autoquad/autoquad.h[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ASLUAV.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ASLUAV.xml
+Note: message ASLCTRL_DATA is longer than 64 bytes long (106 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FW_SOARING_DATA is longer than 64 bytes long (110 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/autoquad.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/autoquad.xml
+Note: message AQ_TELEMETRY_F is longer than 64 bytes long (90 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Found 149 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/ASLUAV
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Merged enum MAV_CMD
+Merged enum MAV_DATA_STREAM
+Note: An enum value was auto-generated: AQ_MAVLINK_DEFS_VERSION_1 = 1
+Note: An enum value was auto-generated: MAV_DATA_STREAM_PROPULSION = 13
+Found 139 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/autoquad
+Generating C implementation in directory include/v1.0/common
+Generating C implementation in directory include/v1.0/common
+Copying fixed headers for protocol 1.0 to include/v1.0
+[ 77%] Built target slugs.xml-v1.0
+[35m[1mScanning dependencies of target icarous.xml-v1.0[0m
+[ 81%] [34m[1mGenerating include/v1.0/icarous/icarous.h[0m
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Ignoring MAVLink2 message ICAROUS_HEARTBEAT
+Ignoring MAVLink2 message ICAROUS_KINEMATIC_BANDS
+Found 0 MAVLink message types in 1 XML files
+Generating C implementation in directory include/v1.0/icarous
+Copying fixed headers for protocol 1.0 to include/v1.0
+[ 81%] Built target icarous.xml-v1.0
+[35m[1mScanning dependencies of target ardupilotmega.xml-v1.0[0m
+[ 86%] [34m[1mGenerating include/v1.0/ardupilotmega/ardupilotmega.h[0m
+Copying fixed headers for protocol 1.0 to include/v1.0
+[ 86%] Built target ASLUAV.xml-v1.0
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ardupilotmega.xml
+Copying fixed headers for protocol 1.0 to include/v1.0
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ardupilotmega.xml
+[35m[1mScanning dependencies of target common.xml-v1.0[0m
+[ 90%] Built target common.xml-v1.0
+[ 90%] Built target autoquad.xml-v1.0
+[35m[1mScanning dependencies of target ualberta.xml-v1.0[0m
+Ignoring MAVLink2 message DEVICE_OP_READ
+Ignoring MAVLink2 message DEVICE_OP_READ_REPLY
+Ignoring MAVLink2 message DEVICE_OP_WRITE
+Ignoring MAVLink2 message DEVICE_OP_WRITE_REPLY
+Ignoring MAVLink2 message ADAP_TUNING
+Ignoring MAVLink2 message VISION_POSITION_DELTA
+Ignoring MAVLink2 message AOA_SSA
+[ 95%] [34m[1mGenerating include/v1.0/ualberta/ualberta.h[0m
+Note: message DATA64 is longer than 64 bytes long (74 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message DATA96 is longer than 64 bytes long (106 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message REMOTE_LOG_DATA_BLOCK is longer than 64 bytes long (214 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+[35m[1mScanning dependencies of target common.xml-v2.0[0m
+[100%] [34m[1mGenerating common-v2.0-cxx-stamp[0m
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ualberta.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/ualberta.xml
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/uAvionix.xml
+Ignoring MAVLink2 message UAVIONIX_ADSB_OUT_CFG
+Ignoring MAVLink2 message UAVIONIX_ADSB_OUT_DYNAMIC
+Ignoring MAVLink2 message UAVIONIX_ADSB_TRANSCEIVER_HEALTH_REPORT
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/icarous.xml
+Ignoring MAVLink2 message ICAROUS_HEARTBEAT
+Ignoring MAVLink2 message ICAROUS_KINEMATIC_BANDS
+Merged enum MAV_CMD
+Found 187 MAVLink message types in 4 XML files
+Generating C implementation in directory include/v1.0/ardupilotmega
+Validating /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Parsing /home/joaquin/catkin_ws/src/mavlink/message_definitions/v1.0/common.xml
+Ignoring MAVLink2 message SETUP_SIGNING
+Ignoring MAVLink2 message BUTTON_CHANGE
+Ignoring MAVLink2 message PLAY_TUNE
+Ignoring MAVLink2 message CAMERA_INFORMATION
+Ignoring MAVLink2 message CAMERA_SETTINGS
+Ignoring MAVLink2 message STORAGE_INFORMATION
+Ignoring MAVLink2 message CAMERA_CAPTURE_STATUS
+Ignoring MAVLink2 message CAMERA_IMAGE_CAPTURED
+Ignoring MAVLink2 message FLIGHT_INFORMATION
+Ignoring MAVLink2 message MOUNT_ORIENTATION
+Ignoring MAVLink2 message LOGGING_DATA
+Ignoring MAVLink2 message LOGGING_DATA_ACKED
+Ignoring MAVLink2 message LOGGING_ACK
+Ignoring MAVLink2 message VIDEO_STREAM_INFORMATION
+Ignoring MAVLink2 message SET_VIDEO_STREAM_SETTINGS
+Ignoring MAVLink2 message WIFI_CONFIG_AP
+Ignoring MAVLink2 message PROTOCOL_VERSION
+Ignoring MAVLink2 message UAVCAN_NODE_STATUS
+Ignoring MAVLink2 message UAVCAN_NODE_INFO
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_READ
+Ignoring MAVLink2 message PARAM_EXT_REQUEST_LIST
+Ignoring MAVLink2 message PARAM_EXT_VALUE
+Ignoring MAVLink2 message PARAM_EXT_SET
+Ignoring MAVLink2 message PARAM_EXT_ACK
+Ignoring MAVLink2 message OBSTACLE_DISTANCE
+Ignoring MAVLink2 message ODOMETRY
+Ignoring MAVLink2 message TRAJECTORY
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: An enum value was auto-generated: MODE_MANUAL_DIRECT = 1
+Note: An enum value was auto-generated: MODE_MANUAL_SCALED = 2
+Note: An enum value was auto-generated: MODE_AUTO_PID_ATT = 3
+Note: An enum value was auto-generated: MODE_AUTO_PID_VEL = 4
+Note: An enum value was auto-generated: MODE_AUTO_PID_POS = 5
+Note: An enum value was auto-generated: NAV_AHRS_INIT = 1
+Note: An enum value was auto-generated: NAV_AHRS = 2
+Note: An enum value was auto-generated: NAV_INS_GPS_INIT = 3
+Note: An enum value was auto-generated: NAV_INS_GPS = 4
+Note: An enum value was auto-generated: PILOT_MANUAL = 1
+Note: An enum value was auto-generated: PILOT_AUTO = 2
+Note: An enum value was auto-generated: PILOT_ROTO = 3
+Note: message GPS_STATUS is longer than 64 bytes long (109 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 140 MAVLink message types in 2 XML files
+Generating C implementation in directory include/v1.0/ualberta
+Note: message ATTITUDE_QUATERNION_COV is longer than 64 bytes long (80 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GLOBAL_POSITION_INT_COV is longer than 64 bytes long (189 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOCAL_POSITION_NED_COV is longer than 64 bytes long (233 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_ACTUATOR_CONTROLS is longer than 64 bytes long (89 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Generating C implementation in directory include/v1.0/common
+Note: message GLOBAL_VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VISION_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VICON_POSITION_ESTIMATE is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIGHRES_IMU is longer than 64 bytes long (70 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_SENSOR is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SIM_STATE is longer than 64 bytes long (92 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FILE_TRANSFER_PROTOCOL is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HIL_STATE_QUATERNION is longer than 64 bytes long (72 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOG_DATA is longer than 64 bytes long (105 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INJECT_DATA is longer than 64 bytes long (121 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SERIAL_CONTROL is longer than 64 bytes long (87 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ENCAPSULATED_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ATT_POS_MOCAP is longer than 64 bytes long (128 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message RESOURCE_REQUEST is longer than 64 bytes long (251 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message FOLLOW_TARGET is longer than 64 bytes long (101 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CONTROL_SYSTEM_STATE is longer than 64 bytes long (108 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message AUTOPILOT_VERSION is longer than 64 bytes long (86 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Generating C implementation in directory include/v1.0/common
+Note: message LANDING_TARGET is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_INPUT is longer than 64 bytes long (71 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message GPS_RTCM_DATA is longer than 64 bytes long (190 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message HOME_POSITION is longer than 64 bytes long (68 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_HOME_POSITION is longer than 64 bytes long (69 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message V2_EXTENSION is longer than 64 bytes long (262 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_INFORMATION is longer than 64 bytes long (243 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message CAMERA_IMAGE_CAPTURED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message LOGGING_DATA_ACKED is longer than 64 bytes long (263 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message VIDEO_STREAM_INFORMATION is longer than 64 bytes long (254 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message SET_VIDEO_STREAM_SETTINGS is longer than 64 bytes long (255 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message WIFI_CONFIG_AP is longer than 64 bytes long (104 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message UAVCAN_NODE_INFO is longer than 64 bytes long (124 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_VALUE is longer than 64 bytes long (157 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_SET is longer than 64 bytes long (155 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message PARAM_EXT_ACK is longer than 64 bytes long (154 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message OBSTACLE_DISTANCE is longer than 64 bytes long (166 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message ODOMETRY is longer than 64 bytes long (238 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Note: message TRAJECTORY is longer than 64 bytes long (242 bytes), which can cause fragmentation since many radio modems use 64 bytes as maximum air transfer unit.
+Found 164 MAVLink message types in 1 XML files
+Generating C headers
+Generating C implementation in directory include/v2.0/common
+Generating C implementation in directory include/v1.0/uAvionix
+Copying fixed headers for protocol 1.0 to include/v1.0
+Generating C implementation in directory include/v1.0/icarous
+Copying fixed headers for protocol 1.0 to include/v1.0
+[100%] Built target ualberta.xml-v1.0
+[100%] Built target ardupilotmega.xml-v1.0
+Copying fixed headers for protocol 2.0 to include/v2.0
+Generating C++ implementation in directory include/v2.0/common
+Copying fixed C++ headers for protocol 2.0 to include/v2.0
+[100%] Built target common.xml-v2.0

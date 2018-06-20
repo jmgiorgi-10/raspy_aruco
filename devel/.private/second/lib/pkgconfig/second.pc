@@ -1,0 +1,8 @@
+prefix=/home/joaquin/catkin_ws/devel/.private/second
+
+Name: second
+Description: Description of second
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/joaquin/catkin_ws/devel/.private/second/lib 
+Requires: 

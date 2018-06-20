@@ -1,0 +1,503 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:10:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ and ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’)
+     cout << tvecs << '\n';
+[01;32m[K          ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:108:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}[m[K’
+[01m[K/usr/include/c++/5/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:117:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}[m[K’
+[01m[K/usr/include/c++/5/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:127:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+[01m[K/usr/include/c++/5/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:166:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Klong int[m[K’
+[01m[K/usr/include/c++/5/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:170:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Klong unsigned int[m[K’
+[01m[K/usr/include/c++/5/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:174:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kbool[m[K’
+In file included from [01m[K/usr/include/c++/5/ostream:638:0[m[K,
+                 from [01m[K/usr/include/c++/5/iostream:39[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kshort int[m[K’
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:181:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kshort unsigned int[m[K’
+In file included from [01m[K/usr/include/c++/5/ostream:638:0[m[K,
+                 from [01m[K/usr/include/c++/5/iostream:39[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kint[m[K’
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:192:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kunsigned int[m[K’
+[01m[K/usr/include/c++/5/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:201:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Klong long int[m[K’
+[01m[K/usr/include/c++/5/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:205:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Klong long unsigned int[m[K’
+[01m[K/usr/include/c++/5/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:220:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kdouble[m[K’
+[01m[K/usr/include/c++/5/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:224:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kfloat[m[K’
+[01m[K/usr/include/c++/5/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:232:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Klong double[m[K’
+[01m[K/usr/include/c++/5/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+[01;32m[K       ^[m[K
+[01m[K/usr/include/c++/5/ostream:245:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kconst void*[m[K’
+In file included from [01m[K/usr/include/c++/5/ostream:638:0[m[K,
+                 from [01m[K/usr/include/c++/5/iostream:39[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/ros/node_handle.h:51:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h:192:15:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& operator<<(std::ostream&, XmlRpc::XmlRpcValue&)
+ std::ostream& operator<<(std::ostream& os, XmlRpc::XmlRpcValue& v);
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h:192:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[KXmlRpc::XmlRpcValue&[m[K’
+In file included from [01m[K/usr/include/boost/config/no_tr1/complex.hpp:21:0[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:15[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/complex:526:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/complex:526:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/iomanip:238:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/iomanip:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kstd::_Setw[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/iomanip:208:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/iomanip:208:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kstd::_Setprecision[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/iomanip:178:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/iomanip:178:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/iomanip:143:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/iomanip:143:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kstd::_Setbase[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/iomanip:109:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/iomanip:109:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kstd::_Setiosflags[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/boost/math/policies/error_handling.hpp:12:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/iomanip:79:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/iomanip:79:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:574:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:574:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kconst unsigned char*[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:569:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:569:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kconst signed char*[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:556:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:556:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kconst char*[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/ostream:638:0[m[K,
+                 from [01m[K/usr/include/c++/5/iostream:39[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kconst char*[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:539:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:539:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:519:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:519:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kunsigned char[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:514:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:514:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Ksigned char[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:508:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:508:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kchar[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:502:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:502:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Ktvecs[m[K’ (type ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’) to type ‘[01m[Kchar[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/iostream:39:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:54[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/ostream:497:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/ostream:497:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’)
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/usr/include/c++/5/string:52:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/platform.h:55[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/time.h:53[m[K,
+                 from [01m[K/opt/ros/kinetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:1[m[K:
+[01m[K/usr/include/c++/5/bits/basic_string.h:5172:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+[01;32m[K     ^[m[K
+[01m[K/usr/include/c++/5/bits/basic_string.h:5172:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3216:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/utility.hpp:383:15:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& cv::operator<<(std::ostream&, const cv::TickMeter&)
+ std::ostream& operator << (std::ostream& out, const TickMeter& tm)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/utility.hpp:383:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kconst cv::TickMeter&[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:256:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Rect_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Rect_<_Tp>& rect)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:256:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst cv::Rect_<_Tp>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:250:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Size_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Size_<_Tp>& size)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:250:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst cv::Size_<_Tp>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:221:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Vec<_Tp, m>&)
+ std::ostream& operator << (std::ostream& out, const Vec<_Tp, n>& vec)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:221:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst cv::Vec<_Tp, m>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:214:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point3_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point3_<_Tp>& p)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:214:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst cv::Point3_<_Tp>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:207:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const cv::Point_<_Tp>&)
+ std::ostream& operator << (std::ostream& out, const Point_<_Tp>& p)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:207:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst cv::Point_<_Tp>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:201:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, int m, int n> std::ostream& cv::operator<<(std::ostream&, const cv::Matx<_Tp, m, n>&)
+ std::ostream& operator << (std::ostream& out, const Matx<_Tp, m, n>& matx)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:201:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst cv::Matx<_Tp, m, n>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:194:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point3_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point3_<_Tp> >& vec)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:194:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kcv::Point3_<_Tp>[m[K’ and ‘[01m[Kcv::Vec<double, 3>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst std::vector<cv::Point3_<_Tp> >[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:187:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> std::ostream& cv::operator<<(std::ostream&, const std::vector<cv::Point_<_Tp> >&)
+ std::ostream& operator << (std::ostream& out, const std::vector<Point_<_Tp> >& vec)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:187:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kcv::Point_<_Tp>[m[K’ and ‘[01m[Kcv::Vec<double, 3>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ is not derived from ‘[01m[Kconst std::vector<cv::Point_<_Tp> >[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:3215:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:181:15:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& cv::operator<<(std::ostream&, const cv::Mat&)
+ std::ostream& operator << (std::ostream& out, const Mat& mtx)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:181:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kconst cv::Mat&[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:172:15:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& cv::operator<<(std::ostream&, cv::Ptr<cv::Formatted>)
+ std::ostream& operator << (std::ostream& out, Ptr<Formatted> fmtd)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:172:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kcv::Ptr<cv::Formatted>[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:166:15:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& cv::operator<<(std::ostream&, const cv::String&)
+ std::ostream& operator << (std::ostream& os, const String& str)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/cvstd.inl.hpp:166:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kstd::vector<cv::Vec<double, 3> >[m[K’ to ‘[01m[Kconst cv::String&[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:2976:9:[m[K [01;36m[Knote: [m[Kcandidate: cv::String& cv::operator<<(cv::String&, const cv::Mat&)
+ String& operator << (String& out, const Mat& mtx)
+[01;32m[K         ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:2976:9:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ to ‘[01m[Kcv::String&[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:2967:9:[m[K [01;36m[Knote: [m[Kcandidate: cv::String& cv::operator<<(cv::String&, cv::Ptr<cv::Formatted>)
+ String& operator << (String& out, Ptr<Formatted> fmtd)
+[01;32m[K         ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:2967:9:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ to ‘[01m[Kcv::String&[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:60:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:1130:14:[m[K [01;36m[Knote: [m[Kcandidate: cv::FileStorage& cv::operator<<(cv::FileStorage&, char*)
+ FileStorage& operator << (FileStorage& fs, char* value)
+[01;32m[K              ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:1130:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:1122:14:[m[K [01;36m[Knote: [m[Kcandidate: cv::FileStorage& cv::operator<<(cv::FileStorage&, const char*)
+ FileStorage& operator << (FileStorage& fs, const char* str)
+[01;32m[K              ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:1122:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:1107:14:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp> cv::FileStorage& cv::operator<<(cv::FileStorage&, const _Tp&)
+ FileStorage& operator << (FileStorage& fs, const _Tp& value)
+[01;32m[K              ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:1107:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::cout[m[K’ (type ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’) to type ‘[01m[Kcv::FileStorage&[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:60:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:779:25:[m[K [01;36m[Knote: [m[Kcandidate: cv::FileStorage& cv::operator<<(cv::FileStorage&, const cv::String&)
+ CV_EXPORTS FileStorage& operator << (FileStorage& fs, const String& str);
+[01;32m[K                         ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/persistence.hpp:779:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ to ‘[01m[Kcv::FileStorage&[m[K’
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.hpp:3518:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:59[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:3093:27:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class T2> cv::MatCommaInitializer_<_Tp> cv::operator<<(const cv::Mat_<_Tp>&, T2)
+ MatCommaInitializer_<_Tp> operator << (const Mat_<_Tp>& m, T2 val)
+[01;32m[K                           ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/mat.inl.hpp:3093:27:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ is not derived from ‘[01m[Kconst cv::Mat_<_Tp>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:57:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/matx.hpp:1087:30:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _T2, int cn> cv::VecCommaInitializer<_Tp, cn> cv::operator<<(const cv::Vec<_Tp, n>&, _T2)
+ VecCommaInitializer<_Tp, cn> operator << (const Vec<_Tp, cn>& vec, _T2 val)
+[01;32m[K                              ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/matx.hpp:1087:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ is not derived from ‘[01m[Kconst cv::Vec<_Tp, n>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core.hpp:57:0[m[K,
+                 from [01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/kinetic/include/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:3[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/matx.hpp:878:33:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class _T2, int m, int n> cv::MatxCommaInitializer<_Tp, m, n> cv::operator<<(const cv::Matx<_Tp, m, n>&, _T2)
+ MatxCommaInitializer<_Tp, m, n> operator << (const Matx<_Tp, m, n>& mtx, _T2 val)
+[01;32m[K                                 ^[m[K
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/core/matx.hpp:878:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:66:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ostream {aka std::basic_ostream<char>}[m[K’ is not derived from ‘[01m[Kconst cv::Matx<_Tp, m, n>[m[K’
+     cout << tvecs << '\n';
+[01;32m[K             ^[m[K
+make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
+make: *** [all] Error 2
