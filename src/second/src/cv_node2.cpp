@@ -14,12 +14,20 @@ int main() {
 	vector<int> markerIds;
 	vector< vector<Point2f> > markerCorners, rejectedCandidates;
 	Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
-	aruco::detectMarkers(inputImage, dictionary, markerCorners, markerIds);
+
+	//cv::aruco::MarkerDetector Detector;
+	//Detector.setDictionary(dictionary);
+
+
+	//cv::aruco::detectMarkers(inputImage, dictionary, markerCorners, markerIds);
 
 	aruco::drawDetectedMarkers(inputImage, markerCorners, markerIds);
+
+	vector<Vec3d> rvecs, tvecs;
+	//aruco::estimatePoseSingleMarkers(corners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+
 	imshow("here it is bruu", inputImage);
 	waitKey(0);
-
 	return(0);
 
 }

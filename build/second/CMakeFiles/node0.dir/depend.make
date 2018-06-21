@@ -10,6 +10,7 @@ CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Twi
 CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/geometry_msgs/TwistStamped.h
 CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3.h
 CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
+CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/mavros_msgs/Altitude.h
 CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/mavros_msgs/CommandBool.h
 CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/mavros_msgs/CommandBoolRequest.h
 CMakeFiles/node0.dir/src/node0.cpp.o: /opt/ros/kinetic/include/mavros_msgs/CommandBoolResponse.h

@@ -1,0 +1,23 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:18:2:[m[K [01;31m[Kerror: [m[K‘[01m[KMarkerDetector[m[K’ is not a member of ‘[01m[Kcv::aruco[m[K’
+  aruco::MarkerDetector Detector;
+[01;32m[K  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:19:2:[m[K [01;31m[Kerror: [m[K‘[01m[KDetector[m[K’ was not declared in this scope
+  Detector.setDictionary(dictionary);
+[01;32m[K  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:22:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::aruco::detectMarkers[m[K’ is not a class member
+  aruco::detectMarkers(inputImage, dictionary, markerCorners, markerIds);
+[01;32m[K  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:27:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kcorners[m[K’ was not declared in this scope
+  aruco::estimatePoseSingleMarkers(corners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                   ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:27:50:[m[K [01;31m[Kerror: [m[K‘[01m[KcameraMatrix[m[K’ was not declared in this scope
+  aruco::estimatePoseSingleMarkers(corners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                                  ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/cv_node2.cpp:27:64:[m[K [01;31m[Kerror: [m[K‘[01m[KdistCoeffs[m[K’ was not declared in this scope
+  aruco::estimatePoseSingleMarkers(corners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+[01;32m[K                                                                ^[m[K
+make[2]: *** [CMakeFiles/cv_node2.dir/src/cv_node2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cv_node2.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

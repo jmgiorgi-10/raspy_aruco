@@ -1,0 +1,7 @@
+<launch>
+
+<include file="$(find second)/launch/mavros_posix_sitl.launch" />
+
+<include file="$(find second)/launch/aruco_launch.launch">
+
+</launch>

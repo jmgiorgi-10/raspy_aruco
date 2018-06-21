@@ -1,0 +1,9 @@
+<launch>
+
+<node pkg="second" type="node0" name="node0" output="screen">
+</node>
+
+<node pkg="second" type="image_converter3" name="image_converter3" output="screen">
+</node>
+
+</launch>
