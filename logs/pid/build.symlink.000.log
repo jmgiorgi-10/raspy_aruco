@@ -1,0 +1,15 @@
+Symlinking /home/joaquin/catkin_ws/devel/lib/python2.7/dist-packages/pid/__init__.py
+Symlinking /home/joaquin/catkin_ws/devel/lib/python2.7/dist-packages/pid/cfg/PidConfig.py
+Symlinking /home/joaquin/catkin_ws/devel/lib/python2.7/dist-packages/pid/cfg/__init__.py
+Symlinking /home/joaquin/catkin_ws/devel/lib/pid/autotune
+Symlinking /home/joaquin/catkin_ws/devel/lib/pid/controller
+Symlinking /home/joaquin/catkin_ws/devel/lib/pid/plant_sim
+Symlinking /home/joaquin/catkin_ws/devel/lib/pid/setpoint_node
+Symlinking /home/joaquin/catkin_ws/devel/lib/pid/sim_time
+Symlinking /home/joaquin/catkin_ws/devel/lib/pkgconfig/pid.pc
+Symlinking /home/joaquin/catkin_ws/devel/share/pid/cmake/pidConfig.cmake
+Symlinking /home/joaquin/catkin_ws/devel/share/pid/cmake/pidConfig-version.cmake
+Symlinking /home/joaquin/catkin_ws/devel/share/pid/docs/PidConfig.wikidoc
+Symlinking /home/joaquin/catkin_ws/devel/share/pid/docs/PidConfig.dox
+Symlinking /home/joaquin/catkin_ws/devel/share/pid/docs/PidConfig-usage.dox
+Symlinking /home/joaquin/catkin_ws/devel/include/pid/PidConfig.h

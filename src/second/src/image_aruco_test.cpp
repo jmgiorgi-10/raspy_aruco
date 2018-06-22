@@ -39,7 +39,6 @@ public:
     cameraMatrix = (Mat1d(3,3) << 1.1131964048572934e+03, 0, 6.4918146753565634e+02, 0, 1.1234296429352053e+03, 2.6055413683654331e+02, 0, 0, 1);
     distCoeffs = (Mat1d(1,5) <<  2.4936964447069973e-01, -7.0650882086700950e-01, -4.6592829034340401e-02, 3.6756516954705444e-04,  9.5260003500440427e-01);
 
-
   }
 
   void imageCb(const sensor_msgs::ImageConstPtr& msg)
@@ -63,7 +62,7 @@ public:
     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
     vector<Vec3d> rvecs, tvecs;
-    aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+    aruco::estimatePoseSingleMarkers(markerCorners, 3.6, cameraMatrix, distCoeffs, rvecs, tvecs);
 
     aruco::drawDetectedMarkers(cv_ptr->image, markerCorners, markerIds);
     image_pub.publish(cv_ptr->toImageMsg());

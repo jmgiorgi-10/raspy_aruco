@@ -1,0 +1,68 @@
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_eus[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_gencfg[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_py[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[  0%] Built target dynamic_reconfigure_gencfg
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
+[  0%] Built target dynamic_reconfigure_generate_messages_eus
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[  0%] Built target roscpp_generate_messages_py
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target pid_gencfg[0m
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  8%] [34m[1mGenerating dynamic reconfigure files from cfg/Pid.cfg: /home/joaquin/catkin_ws/devel/.private/pid/include/pid/PidConfig.h /home/joaquin/catkin_ws/devel/.private/pid/lib/python2.7/dist-packages/pid/cfg/PidConfig.py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_lisp[0m
+[  8%] Built target dynamic_reconfigure_generate_messages_lisp
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_nodejs[0m
+Generating reconfiguration files for Pid in pid
+[  8%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+Wrote header file in /home/joaquin/catkin_ws/devel/.private/pid/include/pid/PidConfig.h
+[  8%] Built target roscpp_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
+[  8%] Built target std_msgs_generate_messages_eus
+[  8%] Built target dynamic_reconfigure_generate_messages_nodejs
+[35m[1mScanning dependencies of target dynamic_reconfigure_generate_messages_cpp[0m
+[  8%] Built target roscpp_generate_messages_eus
+[  8%] Built target pid_gencfg
+[  8%] Built target dynamic_reconfigure_generate_messages_cpp
+[35m[1mScanning dependencies of target sim_time[0m
+[35m[1mScanning dependencies of target setpoint_node[0m
+[35m[1mScanning dependencies of target autotune[0m
+[35m[1mScanning dependencies of target controller[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/setpoint_node.dir/src/setpoint_node.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/sim_time.dir/src/sim_time.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/autotune.dir/src/autotune.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controller.cpp.o[0m
+[ 50%] [32m[1mLinking CXX executable /home/joaquin/catkin_ws/devel/.private/pid/lib/pid/sim_time[0m
+[ 50%] Built target sim_time
+[35m[1mScanning dependencies of target plant_sim[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/plant_sim.dir/src/plant_sim.cpp.o[0m
+[ 66%] [32m[1mLinking CXX executable /home/joaquin/catkin_ws/devel/.private/pid/lib/pid/setpoint_node[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/controller.dir/src/pid.cpp.o[0m
+[ 75%] Built target setpoint_node
+[ 83%] [32m[1mLinking CXX executable /home/joaquin/catkin_ws/devel/.private/pid/lib/pid/autotune[0m
+[ 83%] Built target autotune
+[ 91%] [32m[1mLinking CXX executable /home/joaquin/catkin_ws/devel/.private/pid/lib/pid/plant_sim[0m
+[ 91%] Built target plant_sim
+[100%] [32m[1mLinking CXX executable /home/joaquin/catkin_ws/devel/.private/pid/lib/pid/controller[0m
+[100%] Built target controller

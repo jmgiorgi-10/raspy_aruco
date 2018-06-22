@@ -31,7 +31,7 @@ public:
     // Subscrive to input video feed and publish output video feed
     image_sub_ = it_.subscribe("iris/camera_red_iris/image_raw", 1,
       &ImageConverter::imageCb, this);
-    pub = n2.advertise<std_msgs::Float32MultiArray>("array", 100);
+    pub = n2.advertise<std_msgs::Float32MultiArray>("array", 1);
 
     image_pub = it_.advertise("/aruco_camera", 1);
 
@@ -63,20 +63,34 @@ public:
     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
     vector<Vec3d> rvecs, tvecs;
-    aruco::estimatePoseSingleMarkers(markerCorners, 0.05, cameraMatrix, distCoeffs, rvecs, tvecs);
+    aruco::estimatePoseSingleMarkers(markerCorners, 0.3, cameraMatrix, distCoeffs, rvecs, tvecs);
 
     aruco::drawDetectedMarkers(cv_ptr->image, markerCorners, markerIds);
     image_pub.publish(cv_ptr->toImageMsg());
 
+
+    vector<std_msgs::Float32MultiArray> marker_poses;
+
     std_msgs::Float32MultiArray array;
 
-    if (tvecs.size() >= 1) {
+    if (tvecs.size() != 0) {
       for (int i = 0; i < 3; i++) {
-        //array.data.push_back(tvecs.at(0)[i]);
         array.data.push_back((tvecs.at(0))[i]);
-        ///array.data.push_back(1);
       }
     }
+
+
+    // for (int i = 0; i < rvecs.size(); i++) {  // Loop through all detected markers.
+    //   std_msgs::Float32MultiArray array1;
+    //   std_msgs::Float32MultiArray array2;
+
+    //   Mat rot_mat;
+    //   Rodrigues(rvec, rot_mat);  // Calculate the rotation matrix.
+
+
+    //   }
+    
+
     pub.publish(array);
     
   }
