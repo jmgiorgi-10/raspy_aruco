@@ -9,6 +9,7 @@ second
 /home/joaquin/catkin_ws/devel/.private/second/lib/second/mavros1 /home/joaquin/catkin_ws/devel/lib/second/mavros1
 /home/joaquin/catkin_ws/devel/.private/second/lib/second/test_control /home/joaquin/catkin_ws/devel/lib/second/test_control
 /home/joaquin/catkin_ws/devel/.private/second/lib/second/controller /home/joaquin/catkin_ws/devel/lib/second/controller
+/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_converter4 /home/joaquin/catkin_ws/devel/lib/second/image_converter4
 /home/joaquin/catkin_ws/devel/.private/second/lib/second/image_converter2 /home/joaquin/catkin_ws/devel/lib/second/image_converter2
 /home/joaquin/catkin_ws/devel/.private/second/lib/pkgconfig/second.pc /home/joaquin/catkin_ws/devel/lib/pkgconfig/second.pc
 /home/joaquin/catkin_ws/devel/.private/second/share/second/cmake/secondConfig-version.cmake /home/joaquin/catkin_ws/devel/share/second/cmake/secondConfig-version.cmake

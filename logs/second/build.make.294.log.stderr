@@ -1,0 +1,33 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kyaw_pub[m[K’ was not declared in this scope
+     yaw_pub = n2.advertise<std_msgs::Float32>("yaw_array", 1);
+[01;32m[K     ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:34:28:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat32[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+     yaw_pub = n2.advertise<std_msgs::Float32>("yaw_array", 1);
+[01;32m[K                            ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:34:28:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat32[m[K’ is not a member of ‘[01m[Kstd_msgs[m[K’
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:34:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise(const char [10], int)[m[K’
+     yaw_pub = n2.advertise<std_msgs::Float32>("yaw_array", 1);
+[01;32m[K                                                             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:1[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)
+     Publisher advertise(const std::string& topic, uint32_t queue_size, bool latch = false)
+[01;32m[K               ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:248:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:34:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     yaw_pub = n2.advertise<std_msgs::Float32>("yaw_array", 1);
+[01;32m[K                                                             ^[m[K
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:45:0[m[K,
+                 from [01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:1[m[K:
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[Kcandidate: template<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)
+   Publisher advertise(const std::string& topic, uint32_t queue_size,
+[01;32m[K             ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/node_handle.h:314:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter4.cpp:34:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     yaw_pub = n2.advertise<std_msgs::Float32>("yaw_array", 1);
+[01;32m[K                                                             ^[m[K
+make[2]: *** [CMakeFiles/image_converter4.dir/src/image_converter4.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_converter4.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

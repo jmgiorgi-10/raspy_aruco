@@ -1,0 +1,54 @@
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  9%] Built target node0
+[ 18%] Built target cv_node2
+[ 27%] Built target mavros1
+[ 36%] Built target cv_node
+[35m[1mScanning dependencies of target image_aruco_test[0m
+[ 45%] Built target cv_node3
+[ 54%] Built target controller
+[ 63%] Built target image_converter3
+[ 68%] [32mBuilding CXX object CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o[0m
+[ 77%] Built target velocity_test
+[ 86%] Built target image_converter4
+[ 95%] Built target test_control
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp:69:77:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kvoid cv::aruco::drawAxis(cv::InputOutputArray, cv::InputArray, cv::InputArray, cv::InputArray, cv::InputArray, float)[m[K’
+     aruco::drawAxis(cv_ptr->image, distCoeffs, rvecs.at(0), tvecs.at(0), 3.0);
+[01;32m[K                                                                             ^[m[K
+In file included from [01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp:8:0[m[K:
+[01m[K/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/aruco.hpp:433:19:[m[K [01;36m[Knote: [m[Kdeclared here
+ CV_EXPORTS_W void drawAxis(InputOutputArray image, InputArray cameraMatrix, InputArray distCoeffs,
+[01;32m[K                   ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp:74:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kr[m[K’ was not declared in this scope
+ r
+[01;32m[K ^[m[K
+CMakeFiles/image_aruco_test.dir/build.make:62: recipe for target 'CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o' failed
+make[2]: *** [CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o] Error 1
+CMakeFiles/Makefile2:1353: recipe for target 'CMakeFiles/image_aruco_test.dir/all' failed
+make[1]: *** [CMakeFiles/image_aruco_test.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

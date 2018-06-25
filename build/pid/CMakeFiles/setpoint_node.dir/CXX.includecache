@@ -9,8 +9,8 @@
 /home/joaquin/catkin_ws/src/pid/src/setpoint_node.cpp
 ros/ros.h
 /home/joaquin/catkin_ws/src/pid/src/ros/ros.h
-std_msgs/Float64.h
-/home/joaquin/catkin_ws/src/pid/src/std_msgs/Float64.h
+std_msgs/Float32.h
+/home/joaquin/catkin_ws/src/pid/src/std_msgs/Float32.h
 
 /opt/ros/kinetic/include/ros/advertise_options.h
 ros/forwards.h
@@ -642,7 +642,7 @@ ros/forwards.h
 
 /opt/ros/kinetic/include/rosconsole/macros_generated.h
 
-/opt/ros/kinetic/include/std_msgs/Float64.h
+/opt/ros/kinetic/include/std_msgs/Float32.h
 string
 -
 vector

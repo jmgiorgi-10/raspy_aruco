@@ -15,9 +15,7 @@ cv_bridge/cv_bridge.h
 -
 sensor_msgs/image_encodings.h
 -
-opencv2/imgproc/imgproc.hpp
--
-opencv2/highgui/highgui.hpp
+opencv2/opencv.hpp
 -
 opencv2/aruco.hpp
 -
@@ -859,10 +857,6 @@ opencv2/videoio.hpp
 /opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/opencv2/videoio.hpp
 opencv2/highgui/highgui_c.h
 /opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/opencv2/highgui/highgui_c.h
-
-/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/highgui/highgui.hpp
-opencv2/highgui.hpp
-/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/highgui/opencv2/highgui.hpp
 
 /opt/ros/kinetic/include/opencv-3.2.0-dev/opencv2/highgui/highgui_c.h
 opencv2/core/core_c.h

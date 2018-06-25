@@ -34,7 +34,7 @@ void ar_callback(const std_msgs::Float32MultiArray::ConstPtr& array) {
         if ((array->data)[0] > 0) {
             vel_msg.twist.linear.x = .3;  // Rudimentary x,y control system.
         } else if (array->data[0] < 0) {
-            vel_msg.twist.linear.x = -0.3;
+            vel_msg.twist.linear.x = -.3;
         }
         if ((array->data)[1] > 0) {
             vel_msg.twist.linear.y = .3;

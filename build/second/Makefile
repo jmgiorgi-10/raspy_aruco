@@ -66,6 +66,18 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -120,18 +132,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -335,6 +335,19 @@ doxygen/fast:
 .PHONY : doxygen/fast
 
 #=============================================================================
+# Target rules for targets named std_msgs_generate_messages_lisp
+
+# Build rule for target.
+std_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -517,32 +530,6 @@ cv_node/fast:
 .PHONY : cv_node/fast
 
 #=============================================================================
-# Target rules for targets named std_msgs_generate_messages_py
-
-# Build rule for target.
-std_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named controller
-
-# Build rule for target.
-controller: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controller
-.PHONY : controller
-
-# fast build rule for target.
-controller/fast:
-	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
-.PHONY : controller/fast
-
-#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -634,6 +621,45 @@ image_aruco_test/fast:
 .PHONY : image_aruco_test/fast
 
 #=============================================================================
+# Target rules for targets named std_msgs_generate_messages_py
+
+# Build rule for target.
+std_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_py
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_py.dir/build.make CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named controller
+
+# Build rule for target.
+controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controller
+.PHONY : controller
+
+# fast build rule for target.
+controller/fast:
+	$(MAKE) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
+.PHONY : controller/fast
+
+#=============================================================================
+# Target rules for targets named image_converter4
+
+# Build rule for target.
+image_converter4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_converter4
+.PHONY : image_converter4
+
+# fast build rule for target.
+image_converter4/fast:
+	$(MAKE) -f CMakeFiles/image_converter4.dir/build.make CMakeFiles/image_converter4.dir/build
+.PHONY : image_converter4/fast
+
+#=============================================================================
 # Target rules for targets named test_control
 
 # Build rule for target.
@@ -671,19 +697,6 @@ geometry_msgs_generate_messages_cpp: cmake_check_build_system
 geometry_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named std_msgs_generate_messages_lisp
-
-# Build rule for target.
-std_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_msgs_generate_messages_lisp
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -873,6 +886,33 @@ src/image_converter3.cpp.s:
 	$(MAKE) -f CMakeFiles/image_converter3.dir/build.make CMakeFiles/image_converter3.dir/src/image_converter3.cpp.s
 .PHONY : src/image_converter3.cpp.s
 
+src/image_converter4.o: src/image_converter4.cpp.o
+
+.PHONY : src/image_converter4.o
+
+# target to build an object file
+src/image_converter4.cpp.o:
+	$(MAKE) -f CMakeFiles/image_converter4.dir/build.make CMakeFiles/image_converter4.dir/src/image_converter4.cpp.o
+.PHONY : src/image_converter4.cpp.o
+
+src/image_converter4.i: src/image_converter4.cpp.i
+
+.PHONY : src/image_converter4.i
+
+# target to preprocess a source file
+src/image_converter4.cpp.i:
+	$(MAKE) -f CMakeFiles/image_converter4.dir/build.make CMakeFiles/image_converter4.dir/src/image_converter4.cpp.i
+.PHONY : src/image_converter4.cpp.i
+
+src/image_converter4.s: src/image_converter4.cpp.s
+
+.PHONY : src/image_converter4.s
+
+# target to generate assembly for a file
+src/image_converter4.cpp.s:
+	$(MAKE) -f CMakeFiles/image_converter4.dir/build.make CMakeFiles/image_converter4.dir/src/image_converter4.cpp.s
+.PHONY : src/image_converter4.cpp.s
+
 src/mavros1.o: src/mavros1.cpp.o
 
 .PHONY : src/mavros1.o
@@ -1001,6 +1041,8 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... run_tests"
 	@echo "... doxygen"
+	@echo "... install"
+	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... node0"
 	@echo "... roscpp_generate_messages_cpp"
@@ -1015,8 +1057,6 @@ help:
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... cv_node"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... controller"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... cv_node2"
 	@echo "... rebuild_cache"
@@ -1025,6 +1065,9 @@ help:
 	@echo "... image_converter3"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... image_aruco_test"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... controller"
+	@echo "... image_converter4"
 	@echo "... test_control"
 	@echo "... edit_cache"
 	@echo "... install/strip"
@@ -1032,8 +1075,6 @@ help:
 	@echo "... install/local"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... test"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... install"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... src/controller.o"
@@ -1054,6 +1095,9 @@ help:
 	@echo "... src/image_converter3.o"
 	@echo "... src/image_converter3.i"
 	@echo "... src/image_converter3.s"
+	@echo "... src/image_converter4.o"
+	@echo "... src/image_converter4.i"
+	@echo "... src/image_converter4.s"
 	@echo "... src/mavros1.o"
 	@echo "... src/mavros1.i"
 	@echo "... src/mavros1.s"

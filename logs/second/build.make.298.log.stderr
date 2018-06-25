@@ -1,0 +1,13 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:124:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistStamped_<std::allocator<void> >::_twist_type {aka struct geometry_msgs::Twist_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ktwist[m[K’
+             vel_msg.twist.twist.x = 0;
+[01;32m[K                           ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:125:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistStamped_<std::allocator<void> >::_twist_type {aka struct geometry_msgs::Twist_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ktwist[m[K’
+             vel_msg.twist.twist.y = 0;
+[01;32m[K                           ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:126:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistStamped_<std::allocator<void> >::_twist_type {aka struct geometry_msgs::Twist_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ktwist[m[K’
+             vel_msg.twist.twist.z = 0;
+[01;32m[K                           ^[m[K
+make[2]: *** [CMakeFiles/node0.dir/src/node0.cpp.o] Error 1
+make[1]: *** [CMakeFiles/node0.dir/all] Error 2
+make: *** [all] Error 2
