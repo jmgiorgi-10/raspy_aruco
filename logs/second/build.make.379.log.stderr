@@ -1,0 +1,10 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:77:20:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kros::Publisher att_pub[m[K’
+     ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>;
+[01;32m[K                    ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/node0.cpp:72:20:[m[K [01;36m[Knote: [m[K‘[01m[Kros::Publisher att_pub[m[K’ previously declared here
+     ros::Publisher att_pub = nh.advertise<mavros_msgs::AttitudeTarget>("mavros/setpoint_attitude/attitude", 10);  // Publisher to change pitch, roll, and yaw.
+[01;32m[K                    ^[m[K
+make[2]: *** [CMakeFiles/node0.dir/src/node0.cpp.o] Error 1
+make[1]: *** [CMakeFiles/node0.dir/all] Error 2
+make: *** [all] Error 2

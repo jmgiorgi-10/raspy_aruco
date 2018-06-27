@@ -1,0 +1,10 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:74:42:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Point2f {aka cv::Point_<float>}) (int)[m[K’
+     Mat u = (Mat1f(2,1) << markerCorner(0), markerCorner(1), float(1));  // Get pixel coordinates of top left corner.
+[01;32m[K                                          ^[m[K
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:74:59:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(cv::Point2f {aka cv::Point_<float>}) (int)[m[K’
+     Mat u = (Mat1f(2,1) << markerCorner(0), markerCorner(1), float(1));  // Get pixel coordinates of top left corner.
+[01;32m[K                                                           ^[m[K
+make[2]: *** [CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_aruco_test2.dir/all] Error 2
+make: *** [all] Error 2

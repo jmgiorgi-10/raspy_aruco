@@ -56,6 +56,17 @@ CMAKE_BINARY_DIR = /home/joaquin/catkin_ws/build/second
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -77,17 +88,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -673,6 +673,19 @@ test_control/fast:
 .PHONY : test_control/fast
 
 #=============================================================================
+# Target rules for targets named image_aruco_test2
+
+# Build rule for target.
+image_aruco_test2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_aruco_test2
+.PHONY : image_aruco_test2
+
+# fast build rule for target.
+image_aruco_test2/fast:
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/build
+.PHONY : image_aruco_test2/fast
+
+#=============================================================================
 # Target rules for targets named velocity_test
 
 # Build rule for target.
@@ -859,6 +872,33 @@ src/image_aruco_test.cpp.s:
 	$(MAKE) -f CMakeFiles/image_aruco_test.dir/build.make CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s
 .PHONY : src/image_aruco_test.cpp.s
 
+src/image_aruco_test2.o: src/image_aruco_test2.cpp.o
+
+.PHONY : src/image_aruco_test2.o
+
+# target to build an object file
+src/image_aruco_test2.cpp.o:
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.o
+.PHONY : src/image_aruco_test2.cpp.o
+
+src/image_aruco_test2.i: src/image_aruco_test2.cpp.i
+
+.PHONY : src/image_aruco_test2.i
+
+# target to preprocess a source file
+src/image_aruco_test2.cpp.i:
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.i
+.PHONY : src/image_aruco_test2.cpp.i
+
+src/image_aruco_test2.s: src/image_aruco_test2.cpp.s
+
+.PHONY : src/image_aruco_test2.s
+
+# target to generate assembly for a file
+src/image_aruco_test2.cpp.s:
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.s
+.PHONY : src/image_aruco_test2.cpp.s
+
 src/image_converter3.o: src/image_converter3.cpp.o
 
 .PHONY : src/image_converter3.o
@@ -1027,6 +1067,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... rebuild_cache"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... tests"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
@@ -1059,7 +1100,6 @@ help:
 	@echo "... cv_node"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... cv_node2"
-	@echo "... rebuild_cache"
 	@echo "... cv_node3"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... image_converter3"
@@ -1070,6 +1110,7 @@ help:
 	@echo "... image_converter4"
 	@echo "... test_control"
 	@echo "... edit_cache"
+	@echo "... image_aruco_test2"
 	@echo "... install/strip"
 	@echo "... velocity_test"
 	@echo "... install/local"
@@ -1092,6 +1133,9 @@ help:
 	@echo "... src/image_aruco_test.o"
 	@echo "... src/image_aruco_test.i"
 	@echo "... src/image_aruco_test.s"
+	@echo "... src/image_aruco_test2.o"
+	@echo "... src/image_aruco_test2.i"
+	@echo "... src/image_aruco_test2.s"
 	@echo "... src/image_converter3.o"
 	@echo "... src/image_converter3.i"
 	@echo "... src/image_converter3.s"

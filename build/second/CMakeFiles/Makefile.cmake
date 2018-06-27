@@ -219,6 +219,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/controller.dir/DependInfo.cmake"
   "CMakeFiles/image_converter4.dir/DependInfo.cmake"
   "CMakeFiles/test_control.dir/DependInfo.cmake"
+  "CMakeFiles/image_aruco_test2.dir/DependInfo.cmake"
   "CMakeFiles/velocity_test.dir/DependInfo.cmake"
   "CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest.dir/DependInfo.cmake"

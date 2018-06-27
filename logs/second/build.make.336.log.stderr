@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:[m[K In constructor ‘[01m[KImageConverter::ImageConverter()[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:46:1:[m[K [01;31m[Kerror: [m[K‘[01m[Kos[m[K’ was not declared in this scope
+ os
+[01;32m[K ^[m[K
+make[2]: *** [CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_aruco_test2.dir/all] Error 2
+make: *** [all] Error 2

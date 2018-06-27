@@ -1,0 +1,7 @@
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
+[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:93:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs::Float32MultiArray {aka struct std_msgs::Float32MultiArray_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kpush_back[m[K’
+         array.push_back(tvec[i]);
+[01;32m[K               ^[m[K
+make[2]: *** [CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.o] Error 1
+make[1]: *** [CMakeFiles/image_aruco_test2.dir/all] Error 2
+make: *** [all] Error 2

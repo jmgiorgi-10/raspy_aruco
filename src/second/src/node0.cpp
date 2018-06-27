@@ -8,6 +8,7 @@
 #include <mavros_msgs/SetMode.h>
 #include <mavros_msgs/State.h>
 #include <mavros_msgs/Altitude.h>
+#include <mavros_msgs/AttitudeTarget.h>
 #include <std_msgs/Float32.h>
 #include <std_msgs/Float32MultiArray.h>
 #include "std_msgs/MultiArrayLayout.h"
@@ -19,6 +20,11 @@ geometry_msgs::TwistStamped vel_msg;
 mavros_msgs::Altitude alt_msg;
 bool out_of_sight = false;
 mavros_msgs::State current_state;
+geometry_msgs::Quaternion quaternion;
+
+geometry_msgs::PoseStamped attitude;
+
+mavros_msgs::AttitudeTarget set_pos{};
 
 void state_cb(const mavros_msgs::State::ConstPtr& msg){
     current_state = *msg;
@@ -27,16 +33,20 @@ void state_cb(const mavros_msgs::State::ConstPtr& msg){
 void ar_callback(const std_msgs::Float32MultiArray::ConstPtr& array) {
     if (array->data.size() != 0) {  // Check if any marker detected.
         out_of_sight = false;
-        if ((array->data)[0] > 0) {
-            vel_msg.twist.linear.x = .5;  // Rudimentary x,y control system.
-        } else if (array->data[0]   < 0) {
-            vel_msg.twist.linear.x = -.5;
-        }
         if ((array->data)[1] > 0) {
-            vel_msg.twist.linear.y = -.5;  // Opposite because does not start in right orientation.
+            vel_msg.twist.linear.x = .5;  // Rudimentary x,y control system.
+            //attitude.pose.orientation.y = -.1;
+        } else if (array->data[1]   < 0) {
+            vel_msg.twist.linear.x = -.5;
+            //attitude.pose.orientation.y = .1;
+        }
+        if ((array->data)[0] > 0) {
+            vel_msg.twist.linear.y = .5;  // Opposite because does not start in right orientation.
+            //attitude.pose.orientation.x = -.1;
 
-        } else if (array->data[1] < 0) {
-            vel_msg.twist.linear.y = .5;
+        } else if (array->data[0] < 0) { 
+            vel_msg.twist.linear.y = -.5; // Y sign inversed because RH coordinate systems, and for drone Z is downwards.
+            //attitude.pose.orientation.x = .1;
         }
     } else {
         out_of_sight = true;
@@ -59,12 +69,24 @@ int main(int argc, char **argv)
     ros::Subscriber arr_sub = nh.subscribe<std_msgs::Float32MultiArray>("array", 5, ar_callback);
     ros::Publisher alt_pub = nh.advertise<mavros_msgs::Altitude>("mavros/altitude", 10);
 
+    //ros::Publisher att_pub = nh.advertise<mavros_msgs::AttitudeTarget>("mavros/setpoint_attitude/attitude", 10);  // Publisher to change pitch, roll, and yaw.
+    set_pos.type_mask = mavros_msgs::AttitudeTarget::IGNORE_ROLL_RATE | mavros_msgs::AttitudeTarget::IGNORE_PITCH_RATE | mavros_msgs::AttitudeTarget::IGNORE_YAW_RATE | mavros_msgs::AttitudeTarget::IGNORE_THRUST;
+    set_pos.thrust = 0.5f;
+
+    ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/setpoint_attitude/attitude", 10);
+
+    ros::Subscriber vel_x_sub = nh.subscribe<std_msgs::Float32>("vel_x", 5, vel_x_CB);
+    ros::Subscriber vel_y_sub = nh.subscribe<std_msgs::Float32>("vel_y", 5, vel_y_CB);
+
     //the setpoint publishing rate MUST be faster than 2Hz to not drop out of OFFBOARD mode.
-    ros::Rate rate(40.0);
+    ros::Rate rate(20.0);
 
     vel_msg.twist.linear.x = 0;  // Set all initial velocities to zero.
     vel_msg.twist.linear.y = 0;
     vel_msg.twist.linear.z = 0;
+
+    attitude.pose.orientation.x = 0;
+    attitude.pose.orientation.y = 0;
 
     alt_msg.local = 1.5;  // Set local altitude message value.
 
@@ -76,7 +98,7 @@ int main(int argc, char **argv)
 
     geometry_msgs::PoseStamped pose;
     pose.pose.position.x = 0;
-    pose.pose.position.y = 0;
+    pose.pose.position.y = .5;
     pose.pose.position.z = 1.5;
     //pose.pose.orientation.z = 3.14;
 
@@ -120,6 +142,9 @@ int main(int argc, char **argv)
         } else {
             if (!out_of_sight) {
                 vel_pub.publish(vel_msg);
+                //att_pub.publish(attitude);
+
+
                 alt_pub.publish(alt_msg);
                 //local_pos_pub.publish(pose);
             } else {
@@ -128,6 +153,9 @@ int main(int argc, char **argv)
             // Reset vel_msg to null.
             vel_msg.twist.linear.x = 0;
             vel_msg.twist.linear.y = 0;
+
+            attitude.pose.orientation.x = 0;
+            attitude.pose.orientation.y = 0;
             //vel_msg.twist.linear.z = 0;
 
         }

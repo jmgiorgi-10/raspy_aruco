@@ -12,6 +12,7 @@ CMakeFiles/node0.dir/src/node0.cpp.o
  /opt/ros/kinetic/include/geometry_msgs/Vector3.h
  /opt/ros/kinetic/include/geometry_msgs/Vector3Stamped.h
  /opt/ros/kinetic/include/mavros_msgs/Altitude.h
+ /opt/ros/kinetic/include/mavros_msgs/AttitudeTarget.h
  /opt/ros/kinetic/include/mavros_msgs/CommandBool.h
  /opt/ros/kinetic/include/mavros_msgs/CommandBoolRequest.h
  /opt/ros/kinetic/include/mavros_msgs/CommandBoolResponse.h

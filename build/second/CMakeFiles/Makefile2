@@ -314,7 +314,7 @@ CMakeFiles/mavros1.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
 CMakeFiles/mavros1.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/mavros1.dir/build.make CMakeFiles/mavros1.dir/depend
 	$(MAKE) -f CMakeFiles/mavros1.dir/build.make CMakeFiles/mavros1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=19,20 "Built target mavros1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=21,22 "Built target mavros1"
 .PHONY : CMakeFiles/mavros1.dir/all
 
 # Include target in all.
@@ -599,7 +599,7 @@ CMakeFiles/node0.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
 CMakeFiles/node0.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/node0.dir/build.make CMakeFiles/node0.dir/depend
 	$(MAKE) -f CMakeFiles/node0.dir/build.make CMakeFiles/node0.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=21,22 "Built target node0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=23,24 "Built target node0"
 .PHONY : CMakeFiles/node0.dir/all
 
 # Include target in all.
@@ -1259,7 +1259,7 @@ CMakeFiles/image_converter3.dir/all: CMakeFiles/std_msgs_generate_messages_py.di
 CMakeFiles/image_converter3.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/image_converter3.dir/build.make CMakeFiles/image_converter3.dir/depend
 	$(MAKE) -f CMakeFiles/image_converter3.dir/build.make CMakeFiles/image_converter3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=15,16 "Built target image_converter3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=17,18 "Built target image_converter3"
 .PHONY : CMakeFiles/image_converter3.dir/all
 
 # Include target in all.
@@ -1506,7 +1506,7 @@ CMakeFiles/image_converter4.dir/all: CMakeFiles/std_msgs_generate_messages_py.di
 CMakeFiles/image_converter4.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/image_converter4.dir/build.make CMakeFiles/image_converter4.dir/depend
 	$(MAKE) -f CMakeFiles/image_converter4.dir/build.make CMakeFiles/image_converter4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=17,18 "Built target image_converter4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=19,20 "Built target image_converter4"
 .PHONY : CMakeFiles/image_converter4.dir/all
 
 # Include target in all.
@@ -1567,7 +1567,7 @@ CMakeFiles/test_control.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/al
 CMakeFiles/test_control.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/test_control.dir/build.make CMakeFiles/test_control.dir/depend
 	$(MAKE) -f CMakeFiles/test_control.dir/build.make CMakeFiles/test_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=23,24 "Built target test_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=25,26 "Built target test_control"
 .PHONY : CMakeFiles/test_control.dir/all
 
 # Include target in all.
@@ -1594,6 +1594,67 @@ CMakeFiles/test_control.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/test_control.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/image_aruco_test2.dir
+
+# All Build rule for target.
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/roscpp_generate_messages_eus.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/std_msgs_generate_messages_eus.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/roscpp_generate_messages_lisp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/roscpp_generate_messages_cpp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/roscpp_generate_messages_py.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
+CMakeFiles/image_aruco_test2.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/depend
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=15,16 "Built target image_aruco_test2"
+.PHONY : CMakeFiles/image_aruco_test2.dir/all
+
+# Include target in all.
+all: CMakeFiles/image_aruco_test2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/image_aruco_test2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/second/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/image_aruco_test2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/second/CMakeFiles 0
+.PHONY : CMakeFiles/image_aruco_test2.dir/rule
+
+# Convenience name for target.
+image_aruco_test2: CMakeFiles/image_aruco_test2.dir/rule
+
+.PHONY : image_aruco_test2
+
+# clean rule for target.
+CMakeFiles/image_aruco_test2.dir/clean:
+	$(MAKE) -f CMakeFiles/image_aruco_test2.dir/build.make CMakeFiles/image_aruco_test2.dir/clean
+.PHONY : CMakeFiles/image_aruco_test2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/image_aruco_test2.dir/clean
 
 .PHONY : clean
 
@@ -1628,7 +1689,7 @@ CMakeFiles/velocity_test.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/a
 CMakeFiles/velocity_test.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/velocity_test.dir/build.make CMakeFiles/velocity_test.dir/depend
 	$(MAKE) -f CMakeFiles/velocity_test.dir/build.make CMakeFiles/velocity_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=25,26 "Built target velocity_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=27,28 "Built target velocity_test"
 .PHONY : CMakeFiles/velocity_test.dir/all
 
 # Include target in all.
