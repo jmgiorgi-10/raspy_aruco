@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter2.cpp:[m[K In constructor ‘[01m[KImageResults::ImageResults()[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter2.cpp:24:79:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function
-   image_sub = it.subscribe("iris/camera_red_iris/image_raw", 1, image_callback);
-[01;32m[K                                                                               ^[m[K
-make[2]: *** [CMakeFiles/image_converter2.dir/src/image_converter2.cpp.o] Error 1
-make[1]: *** [CMakeFiles/image_converter2.dir/all] Error 2
-make: *** [all] Error 2

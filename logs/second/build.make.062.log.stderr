@@ -1,9 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:24:30:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kimage_transport::Publisher ImageConverter::t_pub[m[K’
-   image_transport::Publisher t_pub;
-[01;32m[K                              ^[m[K
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter.cpp:21:81:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kros::Publisher ImageConverter::t_pub[m[K’
-   ros::Publisher t_pub = nh_.advertise<std_msgs::Float32MultiArray>("array", 100);
-[01;32m[K                                                                                 ^[m[K
-make[2]: *** [CMakeFiles/image_converter.dir/src/image_converter.cpp.o] Error 1
-make[1]: *** [CMakeFiles/image_converter.dir/all] Error 2
-make: *** [all] Error 2

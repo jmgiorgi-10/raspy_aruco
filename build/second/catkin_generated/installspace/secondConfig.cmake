@@ -68,7 +68,7 @@ set(second_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(second_SOURCE_PREFIX /home/joaquin/catkin_ws/src/second)
-  set(second_DEVEL_PREFIX /home/joaquin/catkin_ws/devel/.private/second)
+  set(second_DEVEL_PREFIX /home/joaquin/catkin_ws/devel)
   set(second_INSTALL_PREFIX "")
   set(second_PREFIX ${second_DEVEL_PREFIX})
 else()

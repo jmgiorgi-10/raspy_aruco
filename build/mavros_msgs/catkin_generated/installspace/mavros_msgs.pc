@@ -1,8 +1,0 @@
-prefix=/home/joaquin/catkin_ws/install
-
-Name: mavros_msgs
-Description: Description of mavros_msgs
-Version: 0.26.0
-Cflags: -I/home/joaquin/catkin_ws/install/include
-Libs: -L/home/joaquin/catkin_ws/install/lib 
-Requires: geometry_msgs sensor_msgs geographic_msgs message_runtime std_msgs

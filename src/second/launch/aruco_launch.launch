@@ -6,4 +6,7 @@
 <node pkg="second" type="image_converter4" name="image_converter4" output="screen">
 </node>
 
+<node pkg="second" type="controller.py" name="controller.py" output="screen">
+</node>
+
 </launch>

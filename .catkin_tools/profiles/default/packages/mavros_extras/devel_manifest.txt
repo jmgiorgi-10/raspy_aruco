@@ -1,7 +1,0 @@
-mavros/mavros_extras
-/home/joaquin/catkin_ws/devel/.private/mavros_extras/lib/libmavros_extras.so /home/joaquin/catkin_ws/devel/lib/libmavros_extras.so
-/home/joaquin/catkin_ws/devel/.private/mavros_extras/lib/mavros_extras/servo_state_publisher /home/joaquin/catkin_ws/devel/lib/mavros_extras/servo_state_publisher
-/home/joaquin/catkin_ws/devel/.private/mavros_extras/lib/mavros_extras/copter_visualization /home/joaquin/catkin_ws/devel/lib/mavros_extras/copter_visualization
-/home/joaquin/catkin_ws/devel/.private/mavros_extras/lib/pkgconfig/mavros_extras.pc /home/joaquin/catkin_ws/devel/lib/pkgconfig/mavros_extras.pc
-/home/joaquin/catkin_ws/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake /home/joaquin/catkin_ws/devel/share/mavros_extras/cmake/mavros_extrasConfig-version.cmake
-/home/joaquin/catkin_ws/devel/.private/mavros_extras/share/mavros_extras/cmake/mavros_extrasConfig.cmake /home/joaquin/catkin_ws/devel/share/mavros_extras/cmake/mavros_extrasConfig.cmake

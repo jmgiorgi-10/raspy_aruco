@@ -145,7 +145,6 @@ include_directories(
  add_executable(cv_node3 src/cv_node3.cpp)
  add_executable(image_converter3 src/image_converter3.cpp)
  add_executable(mavros1 src/mavros1.cpp)
- add_executable(controller src/controller.cpp)
  add_executable(velocity_test src/velocity_test.cpp)
  add_executable(image_aruco_test src/image_aruco_test.cpp)
  add_executable(test_control src/test_control.cpp)
@@ -166,7 +165,6 @@ add_dependencies(cv_node2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_
 add_dependencies(image_converter3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(cv_node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(mavros1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(controller ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(velocity_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_aruco_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(test_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -195,10 +193,6 @@ add_dependencies(image_aruco_test2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_
  )
 
  target_link_libraries(mavros1
-   ${catkin_LIBRARIES}
- )
-
- target_link_libraries(controller
    ${catkin_LIBRARIES}
  )
 
@@ -236,6 +230,11 @@ target_link_libraries(image_aruco_test2
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
+
+ install(PROGRAMS
+   src/test_rospy
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
 
 ## Mark executables and/or libraries for installation
 # install(TARGETS ${PROJECT_NAME} ${PROJECT_NAME}_node

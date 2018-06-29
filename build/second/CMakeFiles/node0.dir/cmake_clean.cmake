@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/node0.dir/src/node0.cpp.o"
-  "/home/joaquin/catkin_ws/devel/.private/second/lib/second/node0.pdb"
-  "/home/joaquin/catkin_ws/devel/.private/second/lib/second/node0"
+  "/home/joaquin/catkin_ws/devel/lib/second/node0.pdb"
+  "/home/joaquin/catkin_ws/devel/lib/second/node0"
 )
 
 # Per-language clean rules from dependency scanning.

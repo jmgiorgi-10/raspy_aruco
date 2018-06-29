@@ -43,42 +43,42 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joaquin/catkin_ws/src/second
+CMAKE_SOURCE_DIR = /home/joaquin/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joaquin/catkin_ws/build/second
+CMAKE_BINARY_DIR = /home/joaquin/catkin_ws/build
 
 # Include any dependencies generated for this target.
-include CMakeFiles/image_aruco_test.dir/depend.make
+include second/CMakeFiles/image_aruco_test.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/image_aruco_test.dir/progress.make
+include second/CMakeFiles/image_aruco_test.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/image_aruco_test.dir/flags.make
+include second/CMakeFiles/image_aruco_test.dir/flags.make
 
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o: CMakeFiles/image_aruco_test.dir/flags.make
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o: /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o -c /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o: second/CMakeFiles/image_aruco_test.dir/flags.make
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o: /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o"
+	cd /home/joaquin/catkin_ws/build/second && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o -c /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp
 
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.i: cmake_force
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp > CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.i
+	cd /home/joaquin/catkin_ws/build/second && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp > CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.i
 
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s: cmake_force
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp -o CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s
+	cd /home/joaquin/catkin_ws/build/second && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joaquin/catkin_ws/src/second/src/image_aruco_test.cpp -o CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s
 
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires:
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires:
 
-.PHONY : CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires
+.PHONY : second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires
 
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides: CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/image_aruco_test.dir/build.make CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides.build
-.PHONY : CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides: second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires
+	$(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides.build
+.PHONY : second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides
 
-CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides.build: CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o
+second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.provides.build: second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o
 
 
 # Object files for target image_aruco_test
@@ -88,99 +88,99 @@ image_aruco_test_OBJECTS = \
 # External object files for target image_aruco_test
 image_aruco_test_EXTERNAL_OBJECTS =
 
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: CMakeFiles/image_aruco_test.dir/build.make
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libimage_geometry.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libcv_bridge.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_calib3d3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_core3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_features2d3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_flann3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_highgui3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_imgcodecs3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_imgproc3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_ml3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_objdetect3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_photo3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_shape3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_stitching3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_superres3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_video3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_videoio3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_videostab3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_viz3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_aruco3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_bgsegm3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_bioinspired3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_ccalib3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_cvv3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_datasets3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_dpm3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_face3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_fuzzy3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_hdf3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_line_descriptor3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_optflow3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_phase_unwrapping3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_plot3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_reg3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_rgbd3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_saliency3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_stereo3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_structured_light3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_surface_matching3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_text3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_xfeatures2d3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_ximgproc3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_xobjdetect3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_xphoto3.so.3.2.0
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libimage_transport.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libclass_loader.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/libPocoFoundation.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libdl.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libroscpp.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librosconsole.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libroslib.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librospack.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librostime.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libcpp_common.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test: CMakeFiles/image_aruco_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joaquin/catkin_ws/build/second/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/image_aruco_test.dir/link.txt --verbose=$(VERBOSE)
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: second/CMakeFiles/image_aruco_test.dir/build.make
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libimage_geometry.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libcv_bridge.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_calib3d3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_core3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_features2d3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_flann3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_highgui3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_imgcodecs3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_imgproc3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_ml3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_objdetect3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_photo3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_shape3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_stitching3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_superres3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_video3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_videoio3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_videostab3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_viz3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_aruco3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_bgsegm3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_bioinspired3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_ccalib3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_cvv3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_datasets3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_dpm3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_face3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_fuzzy3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_hdf3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_line_descriptor3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_optflow3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_phase_unwrapping3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_plot3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_reg3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_rgbd3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_saliency3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_stereo3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_structured_light3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_surface_matching3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_text3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_xfeatures2d3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_ximgproc3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_xobjdetect3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libopencv_xphoto3.so.3.2.0
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libimage_transport.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libclass_loader.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/libPocoFoundation.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libroscpp.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librosconsole.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libroslib.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librospack.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/librostime.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /opt/ros/kinetic/lib/libcpp_common.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/joaquin/catkin_ws/devel/lib/second/image_aruco_test: second/CMakeFiles/image_aruco_test.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/joaquin/catkin_ws/devel/lib/second/image_aruco_test"
+	cd /home/joaquin/catkin_ws/build/second && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/image_aruco_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/image_aruco_test.dir/build: /home/joaquin/catkin_ws/devel/.private/second/lib/second/image_aruco_test
+second/CMakeFiles/image_aruco_test.dir/build: /home/joaquin/catkin_ws/devel/lib/second/image_aruco_test
 
-.PHONY : CMakeFiles/image_aruco_test.dir/build
+.PHONY : second/CMakeFiles/image_aruco_test.dir/build
 
-CMakeFiles/image_aruco_test.dir/requires: CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires
+second/CMakeFiles/image_aruco_test.dir/requires: second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o.requires
 
-.PHONY : CMakeFiles/image_aruco_test.dir/requires
+.PHONY : second/CMakeFiles/image_aruco_test.dir/requires
 
-CMakeFiles/image_aruco_test.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/image_aruco_test.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/image_aruco_test.dir/clean
+second/CMakeFiles/image_aruco_test.dir/clean:
+	cd /home/joaquin/catkin_ws/build/second && $(CMAKE_COMMAND) -P CMakeFiles/image_aruco_test.dir/cmake_clean.cmake
+.PHONY : second/CMakeFiles/image_aruco_test.dir/clean
 
-CMakeFiles/image_aruco_test.dir/depend:
-	cd /home/joaquin/catkin_ws/build/second && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joaquin/catkin_ws/src/second /home/joaquin/catkin_ws/src/second /home/joaquin/catkin_ws/build/second /home/joaquin/catkin_ws/build/second /home/joaquin/catkin_ws/build/second/CMakeFiles/image_aruco_test.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/image_aruco_test.dir/depend
+second/CMakeFiles/image_aruco_test.dir/depend:
+	cd /home/joaquin/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joaquin/catkin_ws/src /home/joaquin/catkin_ws/src/second /home/joaquin/catkin_ws/build /home/joaquin/catkin_ws/build/second /home/joaquin/catkin_ws/build/second/CMakeFiles/image_aruco_test.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : second/CMakeFiles/image_aruco_test.dir/depend
 

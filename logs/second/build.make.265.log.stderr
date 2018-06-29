@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_converter3.cpp:85:22:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K)[m[K’ token
-     pub.publish(array);
-[01;32m[K                      ^[m[K
-make[2]: *** [CMakeFiles/image_converter3.dir/src/image_converter3.cpp.o] Error 1
-make[1]: *** [CMakeFiles/image_converter3.dir/all] Error 2
-make: *** [all] Error 2

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mavros1.dir/src/mavros1.cpp.o"
-  "/home/joaquin/catkin_ws/devel/.private/second/lib/second/mavros1.pdb"
-  "/home/joaquin/catkin_ws/devel/.private/second/lib/second/mavros1"
+  "/home/joaquin/catkin_ws/devel/lib/second/mavros1.pdb"
+  "/home/joaquin/catkin_ws/devel/lib/second/mavros1"
 )
 
 # Per-language clean rules from dependency scanning.

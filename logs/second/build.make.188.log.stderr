@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:[m[K In member function ‘[01m[Kvoid Controller::t_callback(const ConstPtr&)[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:25:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst ConstPtr {aka const class boost::shared_ptr<const std_msgs::Float32MultiArray_<std::allocator<void> > >}[m[K’ has no member named ‘[01m[Ksize[m[K’
-    if (arr_msg.size() == 0) {
-[01;32m[K                ^[m[K
-make[2]: *** [CMakeFiles/controller.dir/src/controller.cpp.o] Error 1
-make[1]: *** [CMakeFiles/controller.dir/all] Error 2
-make: *** [all] Error 2

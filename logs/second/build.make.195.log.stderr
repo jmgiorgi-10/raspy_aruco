@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/test_control.cpp:[m[K In function ‘[01m[Kvoid t_callback(const ConstPtr&)[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/test_control.cpp:20:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_err[m[K’ was not declared in this scope
-   if (x_err > 0) {
-[01;32m[K       ^[m[K
-make[2]: *** [CMakeFiles/test_control.dir/src/test_control.cpp.o] Error 1
-make[1]: *** [CMakeFiles/test_control.dir/all] Error 2
-make: *** [all] Error 2

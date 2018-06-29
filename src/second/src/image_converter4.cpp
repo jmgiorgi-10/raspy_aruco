@@ -67,7 +67,7 @@ public:
     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
     vector<Vec3d> rvecs, tvecs;
-    aruco::estimatePoseSingleMarkers(markerCorners, 3.0, cameraMatrix, distCoeffs, rvecs, tvecs);
+    aruco::estimatePoseSingleMarkers(markerCorners, 0.3, cameraMatrix, distCoeffs, rvecs, tvecs);
 
     aruco::drawDetectedMarkers(cv_ptr->image, markerCorners, markerIds);
 
@@ -91,16 +91,6 @@ public:
       Point2f markerCorner = (markerCorners[0])[0];  // Assuming only one marker, take top left corner.
       Mat u = (Mat1f(3,1) << markerCorner.x, markerCorner.y, float(1));  // Get pixel coordinates of top left corner.
 
-      // std_msgs::Float32MultiArray array;
-      // Mat t_mat = (Mat1f(3,1) << tvec[0], tvec[1], tvec[2]);
-      // Mat find = 
-
-      // for (int i = 0; i < 3; i++) {
-      //   array.data.push_back(tvec[i]);
-      // }
-
-      //pub.publish(array);
-
       Mat rot_mat;
       Mat t_mat = (Mat1f(3,1) << 0.0, 0.0, 0.0);
       Mat xx = (Mat1f(3,1) << 0.0, 0.0, 0.0);
@@ -112,8 +102,6 @@ public:
       rot_mat.convertTo(rot_mat, CV_32F);  // Convert rotation matrix output to 32-bit float.
       xx = rot_mat.t()*xx_prime - rot_mat.t()*t_mat;
 
-      
-
       for (int i = 0; i < 3; i++) {
         //array.data.push_back(xx.at<float>(i,0));
       }
@@ -121,8 +109,9 @@ public:
       // Define all matrix variables & other//
       float Z_pr = tvec[2];
       float Z = 0; // Marker center position in G-Frame.
-      Mat X = (Mat1f(3,1) << 3/2,3/2,0);  // Position of marker in G-Frame.
-      Mat X_h = (Mat1f(4,1) << 0,0,0,1); // (Homogeneous coords. position of marker in G-Frame).
+      Mat X = (Mat1f(3,1) << .3/2,.3/2, 0);  // Position of marker in G-Frame.
+
+      Mat X_h = (Mat1f(4,1) << .3/2, .3/2 , 0 ,1); // (Homogeneous coords. position of marker in G-Frame).
       Mat T = (Mat1f(3,1) << 0,0,0);  // Translation matrix; 3D B-Frame WRT GFrame (marker center)
 
       Mat RT = Mat(3, 4, CV_32F, float(0)); // Rotation and Translation matrix for 3D homogeneous coordinates. G-Frame --> B-Frame (camera).
@@ -140,15 +129,20 @@ public:
       rvec_yaw[1] = float(0);
       rvec_yaw[2] = rvec[2];
       Rodrigues(rvec_yaw, rot_mat_yaw);
-      rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);
+      rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);  // Convert elements to 32-bit Float.
+
+      //X = rot_mat_yaw * X;
+
+      //X = X * rot_mat_yaw;  // Adjust desired position by yaw rotation.
       // Calculate translation matrix.
       //T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * cameraMatrix * RT * X_h;
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
  
-      for (int i = 0; i < 3; i++) {
-        array.data.push_back(T.at<float>(i, 0));
+      for (int i = 0; i < 2; i++) {
+        array.data.push_back(T.at<float>(i, 0));  // Tx, Ty from VPHEA.
       }
+      array.data.push_back(tvec[2]); // Add Tz from VPBEA.
 
       pub.publish(array);
 

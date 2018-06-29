@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/velocity_test.cpp:[m[K In constructor ‘[01m[KVel::Vel()[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/velocity_test.cpp:19:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::TwistStamped {aka struct geometry_msgs::TwistStamped_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Klinear[m[K’
-   vel_msg.linear.x = 1;
-[01;32m[K           ^[m[K
-make[2]: *** [CMakeFiles/velocity_test.dir/src/velocity_test.cpp.o] Error 1
-make[1]: *** [CMakeFiles/velocity_test.dir/all] Error 2
-make: *** [all] Error 2

@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:[m[K In constructor ‘[01m[KController::Controller()[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/controller.cpp:19:68:[m[K [01;31m[Kerror: [m[K‘[01m[KContoller[m[K’ has not been declared
-    t_sub = nh2.subscribe<std_msgs::Float32MultiArray>("array", 10, Contoller::t_callback, this);
-[01;32m[K                                                                    ^[m[K
-make[2]: *** [CMakeFiles/controller.dir/src/controller.cpp.o] Error 1
-make[1]: *** [CMakeFiles/controller.dir/all] Error 2
-make: *** [all] Error 2

@@ -1,8 +1,0 @@
-prefix=/home/joaquin/catkin_ws/install
-
-Name: pid
-Description: Description of pid
-Version: 0.0.25
-Cflags: -I/home/joaquin/catkin_ws/install/include
-Libs: -L/home/joaquin/catkin_ws/install/lib 
-Requires: roscpp std_msgs message_runtime dynamic_reconfigure

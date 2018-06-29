@@ -1,8 +1,0 @@
-prefix=/home/joaquin/catkin_ws/install
-
-Name: libmavconn
-Description: Description of libmavconn
-Version: 0.26.0
-Cflags: -I/home/joaquin/catkin_ws/install/include -I/usr/include -I/home/joaquin/catkin_ws/devel/include
-Libs: -L/home/joaquin/catkin_ws/install/lib -lmavconn -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-Requires: 

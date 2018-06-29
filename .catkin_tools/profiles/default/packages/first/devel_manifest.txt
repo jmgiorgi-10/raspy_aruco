@@ -1,6 +1,0 @@
-first
-/home/joaquin/catkin_ws/devel/.private/first/lib/pkgconfig/first.pc /home/joaquin/catkin_ws/devel/lib/pkgconfig/first.pc
-/home/joaquin/catkin_ws/devel/.private/first/lib/first/node0 /home/joaquin/catkin_ws/devel/lib/first/node0
-/home/joaquin/catkin_ws/devel/.private/first/lib/first/node1 /home/joaquin/catkin_ws/devel/lib/first/node1
-/home/joaquin/catkin_ws/devel/.private/first/share/first/cmake/firstConfig-version.cmake /home/joaquin/catkin_ws/devel/share/first/cmake/firstConfig-version.cmake
-/home/joaquin/catkin_ws/devel/.private/first/share/first/cmake/firstConfig.cmake /home/joaquin/catkin_ws/devel/share/first/cmake/firstConfig.cmake

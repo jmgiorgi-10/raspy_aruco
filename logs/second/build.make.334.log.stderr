@@ -1,7 +1,0 @@
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:[m[K In member function ‘[01m[Kvoid ImageConverter::imageCb(const ImageConstPtr&)[m[K’:
-[01m[K/home/joaquin/catkin_ws/src/second/src/image_aruco_test2.cpp:127:30:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_request[m[K’ was not declared in this scope
-       if (ros::Time::now() - last_request > ros::Duration(0.5)) {  // Print value of T every half a second.
-[01;32m[K                              ^[m[K
-make[2]: *** [CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.o] Error 1
-make[1]: *** [CMakeFiles/image_aruco_test2.dir/all] Error 2
-make: *** [all] Error 2

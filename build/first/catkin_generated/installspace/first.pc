@@ -1,8 +1,0 @@
-prefix=/home/joaquin/catkin_ws/install
-
-Name: first
-Description: Description of first
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/joaquin/catkin_ws/install/lib 
-Requires: 

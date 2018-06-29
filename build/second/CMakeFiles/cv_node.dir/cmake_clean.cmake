@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cv_node.dir/src/cv_node.cpp.o"
-  "/home/joaquin/catkin_ws/devel/.private/second/lib/second/cv_node.pdb"
-  "/home/joaquin/catkin_ws/devel/.private/second/lib/second/cv_node"
+  "/home/joaquin/catkin_ws/devel/lib/second/cv_node.pdb"
+  "/home/joaquin/catkin_ws/devel/lib/second/cv_node"
 )
 
 # Per-language clean rules from dependency scanning.
