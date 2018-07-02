@@ -91,6 +91,7 @@ public:
       Mat u = (Mat1f(3,1) << markerCorner.x, markerCorner.y, float(1));  // Get pixel coordinates of top left corner.
 
       std_msgs::Float32MultiArray array;
+      Mat t_mat = (Mat1f(3,1) << tvec[0], tvec[1], tvec[2]); 
 
       for (int i = 0; i < 3; i++) {
         array.data.push_back(tvec[i]);
@@ -99,7 +100,7 @@ public:
       pub.publish(array);
 
       Mat rot_mat;
-      Mat t_mat = (Mat1f(3,1) << 0.0, 0.0, 0.0);
+     // Mat t_mat = (Mat1f(3,1) << 0.0, 0.0, 0.0);
       Mat xx = (Mat1f(3,1) << 0.0, 0.0, 0.0);
       Mat xx_prime = (Mat1f(3,1) << 0.0,0.0,0.0);  // Center of aruco marker, in aruco frame.
       for (int i = 0; i < 3; i++) {
@@ -108,6 +109,8 @@ public:
       Rodrigues(rvec, rot_mat);
       rot_mat.convertTo(rot_mat, CV_32F);  // Convert rotation matrix output to 32-bit float.
       xx = rot_mat.t()*xx_prime - rot_mat.t()*t_mat;
+
+      
 
       for (int i = 0; i < 3; i++) {
         //array.data.push_back(xx.at<float>(i,0));

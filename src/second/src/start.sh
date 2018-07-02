@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 1
 cd ~/src/Firmware
 source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/posix_sitl_default
 sleep 0.5

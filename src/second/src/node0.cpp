@@ -25,150 +25,106 @@ geometry_msgs::PoseStamped attitude;
 mavros_msgs::AttitudeTarget set_pos{};
 
 void state_cb(const mavros_msgs::State::ConstPtr& msg){
-    current_state = *msg;
+  current_state = *msg;
 }
-// Callback to tvec array from ARUCO marker
-// void ar_callback(const std_msgs::Float32MultiArray::ConstPtr& array) {
-//     if (array->data.size() != 0) {  // Check if any marker detected.
-//         out_of_sight = false;
-//         if ((array->data)[1] > 0) {
-//             vel_msg.twist.linear.x = .5;  // Rudimentary x,y control system.
-//             //attitude.pose.orientation.y = -.1;
-//         } else if (array->data[1]   < 0) {
-//             vel_msg.twist.linear.x = -.5;
-//             //attitude.pose.orientation.y = .1;
-//         }
-//         if ((array->data)[0] > 0) {
-//             vel_msg.twist.linear.y = .5;  // Opposite because does not start in right orientation.
-//             //attitude.pose.orientation.x = -.1;
-
-//         } else if (array->data[0] < 0) { 
-//             vel_msg.twist.linear.y = -.5; // Y sign inversed because RH coordinate systems, and for drone Z is downwards.
-//             //attitude.pose.orientation.x = .1;
-//         }
-//     } else {
-//         out_of_sight = true;
-//     }
-// }
-
 
 void vel_CB(const geometry_msgs::TwistStamped::ConstPtr& vel) {
   vel_msg.twist.linear.x = vel->twist.linear.x;
   vel_msg.twist.linear.y = vel->twist.linear.y;
   vel_msg.twist.linear.z = -vel->twist.linear.z;
+  vel_msg.twist.angular.z = vel->twist.angular.z; 
 }
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "offb_node");
-    ros::NodeHandle nh;
+  ros::init(argc, argv, "offb_node");
+  ros::NodeHandle nh;
 
-    ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
-            ("mavros/state", 10, state_cb);
-    ros::Publisher local_pos_pub = nh.advertise<geometry_msgs::PoseStamped>
-            ("mavros/setpoint_position/local", 10);
-    ros::Publisher vel_pub = nh.advertise<geometry_msgs::TwistStamped>("mavros/setpoint_velocity/cmd_vel", 10);
-    ros::ServiceClient arming_client = nh.serviceClient<mavros_msgs::CommandBool>
-            ("mavros/cmd/arming");
-    ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
-            ("mavros/set_mode");
-    //ros::Subscriber arr_sub = nh.subscribe<std_msgs::Float32MultiArray>("array", 5, ar_callback);
-    ros::Publisher alt_pub = nh.advertise<mavros_msgs::Altitude>("mavros/altitude", 10);
+  ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
+          ("mavros/state", 10, state_cb);
+  ros::Publisher local_pos_pub = nh.advertise<geometry_msgs::PoseStamped>
+          ("mavros/setpoint_position/local", 10);
+  ros::Publisher vel_pub = nh.advertise<geometry_msgs::TwistStamped>("mavros/setpoint_velocity/cmd_vel", 10);
+  ros::ServiceClient arming_client = nh.serviceClient<mavros_msgs::CommandBool>
+          ("mavros/cmd/arming");
+  ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
+          ("mavros/set_mode");
 
-    //ros::Publisher att_pub = nh.advertise<mavros_msgs::AttitudeTarget>("mavros/setpoint_attitude/attitude", 10);  // Publisher to change pitch, roll, and yaw.
-    set_pos.type_mask = mavros_msgs::AttitudeTarget::IGNORE_ROLL_RATE | mavros_msgs::AttitudeTarget::IGNORE_PITCH_RATE | mavros_msgs::AttitudeTarget::IGNORE_YAW_RATE | mavros_msgs::AttitudeTarget::IGNORE_THRUST;
-    set_pos.thrust = 0.5f;
+  ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/setpoint_attitude/attitude", 10);
 
-    ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/setpoint_attitude/attitude", 10);
+  ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("vel", 5, vel_CB);
 
-    //ros::Subscriber vel_x_sub = nh.subscribe<std_msgs::Float32>("vel_x", 5, vel_x_CB);
-    //ros::Subscriber vel_y_sub = nh.subscribe<std_msgs::Float32>("vel_y", 5, vel_y_CB);
+  //the setpoint publishing rate MUST be faster than 2Hz to not drop out of OFFBOARD mode.
+  ros::Rate rate(20.0);
 
-    ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("vel", 5, vel_CB);
+  vel_msg.twist.linear.x = 0;  // Set all initial velocities to zero.
+  vel_msg.twist.linear.y = 0;
+  vel_msg.twist.linear.z = 0;
+  vel_msg.twist.angular.z = 0;
 
-    //the setpoint publishing rate MUST be faster than 2Hz to not drop out of OFFBOARD mode.
-    ros::Rate rate(20.0);
+  // wait for FCU connection
+  while(ros::ok() && !current_state.connected){
+      ros::spinOnce();
+      rate.sleep();
+  }
 
-    vel_msg.twist.linear.x = 0;  // Set all initial velocities to zero.
-    vel_msg.twist.linear.y = 0;
-    vel_msg.twist.linear.z = 0;
+  geometry_msgs::PoseStamped pose;
 
-    attitude.pose.orientation.x = 0;
-    attitude.pose.orientation.y = 0;
+  pose.pose.position.x = 0;
+  pose.pose.position.y = 0;
+  pose.pose.position.z = 1.5;
 
-    alt_msg.local = 1.5;  // Set local altitude message value.
+  //send a few setpoints before starting
+  for(int i = 100; ros::ok() && i > 0; --i){
+      local_pos_pub.publish(pose);
+      ros::spinOnce();
+      rate.sleep();
+  }
 
-    // wait for FCU connection
-    while(ros::ok() && !current_state.connected){
-        ros::spinOnce();
-        rate.sleep();
-    }
+  mavros_msgs::SetMode offb_set_mode;
+  offb_set_mode.request.custom_mode = "OFFBOARD";
 
-    geometry_msgs::PoseStamped pose;
-    pose.pose.position.x = 0;
-    pose.pose.position.y = 0;
-    pose.pose.position.z = 1.5;
-    //pose.pose.orientation.z = 3.14;
+  mavros_msgs::CommandBool arm_cmd;
+  arm_cmd.request.value = true;
 
-    //send a few setpoints before starting
-    for(int i = 100; ros::ok() && i > 0; --i){
-        local_pos_pub.publish(pose);
-        ros::spinOnce();
-        rate.sleep();
-    }
+  ros::Time last_request = ros::Time::now();
 
-    mavros_msgs::SetMode offb_set_mode;
-    offb_set_mode.request.custom_mode = "OFFBOARD";
-
-    mavros_msgs::CommandBool arm_cmd;
-    arm_cmd.request.value = true;
-
-    ros::Time last_request = ros::Time::now();
-
-    while(ros::ok()){
-        if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0))){
-            if( set_mode_client.call(offb_set_mode) &&
-                offb_set_mode.response.mode_sent){
-                ROS_INFO("Offboard enabled");
-            }
-            last_request = ros::Time::now();
-        } else {
-            if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0))){
-                if( arming_client.call(arm_cmd) &&
-                    arm_cmd.response.success){
-                    ROS_INFO("Vehicle armed");
-                
-                last_request = ros::Time::now();
-            }
-            }
-          }
-        if ((ros::Time::now() - last_request < ros::Duration(7))) {
-            //vel_msg.twist.angular.z()
-            local_pos_pub.publish(pose);
-
-            cout << ros::Time::now() - last_request << "\n";
-        } else {
-            if (!out_of_sight) {
-                vel_pub.publish(vel_msg);
-                //att_pub.publish(attitude);
-
-                //alt_pub.publish(alt_msg);
-                //local_pos_pub.publish(pose);
-            } else {
-                local_pos_pub.publish(pose);
-            }
-            // Reset vel_msg to null.
-            vel_msg.twist.linear.x = 0;
-            vel_msg.twist.linear.y = 0;
-
-            attitude.pose.orientation.x = 0;
-            attitude.pose.orientation.y = 0;
-            //vel_msg.twist.linear.z = 0;
-
+  while(ros::ok()){
+    if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0))){
+        if( set_mode_client.call(offb_set_mode) &&
+            offb_set_mode.response.mode_sent){
+             ROS_INFO("Offboard enabled");
         }
-        ros::spinOnce();
-        rate.sleep();
-    }
+        last_request = ros::Time::now();
+      } else {
+        if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0))){
+          if( arming_client.call(arm_cmd) &&
+            arm_cmd.response.success){
+            ROS_INFO("Vehicle armed");
+              
+            last_request = ros::Time::now();
+          }
+          }
+        }
+      if ((ros::Time::now() - last_request < ros::Duration(7))) {
+        local_pos_pub.publish(pose);
 
-    return 0;
+        cout << ros::Time::now() - last_request << "\n";
+      } else {
+          if (!out_of_sight) {
+              vel_pub.publish(vel_msg);
+          } else {
+              local_pos_pub.publish(pose);
+          }
+          // Reset vel_msg to null.
+          vel_msg.twist.linear.x = 0;
+          vel_msg.twist.linear.y = 0;
+          vel_msg.twist.linear.z = 0;
+          vel_msg.twist.angular.z = 0;
+      }
+      ros::spinOnce();
+      rate.sleep();
+  }
+
+  return 0;
 }

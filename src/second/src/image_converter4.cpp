@@ -39,15 +39,10 @@ public:
 
     // Defining camera values
     cameraMatrix = (Mat1f(3,3) << 476.7030836014194, 0.0, 400.5, 0.0, 476.7030836014194, 400.5, 0.0, 0.0, 1.0);
-    //distCoeffs;
-    //aruco::MarkerDetector Detector;
-    //std_msgs::Float32MultiArray array;
-
   }
 
   void imageCb(const sensor_msgs::ImageConstPtr& msg)
   {
-
         cv_bridge::CvImagePtr cv_ptr;
     try
     {
@@ -131,21 +126,21 @@ public:
       Rodrigues(rvec_yaw, rot_mat_yaw);
       rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);  // Convert elements to 32-bit Float.
 
-      //X = rot_mat_yaw * X;
-
-      //X = X * rot_mat_yaw;  // Adjust desired position by yaw rotation.
-      // Calculate translation matrix.
-      //T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * cameraMatrix * RT * X_h;
+     // X = rot_mat_yaw * X;
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
  
       for (int i = 0; i < 2; i++) {
         array.data.push_back(T.at<float>(i, 0));  // Tx, Ty from VPHEA.
       }
-      array.data.push_back(tvec[2]); // Add Tz from VPBEA.
+      array.data.push_back(tvec[2]);  // Add Tz from VPBEA.
+      array.data.push_back(rvec[2]);  // Push back yaw error.
 
       pub.publish(array);
 
+    } else {
+      std_msgs::Float32MultiArray array;
+      pub.publish(array);  // Publish empty array if no marker detected.
     }
     
   }
