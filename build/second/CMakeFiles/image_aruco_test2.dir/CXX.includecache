@@ -13,6 +13,8 @@ image_transport/image_transport.h
 -
 cv_bridge/cv_bridge.h
 -
+math.h
+-
 sensor_msgs/image_encodings.h
 -
 opencv2/opencv.hpp

@@ -1,6 +1,7 @@
 #include <ros/ros.h>
 #include <image_transport/image_transport.h>
 #include <cv_bridge/cv_bridge.h>
+#include <math.h>
 #include <sensor_msgs/image_encodings.h>
 #include <opencv2/opencv.hpp>
 #include <opencv2/aruco.hpp>
@@ -85,6 +86,9 @@ public:
     //////////////////////
     if (tvecs.size() > 0) {
       Vec3d rvec = rvecs.at(0);  // Only one marker being detected so far.
+
+      //cout << rvec[2] << '\n';
+
       Vec3d tvec = tvecs.at(0);
 
       Point2f markerCorner = (markerCorners[0])[0];  // Assuming only one marker, take top left corner.
@@ -138,14 +142,43 @@ public:
       rvec_yaw[1] = float(0);
       rvec_yaw[2] = rvec[2];
       Rodrigues(rvec_yaw, rot_mat_yaw);
-      rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);
+      rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F); 
+
+      // Find & print yaw angle.n
+      float theta = -asin(rot_mat.at<float>(2,0));
+
+
+      float yaw = atan2(rot_mat.at<float>(1,0) / cos(theta), rot_mat.at<float>(0,0) / cos(theta));
+      yaw = yaw * 180/3.14;
+      cout << yaw << '\n';
+
+      // float yaw = asin(rot_mat_yaw.at<float>(1, 0));
+      // yaw = yaw * 180/3.14;
+      // cout << yaw << ' ';
+       //float yaw = acos(rot_mat_yaw.at<float>(0, 0));
+       //yaw = yaw * 180/3.14;
+       //cout << yaw << '\n';
+
+       //cout << rvec[2] * 180 / 3.14<< '\n';
+
+
+
+      //float yaw = -asin(rot_mat_yaw.at<float>(2, 0));
+      //cout << yaw * 180/3.14 << '\n';
+
+
+      // for(int i = 0; i < 3; i++) {
+      //   cout << rvec[i] << ' ';
+      // }
+      // cout << '\n';
+
       // Calculate translation matrix.
       //T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * cameraMatrix * RT * X_h;
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
  
       if (ros::Time::now() - last_request > ros::Duration(0.5)) {  // Print value of T every half a second.
-        cout << T << '\n';
+        //cout << T << '\n';
         last_request = ros::Time::now();
       }
     }

@@ -118,15 +118,27 @@ public:
         }
       }
       //Construct yaw rotation matrix.
-      Mat rot_mat_yaw;
-      Vec3d rvec_yaw;
-      rvec_yaw[0] = float(0);
-      rvec_yaw[1] = float(0);
-      rvec_yaw[2] = rvec[2];
-      Rodrigues(rvec_yaw, rot_mat_yaw);
-      rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);  // Convert elements to 32-bit Float.
+      // Mat rot_mat_yaw;
+      // Vec3d rvec_yaw;
+      // rvec_yaw[0] = float(0);
+      // rvec_yaw[1] = float(0);
+      // rvec_yaw[2] = rvec[2];
+      // Rodrigues(rvec_yaw, rot_mat_yaw);
+      // rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);  // Convert elements to 32-bit Float.
 
-     // X = rot_mat_yaw * X;
+      // Convert rotation matrix to Euler angles.
+
+      float theta = -asin(rot_mat.at<float>(2,0));
+      float psi = atan2(rot_mat.at<float>(2,1), rot_mat.at<float>(2,2));
+      float yaw = atan2(rot_mat.at<float>(1,0) / cos(theta), rot_mat.at<float>(0,0) / cos(theta));
+
+      // Populate Z-rotation matrix //
+      Mat rot_mat_yaw = (Mat1f(3,3) << 0, 0, 0);
+      rot_mat_yaw.at<float>(0,0) = cos(yaw);
+      rot_mat_yaw.at<float>(1,0) = sin(yaw);
+      rot_mat_yaw.at<float>(0,1) = -sin(yaw);
+      rot_mat_yaw.at<float>(1,1) = cos(yaw);
+      rot_mat_yaw.at<float>(2,2) = float(1);
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
  
@@ -134,7 +146,15 @@ public:
         array.data.push_back(T.at<float>(i, 0));  // Tx, Ty from VPHEA.
       }
       array.data.push_back(tvec[2]);  // Add Tz from VPBEA.
-      array.data.push_back(rvec[2]);  // Push back yaw error.
+
+
+
+
+
+
+      yaw = yaw * 180/3.14;
+
+      array.data.push_back(yaw);  // Push back yaw error in degrees.
 
       pub.publish(array);
 

@@ -17,6 +17,7 @@
 using namespace std;
 
 geometry_msgs::TwistStamped vel_msg;
+geometry_msgs::TwistStamped vel_msg2;
 mavros_msgs::Altitude alt_msg;
 bool out_of_sight = false;
 mavros_msgs::State current_state;
@@ -33,6 +34,8 @@ void vel_CB(const geometry_msgs::TwistStamped::ConstPtr& vel) {
   vel_msg.twist.linear.y = vel->twist.linear.y;
   vel_msg.twist.linear.z = -vel->twist.linear.z;
   vel_msg.twist.angular.z = vel->twist.angular.z; 
+
+  vel_msg2.twist.angular.z = vel->twist.angular.z;  // Message for only yaw.
 }
 
 int main(int argc, char **argv)
@@ -61,6 +64,11 @@ int main(int argc, char **argv)
   vel_msg.twist.linear.y = 0;
   vel_msg.twist.linear.z = 0;
   vel_msg.twist.angular.z = 0;
+
+  vel_msg2.twist.linear.x = 0;
+  vel_msg2.twist.linear.y = 0;
+  vel_msg2.twist.linear.z = 0;
+  vel_msg2.twist.angular.z = 0;
 
   // wait for FCU connection
   while(ros::ok() && !current_state.connected){
@@ -108,23 +116,21 @@ int main(int argc, char **argv)
         }
       if ((ros::Time::now() - last_request < ros::Duration(7))) {
         local_pos_pub.publish(pose);
-
         cout << ros::Time::now() - last_request << "\n";
       } else {
-          if (!out_of_sight) {
-              vel_pub.publish(vel_msg);
+          if (ros::Time::now() - last_request < ros::Duration(12)) {
+              vel_pub.publish(vel_msg2);
           } else {
-              local_pos_pub.publish(pose);
+            vel_pub.publish(vel_msg);
           }
           // Reset vel_msg to null.
-          vel_msg.twist.linear.x = 0;
-          vel_msg.twist.linear.y = 0;
-          vel_msg.twist.linear.z = 0;
-          vel_msg.twist.angular.z = 0;
+          // vel_msg.twist.linear.x = 0;
+          // vel_msg.twist.linear.y = 0;
+          // vel_msg.twist.linear.z = 0;
+          // vel_msg.twist.angular.z = 0;
       }
       ros::spinOnce();
       rate.sleep();
   }
-
   return 0;
 }
