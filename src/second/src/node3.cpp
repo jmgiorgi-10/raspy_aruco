@@ -21,31 +21,14 @@ using namespace std;
 geometry_msgs::TwistStamped vel_msg;
 geometry_msgs::TwistStamped vel_msg2;
 mavros_msgs::Altitude alt_msg;
+bool out_of_sight = false;
 mavros_msgs::State current_state;
 geometry_msgs::Quaternion quaternion;
 geometry_msgs::PoseStamped attitude;
 mavros_msgs::AttitudeTarget set_pos{};
 
-bool init;
-
-bool linear;  // Switch between setting linear & angular velocities.
-
 void state_cb(const mavros_msgs::State::ConstPtr& msg){
   current_state = *msg;
-}
-
-void vel_CB(const geometry_msgs::TwistStamped::ConstPtr& vel) {
-  vel_msg.twist.linear.x = vel->twist.linear.x;
-  vel_msg.twist.linear.y = vel->twist.linear.y;
-  vel_msg.twist.linear.z = -vel->twist.linear.z;  // Flip sign to change frame.
-  //vel_msg.twist.angular.z = vel->twist.angular.z; 
-  
-  vel_msg2.twist.linear.x = 0;
-  vel_msg2.twist.linear.y = 0;
-  vel_msg2.twist.linear.z = 0;
-  vel_msg2.twist.angular.x = 0;
-  vel_msg2.twist.angular.y = 0;
-  vel_msg2.twist.angular.z = vel->twist.angular.z;  // Message w/ yaw.
 }
 
 int main(int argc, char **argv)
@@ -65,12 +48,11 @@ int main(int argc, char **argv)
 
   ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/setpoint_attitude/attitude", 10);
 
-  ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("vel", 5, vel_CB);
 
   //the setpoint publishing rate MUST be faster than 2Hz to not drop out of OFFBOARD mode.
   ros::Rate rate(20.0);
 
-  vel_msg.twist.linear.x = 0;  // Set all initial velocities to zero.
+  vel_msg.twist.linear.x = .7;  // Set all initial velocities to zero.
   vel_msg.twist.linear.y = 0;
   vel_msg.twist.linear.z = 0;
   vel_msg.twist.angular.z = 0;
@@ -78,11 +60,7 @@ int main(int argc, char **argv)
   vel_msg2.twist.linear.x = 0;
   vel_msg2.twist.linear.y = 0;
   vel_msg2.twist.linear.z = 0;
-  vel_msg2.twist.angular.z = 0;
-
-  linear = true;
-
-  init = true;
+  vel_msg2.twist.angular.z = 1;
 
   // wait for FCU connection
   while(ros::ok() && !current_state.connected){
@@ -95,6 +73,7 @@ int main(int argc, char **argv)
   pose.pose.position.x = 0;
   pose.pose.position.y = 0;
   pose.pose.position.z = 1.5;
+
 
   //send a few setpoints before starting
   for(int i = 100; ros::ok() && i > 0; --i){
@@ -111,8 +90,7 @@ int main(int argc, char **argv)
 
   ros::Time last_request = ros::Time::now();
 
-  // LOOP 1 -> SET OFFBOARD
-  while(ros::ok()) {
+  while(ros::ok()){
     if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0))){
         if( set_mode_client.call(offb_set_mode) &&
             offb_set_mode.response.mode_sent){
@@ -129,35 +107,44 @@ int main(int argc, char **argv)
           }
           }
         }
-       if (ros::Time::now() - last_request < ros::Duration(7)) {
-         local_pos_pub.publish(pose);
-         cout << ros::Time::now() - last_request << "\n";
-       } else {
-           last_request = ros::Time::now();
-           break;
-       }
-    ros::spinOnce();
-    rate.sleep();
+      if ((ros::Time::now() - last_request < ros::Duration(7))) {
+        local_pos_pub.publish(pose);
+        cout << ros::Time::now() - last_request << "\n";
+      } else {
+        last_request = ros::Time::now();
+        break;
+      }
+      ros::spinOnce();
+      rate.sleep();
   }
 
-  // LOOP 2 -> VELOCITY COMMANDS
-  float yaw = 0;
-
-  while(ros::ok()) {
-    ///if (ros::Time::now() - last_request < ros::Duration(4)) {
-      vel_pub.publish(vel_msg);
-      //cout << "linear" << '\n';
-  //   } else if (ros::Time::now() - last_request < ros::Duration(7)) {
-  //     yaw += .03;
-  //     pose.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);
-  //     local_pos_pub.publish(pose);
-  //     cout << "angular" << '\n';
-  //   } else {
+  // while(ros::ok()) {
+  //   if(ros::Time::now() - last_request < ros::Duration(3)) {
+  //     vel_msg.twist.linear.x = 1; // Move in x-direction
+  //     vel_pub.publish(vel_msg);
+  //     cout << "linear" << '\n';
+  //   } else if (ros::Time::now() - last_request < ros::Duration(6)) {
+  //     vel_msg.twist.linear.x = 0;
+  //     vel_pub.publish(vel_msg);
+  //     cout << "angular" << '\n';  // Halt before rotating.
+  //   } else if (ros::Time::now() - last_request < ros::Duration(9)) {
+  //     vel_msg2.twist.angular.z = 1.5;
+  //     vel_pub.publish(vel_msg2);  // Rotate.
+  //   } else if (ros::Time::now() - last_request < ros::Duration(12)) {
+  //     vel_pub.publish(vel_msg);  // Halt before moving again.
+  //   }
+  //   else {
   //     last_request = ros::Time::now();
   //   }
-    ros::spinOnce();
-    rate.sleep();
-   }
+  // }
+
+
+  while(ros::ok()) {
+    //geometry_msgs::PoseStamped pose2;
+    pose.pose.orientation = tf::createQuaternionMsgFromYaw(1.57);
+    local_pos_pub.publish(pose);
+  }
+
 
   return 0;
 }

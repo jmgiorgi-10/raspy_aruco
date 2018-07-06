@@ -150,7 +150,14 @@ public:
 
       float yaw = atan2(rot_mat.at<float>(1,0) / cos(theta), rot_mat.at<float>(0,0) / cos(theta));
       yaw = yaw * 180/3.14;
-      cout << yaw << '\n';
+
+      for(int i = 0; i < 3; i++) {
+        cout << tvec[i] << ' ';
+      }
+      cout << '\n';
+
+
+      //cout << yaw << '\n';
 
       // float yaw = asin(rot_mat_yaw.at<float>(1, 0));
       // yaw = yaw * 180/3.14;
@@ -173,9 +180,11 @@ public:
       // cout << '\n';
 
       // Calculate translation matrix.
-      //T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * cameraMatrix * RT * X_h;
+      X = rot_mat_yaw * X;
 
-      T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
+      T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * u;
+
+      //T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
  
       if (ros::Time::now() - last_request > ros::Duration(0.5)) {  // Print value of T every half a second.
         //cout << T << '\n';

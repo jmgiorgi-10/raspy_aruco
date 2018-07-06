@@ -150,6 +150,7 @@ include_directories(
  add_executable(test_control src/test_control.cpp)
  add_executable(image_converter4 src/image_converter4.cpp)
  add_executable(image_aruco_test2 src/image_aruco_test2.cpp)
+ add_executable(node3 src/node3.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -170,6 +171,7 @@ add_dependencies(image_aruco_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_E
 add_dependencies(test_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_converter4 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_aruco_test2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(node0
@@ -216,6 +218,10 @@ target_link_libraries(image_aruco_test2
    ${catkin_LIBRARIES}
  )
 
+ target_link_libraries(node3
+   ${catkin_LIBRARIES}
+ )
+
 
 #############
 ## Install ##
@@ -232,7 +238,7 @@ target_link_libraries(image_aruco_test2
 # )
 
  install(PROGRAMS
-   src/test_rospy
+ 
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 

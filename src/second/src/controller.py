@@ -27,21 +27,28 @@ class Controller:
 		self.vel_cmd = geometry_msgs.msg.TwistStamped();
 		self.yaw_cmd = geometry_msgs.msg.Quaternion();
 
-		self.pid_x = PID(1.5, 0, .4, .8, 0);
-		self.pid_y = PID(1.5, 0, .4, .8, 0);
+    #sign flip experiment
+		self.pid_x = PID(1.5, 0, .4, 1, 0);
+		self.pid_y = PID(1.5, 0, .4, 1, 0);
 		self.pid_z = PID(.8, 0, .2, .4, 1.5);
 
 	def callback(self, array):
 		if len(array.data) > 0:
-			self.Tx = array.data[1];  # Body frame: z point ups; Marker frame: z points down (both right handed frames).
+			# self.Tx = array.data[1];  # Body frame: z point ups; Marker frame: z points down (both right handed frames).
+			# self.Ty = array.data[0];
+			# self.Tz = array.data[2];
+
+			# Put back 'correct' order experiment #
+			self.Tx = array.data[1];
 			self.Ty = array.data[0];
 			self.Tz = array.data[2];
+
 			self.yaw = array.data[3];  # Access current yaw in degrees.
 
 		  ## Choose shortest setpoint, based on current yaw translation ##
 			if self.first_yaw:
 				if self.yaw > 0:
-					self.pid_yaw = PID(1.5, 0, .4, .8, 0);
+					self.pid_yaw = PID(-1.5, 0, -.4, .8, 0);
 				else:
 					self.pid_yaw = PID(-1.5, 0, -.4, .8, 0);
 				self.first_yaw = False;

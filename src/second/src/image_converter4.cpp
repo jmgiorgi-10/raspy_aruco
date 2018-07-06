@@ -109,6 +109,10 @@ public:
       Mat X_h = (Mat1f(4,1) << .3/2, .3/2 , 0 ,1); // (Homogeneous coords. position of marker in G-Frame).
       Mat T = (Mat1f(3,1) << 0,0,0);  // Translation matrix; 3D B-Frame WRT GFrame (marker center)
 
+      for (int i = 0; i < 3; i++) {
+        T.at<float>(i, 0) = tvec[i];
+      }
+
       Mat RT = Mat(3, 4, CV_32F, float(0)); // Rotation and Translation matrix for 3D homogeneous coordinates. G-Frame --> B-Frame (camera).
       // Populate RT Matrix:
       for (int i = 0; i < 3; i++) { // iterate rows.
@@ -118,7 +122,7 @@ public:
         }
       }
       //Construct yaw rotation matrix.
-      // Mat rot_mat_yaw;
+      // Mat rot_rot_yaw;
       // Vec3d rvec_yaw;
       // rvec_yaw[0] = float(0);
       // rvec_yaw[1] = float(0);
@@ -141,6 +145,31 @@ public:
       rot_mat_yaw.at<float>(2,2) = float(1);
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
+      //T = -rot_mat_yaw.inv() * T;
+
+      //Mat R_new = rot_mat.inv();
+      //Mat T_new = -rot_mat.inv() * T;
+
+      //Mat X_new = R_new * X + T_new;
+
+      //Mat X_new =  T;
+
+
+
+      // Test 2
+
+      //T = rot_mat_yaw * T;
+
+      // Test //
+      //T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * u;
+ 
+      //T = rot_mat_yaw * T;
+
+      //////    Two Tries       ////////
+
+      //T = rot_mat_yaw * X - cameraMatrix.inv() * (Z - Z_pr) * u;
+
+     // T = rot_mat_yaw.inv() * X - cameraMatrix.inv() * (Z - Z_pr) * u;
  
       for (int i = 0; i < 2; i++) {
         array.data.push_back(T.at<float>(i, 0));  // Tx, Ty from VPHEA.
@@ -148,8 +177,9 @@ public:
       array.data.push_back(tvec[2]);  // Add Tz from VPBEA.
 
 
-
-
+      // for (int i = 0; i < 3; i++) {
+      //   array.data.push_back(tvec[i]);
+      // }
 
 
       yaw = yaw * 180/3.14;

@@ -23,6 +23,7 @@
 /home/joaquin/catkin_ws/build/second/CMakeFiles/test.dir
 /home/joaquin/catkin_ws/build/second/CMakeFiles/install/local.dir
 /home/joaquin/catkin_ws/build/second/CMakeFiles/install/strip.dir
+/home/joaquin/catkin_ws/build/second/CMakeFiles/node3.dir
 /home/joaquin/catkin_ws/build/second/CMakeFiles/image_aruco_test2.dir
 /home/joaquin/catkin_ws/build/second/CMakeFiles/edit_cache.dir
 /home/joaquin/catkin_ws/build/second/CMakeFiles/test_control.dir

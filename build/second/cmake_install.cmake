@@ -47,7 +47,3 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/second" TYPE FILE FILES "/home/joaquin/catkin_ws/src/second/package.xml")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/second" TYPE PROGRAM FILES "/home/joaquin/catkin_ws/src/second/src/test_rospy")
-endif()
-

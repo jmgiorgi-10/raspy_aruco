@@ -257,6 +257,19 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named node3
+
+# Build rule for target.
+node3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 node3
+.PHONY : node3
+
+# fast build rule for target.
+node3/fast:
+	$(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/build
+.PHONY : node3/fast
+
+#=============================================================================
 # Target rules for targets named image_aruco_test2
 
 # Build rule for target.
@@ -744,6 +757,7 @@ help:
 	@echo "... test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... node3"
 	@echo "... image_aruco_test2"
 	@echo "... test_control"
 	@echo "... image_converter4"

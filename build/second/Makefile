@@ -166,6 +166,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+second/CMakeFiles/node3.dir/rule:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/node3.dir/rule
+.PHONY : second/CMakeFiles/node3.dir/rule
+
+# Convenience name for target.
+node3: second/CMakeFiles/node3.dir/rule
+
+.PHONY : node3
+
+# fast build rule for target.
+node3/fast:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/build
+.PHONY : node3/fast
+
+# Convenience name for target.
 second/CMakeFiles/image_aruco_test2.dir/rule:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test2.dir/rule
 .PHONY : second/CMakeFiles/image_aruco_test2.dir/rule
@@ -948,6 +963,33 @@ src/node0.cpp.s:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.s
 .PHONY : src/node0.cpp.s
 
+src/node3.o: src/node3.cpp.o
+
+.PHONY : src/node3.o
+
+# target to build an object file
+src/node3.cpp.o:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.o
+.PHONY : src/node3.cpp.o
+
+src/node3.i: src/node3.cpp.i
+
+.PHONY : src/node3.i
+
+# target to preprocess a source file
+src/node3.cpp.i:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.i
+.PHONY : src/node3.cpp.i
+
+src/node3.s: src/node3.cpp.s
+
+.PHONY : src/node3.s
+
+# target to generate assembly for a file
+src/node3.cpp.s:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.s
+.PHONY : src/node3.cpp.s
+
 src/test_control.o: src/test_control.cpp.o
 
 .PHONY : src/test_control.o
@@ -1012,6 +1054,7 @@ help:
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... node3"
 	@echo "... image_aruco_test2"
 	@echo "... edit_cache"
 	@echo "... test_control"
@@ -1078,6 +1121,9 @@ help:
 	@echo "... src/node0.o"
 	@echo "... src/node0.i"
 	@echo "... src/node0.s"
+	@echo "... src/node3.o"
+	@echo "... src/node3.i"
+	@echo "... src/node3.s"
 	@echo "... src/test_control.o"
 	@echo "... src/test_control.i"
 	@echo "... src/test_control.s"
