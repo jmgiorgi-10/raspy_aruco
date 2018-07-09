@@ -245,7 +245,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -277,7 +277,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=3,4 "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -307,31 +307,20 @@ clean: gtest/CMakeFiles/gtest_main.dir/clean
 
 # Convenience name for "all" pass in the directory.
 second/all: second/CMakeFiles/node3.dir/all
+second/all: second/CMakeFiles/image_aruco_test3.dir/all
 second/all: second/CMakeFiles/image_aruco_test2.dir/all
-second/all: second/CMakeFiles/test_control.dir/all
+second/all: second/CMakeFiles/image_converter5.dir/all
 second/all: second/CMakeFiles/image_converter4.dir/all
-second/all: second/CMakeFiles/image_aruco_test.dir/all
-second/all: second/CMakeFiles/image_converter3.dir/all
-second/all: second/CMakeFiles/velocity_test.dir/all
-second/all: second/CMakeFiles/cv_node3.dir/all
-second/all: second/CMakeFiles/cv_node2.dir/all
-second/all: second/CMakeFiles/cv_node.dir/all
 second/all: second/CMakeFiles/node0.dir/all
-second/all: second/CMakeFiles/mavros1.dir/all
 
 .PHONY : second/all
 
 # Convenience name for "clean" pass in the directory.
 second/clean: second/CMakeFiles/node3.dir/clean
+second/clean: second/CMakeFiles/image_aruco_test3.dir/clean
 second/clean: second/CMakeFiles/image_aruco_test2.dir/clean
-second/clean: second/CMakeFiles/test_control.dir/clean
+second/clean: second/CMakeFiles/image_converter5.dir/clean
 second/clean: second/CMakeFiles/image_converter4.dir/clean
-second/clean: second/CMakeFiles/image_aruco_test.dir/clean
-second/clean: second/CMakeFiles/image_converter3.dir/clean
-second/clean: second/CMakeFiles/velocity_test.dir/clean
-second/clean: second/CMakeFiles/cv_node3.dir/clean
-second/clean: second/CMakeFiles/cv_node2.dir/clean
-second/clean: second/CMakeFiles/cv_node.dir/clean
 second/clean: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 second/clean: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 second/clean: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
@@ -345,7 +334,6 @@ second/clean: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 second/clean: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 second/clean: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 second/clean: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-second/clean: second/CMakeFiles/mavros1.dir/clean
 second/clean: second/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 second/clean: second/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 second/clean: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
@@ -398,7 +386,7 @@ second/CMakeFiles/node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages
 second/CMakeFiles/node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/depend
 	$(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=23,24 "Built target node3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=15,16 "Built target node3"
 .PHONY : second/CMakeFiles/node3.dir/all
 
 # Include target in all.
@@ -425,6 +413,67 @@ second/CMakeFiles/node3.dir/clean:
 
 # clean rule for target.
 clean: second/CMakeFiles/node3.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target second/CMakeFiles/image_aruco_test3.dir
+
+# All Build rule for target.
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_aruco_test3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/depend
+	$(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=7,8 "Built target image_aruco_test3"
+.PHONY : second/CMakeFiles/image_aruco_test3.dir/all
+
+# Include target in all.
+all: second/CMakeFiles/image_aruco_test3.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+second/CMakeFiles/image_aruco_test3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
+.PHONY : second/CMakeFiles/image_aruco_test3.dir/rule
+
+# Convenience name for target.
+image_aruco_test3: second/CMakeFiles/image_aruco_test3.dir/rule
+
+.PHONY : image_aruco_test3
+
+# clean rule for target.
+second/CMakeFiles/image_aruco_test3.dir/clean:
+	$(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/clean
+.PHONY : second/CMakeFiles/image_aruco_test3.dir/clean
+
+# clean rule for target.
+clean: second/CMakeFiles/image_aruco_test3.dir/clean
 
 .PHONY : clean
 
@@ -459,7 +508,7 @@ second/CMakeFiles/image_aruco_test2.dir/all: second/CMakeFiles/sensor_msgs_gener
 second/CMakeFiles/image_aruco_test2.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f second/CMakeFiles/image_aruco_test2.dir/build.make second/CMakeFiles/image_aruco_test2.dir/depend
 	$(MAKE) -f second/CMakeFiles/image_aruco_test2.dir/build.make second/CMakeFiles/image_aruco_test2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=13,14 "Built target image_aruco_test2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=5,6 "Built target image_aruco_test2"
 .PHONY : second/CMakeFiles/image_aruco_test2.dir/all
 
 # Include target in all.
@@ -490,63 +539,63 @@ clean: second/CMakeFiles/image_aruco_test2.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target second/CMakeFiles/test_control.dir
+# Target rules for target second/CMakeFiles/image_converter5.dir
 
 # All Build rule for target.
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/test_control.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/depend
-	$(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=25,26 "Built target test_control"
-.PHONY : second/CMakeFiles/test_control.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+second/CMakeFiles/image_converter5.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/depend
+	$(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=11,12 "Built target image_converter5"
+.PHONY : second/CMakeFiles/image_converter5.dir/all
 
 # Include target in all.
-all: second/CMakeFiles/test_control.dir/all
+all: second/CMakeFiles/image_converter5.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-second/CMakeFiles/test_control.dir/rule: cmake_check_build_system
+second/CMakeFiles/image_converter5.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/test_control.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_converter5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/test_control.dir/rule
+.PHONY : second/CMakeFiles/image_converter5.dir/rule
 
 # Convenience name for target.
-test_control: second/CMakeFiles/test_control.dir/rule
+image_converter5: second/CMakeFiles/image_converter5.dir/rule
 
-.PHONY : test_control
-
-# clean rule for target.
-second/CMakeFiles/test_control.dir/clean:
-	$(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/clean
-.PHONY : second/CMakeFiles/test_control.dir/clean
+.PHONY : image_converter5
 
 # clean rule for target.
-clean: second/CMakeFiles/test_control.dir/clean
+second/CMakeFiles/image_converter5.dir/clean:
+	$(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/clean
+.PHONY : second/CMakeFiles/image_converter5.dir/clean
+
+# clean rule for target.
+clean: second/CMakeFiles/image_converter5.dir/clean
 
 .PHONY : clean
 
@@ -581,7 +630,7 @@ second/CMakeFiles/image_converter4.dir/all: second/CMakeFiles/sensor_msgs_genera
 second/CMakeFiles/image_converter4.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f second/CMakeFiles/image_converter4.dir/build.make second/CMakeFiles/image_converter4.dir/depend
 	$(MAKE) -f second/CMakeFiles/image_converter4.dir/build.make second/CMakeFiles/image_converter4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=17,18 "Built target image_converter4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=9,10 "Built target image_converter4"
 .PHONY : second/CMakeFiles/image_converter4.dir/all
 
 # Include target in all.
@@ -608,372 +657,6 @@ second/CMakeFiles/image_converter4.dir/clean:
 
 # clean rule for target.
 clean: second/CMakeFiles/image_converter4.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/image_aruco_test.dir
-
-# All Build rule for target.
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_aruco_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/depend
-	$(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=11,12 "Built target image_aruco_test"
-.PHONY : second/CMakeFiles/image_aruco_test.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/image_aruco_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/image_aruco_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/image_aruco_test.dir/rule
-
-# Convenience name for target.
-image_aruco_test: second/CMakeFiles/image_aruco_test.dir/rule
-
-.PHONY : image_aruco_test
-
-# clean rule for target.
-second/CMakeFiles/image_aruco_test.dir/clean:
-	$(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/clean
-.PHONY : second/CMakeFiles/image_aruco_test.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/image_aruco_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/image_converter3.dir
-
-# All Build rule for target.
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/image_converter3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/depend
-	$(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=15,16 "Built target image_converter3"
-.PHONY : second/CMakeFiles/image_converter3.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/image_converter3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/image_converter3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_converter3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/image_converter3.dir/rule
-
-# Convenience name for target.
-image_converter3: second/CMakeFiles/image_converter3.dir/rule
-
-.PHONY : image_converter3
-
-# clean rule for target.
-second/CMakeFiles/image_converter3.dir/clean:
-	$(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/clean
-.PHONY : second/CMakeFiles/image_converter3.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/image_converter3.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/velocity_test.dir
-
-# All Build rule for target.
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/velocity_test.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/depend
-	$(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=27,28 "Built target velocity_test"
-.PHONY : second/CMakeFiles/velocity_test.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/velocity_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/velocity_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/velocity_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/velocity_test.dir/rule
-
-# Convenience name for target.
-velocity_test: second/CMakeFiles/velocity_test.dir/rule
-
-.PHONY : velocity_test
-
-# clean rule for target.
-second/CMakeFiles/velocity_test.dir/clean:
-	$(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/clean
-.PHONY : second/CMakeFiles/velocity_test.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/velocity_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/cv_node3.dir
-
-# All Build rule for target.
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node3.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/depend
-	$(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=5,6 "Built target cv_node3"
-.PHONY : second/CMakeFiles/cv_node3.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/cv_node3.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/cv_node3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/cv_node3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/cv_node3.dir/rule
-
-# Convenience name for target.
-cv_node3: second/CMakeFiles/cv_node3.dir/rule
-
-.PHONY : cv_node3
-
-# clean rule for target.
-second/CMakeFiles/cv_node3.dir/clean:
-	$(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/clean
-.PHONY : second/CMakeFiles/cv_node3.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/cv_node3.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/cv_node2.dir
-
-# All Build rule for target.
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node2.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/depend
-	$(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=3,4 "Built target cv_node2"
-.PHONY : second/CMakeFiles/cv_node2.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/cv_node2.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/cv_node2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/cv_node2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/cv_node2.dir/rule
-
-# Convenience name for target.
-cv_node2: second/CMakeFiles/cv_node2.dir/rule
-
-.PHONY : cv_node2
-
-# clean rule for target.
-second/CMakeFiles/cv_node2.dir/clean:
-	$(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/clean
-.PHONY : second/CMakeFiles/cv_node2.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/cv_node2.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/cv_node.dir
-
-# All Build rule for target.
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/cv_node.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/depend
-	$(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target cv_node"
-.PHONY : second/CMakeFiles/cv_node.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/cv_node.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/cv_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/cv_node.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/cv_node.dir/rule
-
-# Convenience name for target.
-cv_node: second/CMakeFiles/cv_node.dir/rule
-
-.PHONY : cv_node
-
-# clean rule for target.
-second/CMakeFiles/cv_node.dir/clean:
-	$(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/clean
-.PHONY : second/CMakeFiles/cv_node.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/cv_node.dir/clean
 
 .PHONY : clean
 
@@ -1232,7 +915,7 @@ second/CMakeFiles/node0.dir/all: second/CMakeFiles/sensor_msgs_generate_messages
 second/CMakeFiles/node0.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/depend
 	$(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=21,22 "Built target node0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=13,14 "Built target node0"
 .PHONY : second/CMakeFiles/node0.dir/all
 
 # Include target in all.
@@ -1419,67 +1102,6 @@ second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
 
 # clean rule for target.
 clean: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target second/CMakeFiles/mavros1.dir
-
-# All Build rule for target.
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/std_msgs_generate_messages_py.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/roscpp_generate_messages_eus.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/roscpp_generate_messages_py.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-second/CMakeFiles/mavros1.dir/all: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/depend
-	$(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joaquin/catkin_ws/build/CMakeFiles --progress-num=19,20 "Built target mavros1"
-.PHONY : second/CMakeFiles/mavros1.dir/all
-
-# Include target in all.
-all: second/CMakeFiles/mavros1.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-second/CMakeFiles/mavros1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/mavros1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/catkin_ws/build/CMakeFiles 0
-.PHONY : second/CMakeFiles/mavros1.dir/rule
-
-# Convenience name for target.
-mavros1: second/CMakeFiles/mavros1.dir/rule
-
-.PHONY : mavros1
-
-# clean rule for target.
-second/CMakeFiles/mavros1.dir/clean:
-	$(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/clean
-.PHONY : second/CMakeFiles/mavros1.dir/clean
-
-# clean rule for target.
-clean: second/CMakeFiles/mavros1.dir/clean
 
 .PHONY : clean
 

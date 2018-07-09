@@ -140,16 +140,10 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
  add_executable(node0 src/node0.cpp)
- add_executable(cv_node src/cv_node.cpp)
- add_executable(cv_node2 src/cv_node2.cpp)
- add_executable(cv_node3 src/cv_node3.cpp)
- add_executable(image_converter3 src/image_converter3.cpp)
- add_executable(mavros1 src/mavros1.cpp)
- add_executable(velocity_test src/velocity_test.cpp)
- add_executable(image_aruco_test src/image_aruco_test.cpp)
- add_executable(test_control src/test_control.cpp)
  add_executable(image_converter4 src/image_converter4.cpp)
+ add_executable(image_converter5 src/image_converter5.cpp)
  add_executable(image_aruco_test2 src/image_aruco_test2.cpp)
+add_executable(image_aruco_test3 src/image_aruco_test3.cpp)
  add_executable(node3 src/node3.cpp)
 
 ## Rename C++ executable without prefix
@@ -161,16 +155,10 @@ include_directories(
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(node0 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(cv_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(cv_node2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(image_converter3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(cv_node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(mavros1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(velocity_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(image_aruco_test ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(test_control ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_converter4 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(image_converter5 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_aruco_test2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(image_aruco_test3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
@@ -178,39 +166,15 @@ add_dependencies(node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TAR
    ${catkin_LIBRARIES}
  )
 
- target_link_libraries(cv_node
-   ${catkin_LIBRARIES}
- )
-
- target_link_libraries(cv_node2
-   ${catkin_LIBRARIES}
- )
-
-  target_link_libraries(image_converter3
-   ${catkin_LIBRARIES}
- )
-
- target_link_libraries(cv_node3
-   ${catkin_LIBRARIES}
- )
-
- target_link_libraries(mavros1
-   ${catkin_LIBRARIES}
- )
-
-target_link_libraries(velocity_test
-   ${catkin_LIBRARIES}
- )
-
-target_link_libraries(image_aruco_test
-   ${catkin_LIBRARIES}
- )
-
-target_link_libraries(test_control
+target_link_libraries(image_aruco_test3
    ${catkin_LIBRARIES}
  )
 
 target_link_libraries(image_converter4
+   ${catkin_LIBRARIES}
+ )
+
+ target_link_libraries(image_converter5
    ${catkin_LIBRARIES}
  )
 

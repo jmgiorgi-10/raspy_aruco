@@ -138,10 +138,11 @@ int main(int argc, char **argv)
   //   }
   // }
 
+  pose.pose.orientation = tf::createQuaternionMsgFromYaw(5);
 
   while(ros::ok()) {
     //geometry_msgs::PoseStamped pose2;
-    pose.pose.orientation = tf::createQuaternionMsgFromYaw(1.57);
+
     local_pos_pub.publish(pose);
   }
 

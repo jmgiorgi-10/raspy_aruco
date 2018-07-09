@@ -68,6 +68,28 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -100,28 +122,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -181,6 +181,21 @@ node3/fast:
 .PHONY : node3/fast
 
 # Convenience name for target.
+second/CMakeFiles/image_aruco_test3.dir/rule:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test3.dir/rule
+.PHONY : second/CMakeFiles/image_aruco_test3.dir/rule
+
+# Convenience name for target.
+image_aruco_test3: second/CMakeFiles/image_aruco_test3.dir/rule
+
+.PHONY : image_aruco_test3
+
+# fast build rule for target.
+image_aruco_test3/fast:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/build
+.PHONY : image_aruco_test3/fast
+
+# Convenience name for target.
 second/CMakeFiles/image_aruco_test2.dir/rule:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test2.dir/rule
 .PHONY : second/CMakeFiles/image_aruco_test2.dir/rule
@@ -196,19 +211,19 @@ image_aruco_test2/fast:
 .PHONY : image_aruco_test2/fast
 
 # Convenience name for target.
-second/CMakeFiles/test_control.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/test_control.dir/rule
-.PHONY : second/CMakeFiles/test_control.dir/rule
+second/CMakeFiles/image_converter5.dir/rule:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_converter5.dir/rule
+.PHONY : second/CMakeFiles/image_converter5.dir/rule
 
 # Convenience name for target.
-test_control: second/CMakeFiles/test_control.dir/rule
+image_converter5: second/CMakeFiles/image_converter5.dir/rule
 
-.PHONY : test_control
+.PHONY : image_converter5
 
 # fast build rule for target.
-test_control/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/build
-.PHONY : test_control/fast
+image_converter5/fast:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/build
+.PHONY : image_converter5/fast
 
 # Convenience name for target.
 second/CMakeFiles/image_converter4.dir/rule:
@@ -224,96 +239,6 @@ image_converter4: second/CMakeFiles/image_converter4.dir/rule
 image_converter4/fast:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter4.dir/build.make second/CMakeFiles/image_converter4.dir/build
 .PHONY : image_converter4/fast
-
-# Convenience name for target.
-second/CMakeFiles/image_aruco_test.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test.dir/rule
-.PHONY : second/CMakeFiles/image_aruco_test.dir/rule
-
-# Convenience name for target.
-image_aruco_test: second/CMakeFiles/image_aruco_test.dir/rule
-
-.PHONY : image_aruco_test
-
-# fast build rule for target.
-image_aruco_test/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/build
-.PHONY : image_aruco_test/fast
-
-# Convenience name for target.
-second/CMakeFiles/image_converter3.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_converter3.dir/rule
-.PHONY : second/CMakeFiles/image_converter3.dir/rule
-
-# Convenience name for target.
-image_converter3: second/CMakeFiles/image_converter3.dir/rule
-
-.PHONY : image_converter3
-
-# fast build rule for target.
-image_converter3/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/build
-.PHONY : image_converter3/fast
-
-# Convenience name for target.
-second/CMakeFiles/velocity_test.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/velocity_test.dir/rule
-.PHONY : second/CMakeFiles/velocity_test.dir/rule
-
-# Convenience name for target.
-velocity_test: second/CMakeFiles/velocity_test.dir/rule
-
-.PHONY : velocity_test
-
-# fast build rule for target.
-velocity_test/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/build
-.PHONY : velocity_test/fast
-
-# Convenience name for target.
-second/CMakeFiles/cv_node3.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/cv_node3.dir/rule
-.PHONY : second/CMakeFiles/cv_node3.dir/rule
-
-# Convenience name for target.
-cv_node3: second/CMakeFiles/cv_node3.dir/rule
-
-.PHONY : cv_node3
-
-# fast build rule for target.
-cv_node3/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/build
-.PHONY : cv_node3/fast
-
-# Convenience name for target.
-second/CMakeFiles/cv_node2.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/cv_node2.dir/rule
-.PHONY : second/CMakeFiles/cv_node2.dir/rule
-
-# Convenience name for target.
-cv_node2: second/CMakeFiles/cv_node2.dir/rule
-
-.PHONY : cv_node2
-
-# fast build rule for target.
-cv_node2/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/build
-.PHONY : cv_node2/fast
-
-# Convenience name for target.
-second/CMakeFiles/cv_node.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/cv_node.dir/rule
-.PHONY : second/CMakeFiles/cv_node.dir/rule
-
-# Convenience name for target.
-cv_node: second/CMakeFiles/cv_node.dir/rule
-
-.PHONY : cv_node
-
-# fast build rule for target.
-cv_node/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/build
-.PHONY : cv_node/fast
 
 # Convenience name for target.
 second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
@@ -511,21 +436,6 @@ std_msgs_generate_messages_nodejs/fast:
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-second/CMakeFiles/mavros1.dir/rule:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/mavros1.dir/rule
-.PHONY : second/CMakeFiles/mavros1.dir/rule
-
-# Convenience name for target.
-mavros1: second/CMakeFiles/mavros1.dir/rule
-
-.PHONY : mavros1
-
-# fast build rule for target.
-mavros1/fast:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/build
-.PHONY : mavros1/fast
-
-# Convenience name for target.
 second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
@@ -720,114 +630,6 @@ sensor_msgs_generate_messages_eus/fast:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
-src/cv_node.o: src/cv_node.cpp.o
-
-.PHONY : src/cv_node.o
-
-# target to build an object file
-src/cv_node.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/src/cv_node.cpp.o
-.PHONY : src/cv_node.cpp.o
-
-src/cv_node.i: src/cv_node.cpp.i
-
-.PHONY : src/cv_node.i
-
-# target to preprocess a source file
-src/cv_node.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/src/cv_node.cpp.i
-.PHONY : src/cv_node.cpp.i
-
-src/cv_node.s: src/cv_node.cpp.s
-
-.PHONY : src/cv_node.s
-
-# target to generate assembly for a file
-src/cv_node.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/src/cv_node.cpp.s
-.PHONY : src/cv_node.cpp.s
-
-src/cv_node2.o: src/cv_node2.cpp.o
-
-.PHONY : src/cv_node2.o
-
-# target to build an object file
-src/cv_node2.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/src/cv_node2.cpp.o
-.PHONY : src/cv_node2.cpp.o
-
-src/cv_node2.i: src/cv_node2.cpp.i
-
-.PHONY : src/cv_node2.i
-
-# target to preprocess a source file
-src/cv_node2.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/src/cv_node2.cpp.i
-.PHONY : src/cv_node2.cpp.i
-
-src/cv_node2.s: src/cv_node2.cpp.s
-
-.PHONY : src/cv_node2.s
-
-# target to generate assembly for a file
-src/cv_node2.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/src/cv_node2.cpp.s
-.PHONY : src/cv_node2.cpp.s
-
-src/cv_node3.o: src/cv_node3.cpp.o
-
-.PHONY : src/cv_node3.o
-
-# target to build an object file
-src/cv_node3.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/src/cv_node3.cpp.o
-.PHONY : src/cv_node3.cpp.o
-
-src/cv_node3.i: src/cv_node3.cpp.i
-
-.PHONY : src/cv_node3.i
-
-# target to preprocess a source file
-src/cv_node3.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/src/cv_node3.cpp.i
-.PHONY : src/cv_node3.cpp.i
-
-src/cv_node3.s: src/cv_node3.cpp.s
-
-.PHONY : src/cv_node3.s
-
-# target to generate assembly for a file
-src/cv_node3.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/src/cv_node3.cpp.s
-.PHONY : src/cv_node3.cpp.s
-
-src/image_aruco_test.o: src/image_aruco_test.cpp.o
-
-.PHONY : src/image_aruco_test.o
-
-# target to build an object file
-src/image_aruco_test.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.o
-.PHONY : src/image_aruco_test.cpp.o
-
-src/image_aruco_test.i: src/image_aruco_test.cpp.i
-
-.PHONY : src/image_aruco_test.i
-
-# target to preprocess a source file
-src/image_aruco_test.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.i
-.PHONY : src/image_aruco_test.cpp.i
-
-src/image_aruco_test.s: src/image_aruco_test.cpp.s
-
-.PHONY : src/image_aruco_test.s
-
-# target to generate assembly for a file
-src/image_aruco_test.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/src/image_aruco_test.cpp.s
-.PHONY : src/image_aruco_test.cpp.s
-
 src/image_aruco_test2.o: src/image_aruco_test2.cpp.o
 
 .PHONY : src/image_aruco_test2.o
@@ -855,32 +657,32 @@ src/image_aruco_test2.cpp.s:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test2.dir/build.make second/CMakeFiles/image_aruco_test2.dir/src/image_aruco_test2.cpp.s
 .PHONY : src/image_aruco_test2.cpp.s
 
-src/image_converter3.o: src/image_converter3.cpp.o
+src/image_aruco_test3.o: src/image_aruco_test3.cpp.o
 
-.PHONY : src/image_converter3.o
+.PHONY : src/image_aruco_test3.o
 
 # target to build an object file
-src/image_converter3.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/src/image_converter3.cpp.o
-.PHONY : src/image_converter3.cpp.o
+src/image_aruco_test3.cpp.o:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.o
+.PHONY : src/image_aruco_test3.cpp.o
 
-src/image_converter3.i: src/image_converter3.cpp.i
+src/image_aruco_test3.i: src/image_aruco_test3.cpp.i
 
-.PHONY : src/image_converter3.i
+.PHONY : src/image_aruco_test3.i
 
 # target to preprocess a source file
-src/image_converter3.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/src/image_converter3.cpp.i
-.PHONY : src/image_converter3.cpp.i
+src/image_aruco_test3.cpp.i:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.i
+.PHONY : src/image_aruco_test3.cpp.i
 
-src/image_converter3.s: src/image_converter3.cpp.s
+src/image_aruco_test3.s: src/image_aruco_test3.cpp.s
 
-.PHONY : src/image_converter3.s
+.PHONY : src/image_aruco_test3.s
 
 # target to generate assembly for a file
-src/image_converter3.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/src/image_converter3.cpp.s
-.PHONY : src/image_converter3.cpp.s
+src/image_aruco_test3.cpp.s:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.s
+.PHONY : src/image_aruco_test3.cpp.s
 
 src/image_converter4.o: src/image_converter4.cpp.o
 
@@ -909,32 +711,32 @@ src/image_converter4.cpp.s:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter4.dir/build.make second/CMakeFiles/image_converter4.dir/src/image_converter4.cpp.s
 .PHONY : src/image_converter4.cpp.s
 
-src/mavros1.o: src/mavros1.cpp.o
+src/image_converter5.o: src/image_converter5.cpp.o
 
-.PHONY : src/mavros1.o
+.PHONY : src/image_converter5.o
 
 # target to build an object file
-src/mavros1.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/src/mavros1.cpp.o
-.PHONY : src/mavros1.cpp.o
+src/image_converter5.cpp.o:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.o
+.PHONY : src/image_converter5.cpp.o
 
-src/mavros1.i: src/mavros1.cpp.i
+src/image_converter5.i: src/image_converter5.cpp.i
 
-.PHONY : src/mavros1.i
+.PHONY : src/image_converter5.i
 
 # target to preprocess a source file
-src/mavros1.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/src/mavros1.cpp.i
-.PHONY : src/mavros1.cpp.i
+src/image_converter5.cpp.i:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.i
+.PHONY : src/image_converter5.cpp.i
 
-src/mavros1.s: src/mavros1.cpp.s
+src/image_converter5.s: src/image_converter5.cpp.s
 
-.PHONY : src/mavros1.s
+.PHONY : src/image_converter5.s
 
 # target to generate assembly for a file
-src/mavros1.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/src/mavros1.cpp.s
-.PHONY : src/mavros1.cpp.s
+src/image_converter5.cpp.s:
+	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.s
+.PHONY : src/image_converter5.cpp.s
 
 src/node0.o: src/node0.cpp.o
 
@@ -990,60 +792,6 @@ src/node3.cpp.s:
 	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.s
 .PHONY : src/node3.cpp.s
 
-src/test_control.o: src/test_control.cpp.o
-
-.PHONY : src/test_control.o
-
-# target to build an object file
-src/test_control.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/src/test_control.cpp.o
-.PHONY : src/test_control.cpp.o
-
-src/test_control.i: src/test_control.cpp.i
-
-.PHONY : src/test_control.i
-
-# target to preprocess a source file
-src/test_control.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/src/test_control.cpp.i
-.PHONY : src/test_control.cpp.i
-
-src/test_control.s: src/test_control.cpp.s
-
-.PHONY : src/test_control.s
-
-# target to generate assembly for a file
-src/test_control.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/src/test_control.cpp.s
-.PHONY : src/test_control.cpp.s
-
-src/velocity_test.o: src/velocity_test.cpp.o
-
-.PHONY : src/velocity_test.o
-
-# target to build an object file
-src/velocity_test.cpp.o:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/src/velocity_test.cpp.o
-.PHONY : src/velocity_test.cpp.o
-
-src/velocity_test.i: src/velocity_test.cpp.i
-
-.PHONY : src/velocity_test.i
-
-# target to preprocess a source file
-src/velocity_test.cpp.i:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/src/velocity_test.cpp.i
-.PHONY : src/velocity_test.cpp.i
-
-src/velocity_test.s: src/velocity_test.cpp.s
-
-.PHONY : src/velocity_test.s
-
-# target to generate assembly for a file
-src/velocity_test.cpp.s:
-	cd /home/joaquin/catkin_ws/build && $(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/src/velocity_test.cpp.s
-.PHONY : src/velocity_test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1051,21 +799,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... node3"
+	@echo "... image_aruco_test3"
 	@echo "... image_aruco_test2"
-	@echo "... edit_cache"
-	@echo "... test_control"
+	@echo "... image_converter5"
 	@echo "... image_converter4"
-	@echo "... image_aruco_test"
-	@echo "... image_converter3"
-	@echo "... velocity_test"
-	@echo "... cv_node3"
-	@echo "... rebuild_cache"
-	@echo "... cv_node2"
-	@echo "... cv_node"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
@@ -1079,7 +822,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... mavros1"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
@@ -1094,42 +836,24 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... list_install_components"
 	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... src/cv_node.o"
-	@echo "... src/cv_node.i"
-	@echo "... src/cv_node.s"
-	@echo "... src/cv_node2.o"
-	@echo "... src/cv_node2.i"
-	@echo "... src/cv_node2.s"
-	@echo "... src/cv_node3.o"
-	@echo "... src/cv_node3.i"
-	@echo "... src/cv_node3.s"
-	@echo "... src/image_aruco_test.o"
-	@echo "... src/image_aruco_test.i"
-	@echo "... src/image_aruco_test.s"
 	@echo "... src/image_aruco_test2.o"
 	@echo "... src/image_aruco_test2.i"
 	@echo "... src/image_aruco_test2.s"
-	@echo "... src/image_converter3.o"
-	@echo "... src/image_converter3.i"
-	@echo "... src/image_converter3.s"
+	@echo "... src/image_aruco_test3.o"
+	@echo "... src/image_aruco_test3.i"
+	@echo "... src/image_aruco_test3.s"
 	@echo "... src/image_converter4.o"
 	@echo "... src/image_converter4.i"
 	@echo "... src/image_converter4.s"
-	@echo "... src/mavros1.o"
-	@echo "... src/mavros1.i"
-	@echo "... src/mavros1.s"
+	@echo "... src/image_converter5.o"
+	@echo "... src/image_converter5.i"
+	@echo "... src/image_converter5.s"
 	@echo "... src/node0.o"
 	@echo "... src/node0.i"
 	@echo "... src/node0.s"
 	@echo "... src/node3.o"
 	@echo "... src/node3.i"
 	@echo "... src/node3.s"
-	@echo "... src/test_control.o"
-	@echo "... src/test_control.i"
-	@echo "... src/test_control.s"
-	@echo "... src/velocity_test.o"
-	@echo "... src/velocity_test.i"
-	@echo "... src/velocity_test.s"
 .PHONY : help
 
 

@@ -270,6 +270,19 @@ node3/fast:
 .PHONY : node3/fast
 
 #=============================================================================
+# Target rules for targets named image_aruco_test3
+
+# Build rule for target.
+image_aruco_test3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_aruco_test3
+.PHONY : image_aruco_test3
+
+# fast build rule for target.
+image_aruco_test3/fast:
+	$(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/build
+.PHONY : image_aruco_test3/fast
+
+#=============================================================================
 # Target rules for targets named image_aruco_test2
 
 # Build rule for target.
@@ -283,17 +296,17 @@ image_aruco_test2/fast:
 .PHONY : image_aruco_test2/fast
 
 #=============================================================================
-# Target rules for targets named test_control
+# Target rules for targets named image_converter5
 
 # Build rule for target.
-test_control: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_control
-.PHONY : test_control
+image_converter5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_converter5
+.PHONY : image_converter5
 
 # fast build rule for target.
-test_control/fast:
-	$(MAKE) -f second/CMakeFiles/test_control.dir/build.make second/CMakeFiles/test_control.dir/build
-.PHONY : test_control/fast
+image_converter5/fast:
+	$(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/build
+.PHONY : image_converter5/fast
 
 #=============================================================================
 # Target rules for targets named image_converter4
@@ -307,84 +320,6 @@ image_converter4: cmake_check_build_system
 image_converter4/fast:
 	$(MAKE) -f second/CMakeFiles/image_converter4.dir/build.make second/CMakeFiles/image_converter4.dir/build
 .PHONY : image_converter4/fast
-
-#=============================================================================
-# Target rules for targets named image_aruco_test
-
-# Build rule for target.
-image_aruco_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 image_aruco_test
-.PHONY : image_aruco_test
-
-# fast build rule for target.
-image_aruco_test/fast:
-	$(MAKE) -f second/CMakeFiles/image_aruco_test.dir/build.make second/CMakeFiles/image_aruco_test.dir/build
-.PHONY : image_aruco_test/fast
-
-#=============================================================================
-# Target rules for targets named image_converter3
-
-# Build rule for target.
-image_converter3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 image_converter3
-.PHONY : image_converter3
-
-# fast build rule for target.
-image_converter3/fast:
-	$(MAKE) -f second/CMakeFiles/image_converter3.dir/build.make second/CMakeFiles/image_converter3.dir/build
-.PHONY : image_converter3/fast
-
-#=============================================================================
-# Target rules for targets named velocity_test
-
-# Build rule for target.
-velocity_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 velocity_test
-.PHONY : velocity_test
-
-# fast build rule for target.
-velocity_test/fast:
-	$(MAKE) -f second/CMakeFiles/velocity_test.dir/build.make second/CMakeFiles/velocity_test.dir/build
-.PHONY : velocity_test/fast
-
-#=============================================================================
-# Target rules for targets named cv_node3
-
-# Build rule for target.
-cv_node3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cv_node3
-.PHONY : cv_node3
-
-# fast build rule for target.
-cv_node3/fast:
-	$(MAKE) -f second/CMakeFiles/cv_node3.dir/build.make second/CMakeFiles/cv_node3.dir/build
-.PHONY : cv_node3/fast
-
-#=============================================================================
-# Target rules for targets named cv_node2
-
-# Build rule for target.
-cv_node2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cv_node2
-.PHONY : cv_node2
-
-# fast build rule for target.
-cv_node2/fast:
-	$(MAKE) -f second/CMakeFiles/cv_node2.dir/build.make second/CMakeFiles/cv_node2.dir/build
-.PHONY : cv_node2/fast
-
-#=============================================================================
-# Target rules for targets named cv_node
-
-# Build rule for target.
-cv_node: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cv_node
-.PHONY : cv_node
-
-# fast build rule for target.
-cv_node/fast:
-	$(MAKE) -f second/CMakeFiles/cv_node.dir/build.make second/CMakeFiles/cv_node.dir/build
-.PHONY : cv_node/fast
 
 #=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_py
@@ -554,19 +489,6 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 std_msgs_generate_messages_nodejs/fast:
 	$(MAKE) -f second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named mavros1
-
-# Build rule for target.
-mavros1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mavros1
-.PHONY : mavros1
-
-# fast build rule for target.
-mavros1/fast:
-	$(MAKE) -f second/CMakeFiles/mavros1.dir/build.make second/CMakeFiles/mavros1.dir/build
-.PHONY : mavros1/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
@@ -758,15 +680,10 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... node3"
+	@echo "... image_aruco_test3"
 	@echo "... image_aruco_test2"
-	@echo "... test_control"
+	@echo "... image_converter5"
 	@echo "... image_converter4"
-	@echo "... image_aruco_test"
-	@echo "... image_converter3"
-	@echo "... velocity_test"
-	@echo "... cv_node3"
-	@echo "... cv_node2"
-	@echo "... cv_node"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
@@ -780,7 +697,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... mavros1"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
