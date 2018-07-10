@@ -140,9 +140,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
  add_executable(node0 src/node0.cpp)
- add_executable(image_converter4 src/image_converter4.cpp)
  add_executable(image_converter5 src/image_converter5.cpp)
- add_executable(image_aruco_test2 src/image_aruco_test2.cpp)
 add_executable(image_aruco_test3 src/image_aruco_test3.cpp)
  add_executable(node3 src/node3.cpp)
 
@@ -155,9 +153,7 @@ add_executable(image_aruco_test3 src/image_aruco_test3.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(node0 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(image_converter4 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_converter5 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(image_aruco_test2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(image_aruco_test3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(node3 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
@@ -170,15 +166,7 @@ target_link_libraries(image_aruco_test3
    ${catkin_LIBRARIES}
  )
 
-target_link_libraries(image_converter4
-   ${catkin_LIBRARIES}
- )
-
  target_link_libraries(image_converter5
-   ${catkin_LIBRARIES}
- )
-
-target_link_libraries(image_aruco_test2
    ${catkin_LIBRARIES}
  )
 

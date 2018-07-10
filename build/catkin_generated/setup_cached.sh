@@ -7,4 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/joaquin/catkin_ws/build"
+export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/arm-linux-gnueabihf"
+export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/arm-linux-gnueabihf/pkgconfig"
+export PWD="/home/jmgiorgi-10/catkin_ws/build"

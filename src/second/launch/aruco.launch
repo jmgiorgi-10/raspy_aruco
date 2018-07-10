@@ -3,10 +3,19 @@
 <node pkg="second" type="node0" name="node0" output="screen">
 </node>
 
-<node pkg="second" type="image_converter4" name="image_converter4" output="screen">
+<node pkg="second" type="image_converter5" name="image_converter5" output="screen">
 </node>
 
 <node pkg="second" type="controller.py" name="controller" output="screen">
+</node>
+
+<node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+  <param name="video_device" value="/dev/video0" />
+  <param name="image_width" value="640" />
+  <param name="image_height" value="480" />
+  <param name="pixel_format" value="yuyv" />
+  <param name="camera_frame_id" value="usb_cam" />
+  <param name="io_method" value="mmap"/>
 </node>
 
 </launch>

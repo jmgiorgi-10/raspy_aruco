@@ -26,13 +26,19 @@ class ImageConverter
   ros::Publisher yaw_pub;
   Mat cameraMatrix;
   Mat distCoeffs;
+  Mat rot_mat;
+  Mat rot_mat_yaw;
+  Mat T;
+  Mat RT;
+  Mat X;
+  Mat u;
 
 public:
   ImageConverter()
     : it_(nh_)
   {
     // Subscrive to input video feed and publish output video feed
-    image_sub_ = it_.subscribe("iris/camera_red_iris/image_raw", 1,
+    image_sub_ = it_.subscribe("usb_cam/image_raw", 1,
       &ImageConverter::imageCb, this);
     pub = n2.advertise<std_msgs::Float32MultiArray>("array", 5);
    // yaw_pub = n2.advertise<std_msgs::Float32>("yaw_array", 1);
@@ -42,6 +48,12 @@ public:
     // Defining camera values
     cameraMatrix = (Mat1f(3,3) << 1.4986230310335097e+03, 0., 5.9621656961862107e+02, 0.,1.5003680421420222e+03, 3.8539255070784276e+02, 0., 0., 1.);
     distCoeffs = (Mat1f(5,1) << -2.0389153175224519e-02, 1.6311037251535379e+00, 1.1359858738580822e-02, -2.3943006177546120e-03, -5.8474614091374315e+00);
+
+    // Initialize matrices
+    X = (Mat1f(3,1) << .2/2, .2/2 ,0);  // Position of marker in G-Frame.
+    T = (Mat1f(3,1) << 0, 0, 0);  // Translation matrix; 3D B-Frame WRT GFrame (marker center)
+    RT = Mat(3, 4, CV_32F, float(0)); // Rotation and Translation matrix for 3D
+    rot_mat_yaw = (Mat1f(3,3) << 0, 0, 0);
   }
 
   void imageCb(const sensor_msgs::ImageConstPtr& msg)
@@ -65,15 +77,9 @@ public:
     Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::DICT_6X6_250);
     aruco::detectMarkers(image, dictionary, markerCorners, markerIds);
     vector<Vec3d> rvecs, tvecs;
-    aruco::estimatePoseSingleMarkers(markerCorners, 0.2, cameraMatrix, distCoeffs, rvecs, tvecs);
+    aruco::estimatePoseSingleMarkers(markerCorners, .2, cameraMatrix, distCoeffs, rvecs, tvecs);
 
     aruco::drawDetectedMarkers(cv_ptr->image, markerCorners, markerIds);
-
-    float length = 3.0;
-
-    if (rvecs.size() > 0) {
-      aruco::drawAxis(cv_ptr->image, cameraMatrix, distCoeffs, rvecs.at(0), tvecs.at(0), length);
-    }
 
     image_pub.publish(cv_ptr->toImageMsg());
 
@@ -84,39 +90,20 @@ public:
     //////////////////////
     if (tvecs.size() > 0) {
       Vec3d rvec = rvecs.at(0);  // Only one marker being detected so far.
+
+      //cout << rvec[2] << '\n';
+
       Vec3d tvec = tvecs.at(0);
 
       Point2f markerCorner = (markerCorners[0])[0];  // Assuming only one marker, take top left corner.
-      Mat u = (Mat1f(3,1) << markerCorner.x, markerCorner.y, float(1));  // Get pixel coordinates of top left corner.
-
-      Mat rot_mat;
-      Mat t_mat = (Mat1f(3,1) << 0.0, 0.0, 0.0);
-      Mat xx = (Mat1f(3,1) << 0.0, 0.0, 0.0);
-      Mat xx_prime = (Mat1f(3,1) << 0.0,0.0,0.0);  // Center of aruco marker, in aruco frame.
-      for (int i = 0; i < 3; i++) {
-       t_mat.at<float>(i,0) = tvec[i];
-      }
+      u = (Mat1f(3,1) << markerCorner.x, markerCorner.y, float(1));  // Get pixel coordinates of top left corner.
       Rodrigues(rvec, rot_mat);
-      rot_mat.convertTo(rot_mat, CV_32F);  // Convert rotation matrix output to 32-bit float.
-      xx = rot_mat.t()*xx_prime - rot_mat.t()*t_mat;
-
-      for (int i = 0; i < 3; i++) {
-        //array.data.push_back(xx.at<float>(i,0));
-      }
+      rot_mat.convertTo(rot_mat, CV_32F);  // Get rotation matrix in 32-bit float.
 
       // Define all matrix variables & other//
       float Z_pr = tvec[2];
       float Z = 0; // Marker center position in G-Frame.
-      Mat X = (Mat1f(3,1) << .2/2,.2/2, 0);  // Position of marker in G-Frame.
 
-      Mat X_h = (Mat1f(4,1) << .2/2, .2/2 , 0 ,1); // (Homogeneous coords. position of marker in G-Frame).
-      Mat T = (Mat1f(3,1) << 0,0,0);  // Translation matrix; 3D B-Frame WRT GFrame (marker center)
-
-      // for (int i = 0; i < 3; i++) {
-      //   T.at<float>(i, 0) = tvec[i];
-      // }
-
-      Mat RT = Mat(3, 4, CV_32F, float(0)); // Rotation and Translation matrix for 3D homogeneous coordinates. G-Frame --> B-Frame (camera).
       // Populate RT Matrix:
       for (int i = 0; i < 3; i++) { // iterate rows.
         RT.at<float>(i,3) = tvec[i];  // Including translation vector
@@ -124,23 +111,13 @@ public:
           RT.at<float>(i,j) = rot_mat.at<float>(i,j);  // Including rotation matrix
         }
       }
-      //Construct yaw rotation matrix.
-      // Mat rot_rot_yaw;
-      // Vec3d rvec_yaw;
-      // rvec_yaw[0] = float(0);
-      // rvec_yaw[1] = float(0);
-      // rvec_yaw[2] = rvec[2];
-      // Rodrigues(rvec_yaw, rot_mat_yaw);
-      // rot_mat_yaw.convertTo(rot_mat_yaw, CV_32F);  // Convert elements to 32-bit Float.
-
-      // Convert rotation matrix to Euler angles.
-
+      
+      // Find Euler Angles (roll, pitch, yaw) from rotation matrix.
       float theta = -asin(rot_mat.at<float>(2,0));
       float psi = atan2(rot_mat.at<float>(2,1), rot_mat.at<float>(2,2));
       float yaw = atan2(rot_mat.at<float>(1,0) / cos(theta), rot_mat.at<float>(0,0) / cos(theta));
 
       // Populate Z-rotation matrix //
-      Mat rot_mat_yaw = (Mat1f(3,3) << 0, 0, 0);
       rot_mat_yaw.at<float>(0,0) = cos(yaw);
       rot_mat_yaw.at<float>(1,0) = sin(yaw);
       rot_mat_yaw.at<float>(0,1) = -sin(yaw);
@@ -148,47 +125,15 @@ public:
       rot_mat_yaw.at<float>(2,2) = float(1);
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
-      //T = -rot_mat_yaw.inv() * T;
+    }
 
-      //Mat R_new = rot_mat.inv();
-      //Mat T_new = -rot_mat.inv() * T;
-
-      //Mat X_new = R_new * X + T_new;
-
-      //Mat X_new =  T;
-
-
-
-      // Test 2
-
-      //T = rot_mat_yaw * T;
-
-      // Test //
-      //T = X - rot_mat_yaw.inv() * cameraMatrix.inv() * (Z - Z_pr) * u;
- 
-      //T = rot_mat_yaw * T;
-
-      //////    Two Tries       ////////
-
-      //T = rot_mat_yaw * X - cameraMatrix.inv() * (Z - Z_pr) * u;
-
-     // T = rot_mat_yaw.inv() * X - cameraMatrix.inv() * (Z - Z_pr) * u;
- 
       for (int i = 0; i < 2; i++) {
         array.data.push_back(T.at<float>(i, 0));  // Tx, Ty from VPHEA.
       }
       array.data.push_back(tvec[2]);  // Add Tz from VPBEA.
 
-
-      // for (int i = 0; i < 3; i++) {
-      //   array.data.push_back(tvec[i]);
-      // }
-
-
       yaw = yaw * 180/3.14;
-
       array.data.push_back(yaw);  // Push back yaw error in degrees.
-
       pub.publish(array);
 
     } else {

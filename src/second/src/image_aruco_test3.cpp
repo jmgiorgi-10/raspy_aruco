@@ -30,13 +30,19 @@ class ImageConverter
   Mat cameraMatrix;
   Mat distCoeffs;
   ros::Time last_request;
+  Mat rot_mat;
+  Mat rot_mat_yaw;
+  Mat T;
+  Mat RT;
+  Mat X;
+  Mat u;
 
 public:
   ImageConverter()
     : it_(nh_)
   {
     // Subscrive to input video feed and publish output video feed
-    image_sub_ = it_.subscribe("/camera/image_raw", 1,
+    image_sub_ = it_.subscribe("/usb_cam/image_raw", 1,
       &ImageConverter::imageCb, this);
     pub = n2.advertise<std_msgs::Float32MultiArray>("array", 1);
 
@@ -46,6 +52,12 @@ public:
     distCoeffs = (Mat1f(5,1) << -2.0389153175224519e-02, 1.6311037251535379e+00, 1.1359858738580822e-02, -2.3943006177546120e-03, -5.8474614091374315e+00);
 
     last_request = ros::Time::now();
+
+    // Initialize matrices
+    X = (Mat1f(3,1) << .2/2, .2/2 ,0);  // Position of marker in G-Frame.
+    T = (Mat1f(3,1) << 0, 0, 0);  // Translation matrix; 3D B-Frame WRT GFrame (marker center)
+    RT = Mat(3, 4, CV_32F, float(0)); // Rotation and Translation matrix for 3D
+    rot_mat_yaw = (Mat1f(3,3) << 0, 0, 0);
   }
 
   void imageCb(const sensor_msgs::ImageConstPtr& msg)
@@ -73,12 +85,6 @@ public:
 
     aruco::drawDetectedMarkers(cv_ptr->image, markerCorners, markerIds);
 
-    float length = 3.0;
-
-    if (rvecs.size() > 0) {
-      aruco::drawAxis(cv_ptr->image, cameraMatrix, distCoeffs, rvecs.at(0), tvecs.at(0), length);
-    }
-
     image_pub.publish(cv_ptr->toImageMsg());
 
     std_msgs::Float32MultiArray array;
@@ -94,42 +100,14 @@ public:
       Vec3d tvec = tvecs.at(0);
 
       Point2f markerCorner = (markerCorners[0])[0];  // Assuming only one marker, take top left corner.
-      Mat u = (Mat1f(3,1) << markerCorner.x, markerCorner.y, float(1));  // Get pixel coordinates of top left corner.
-
-      std_msgs::Float32MultiArray array;
-      Mat t_mat = (Mat1f(3,1) << tvec[0], tvec[1], tvec[2]); 
-
-      for (int i = 0; i < 3; i++) {
-        array.data.push_back(tvec[i]);
-      }
-
-      pub.publish(array);
-
-      Mat rot_mat;
-     // Mat t_mat = (Mat1f(3,1) << 0.0, 0.0, 0.0);
-      Mat xx = (Mat1f(3,1) << 0.0, 0.0, 0.0);
-      Mat xx_prime = (Mat1f(3,1) << 0.0,0.0,0.0);  // Center of aruco marker, in aruco frame.
-      for (int i = 0; i < 3; i++) {
-       t_mat.at<float>(i,0) = tvec[i];
-      }
+      u = (Mat1f(3,1) << markerCorner.x, markerCorner.y, float(1));  // Get pixel coordinates of top left corner.
       Rodrigues(rvec, rot_mat);
-      rot_mat.convertTo(rot_mat, CV_32F);  // Convert rotation matrix output to 32-bit float.
-      xx = rot_mat.t()*xx_prime - rot_mat.t()*t_mat;
-
-      
-
-      for (int i = 0; i < 3; i++) {
-        //array.data.push_back(xx.at<float>(i,0));
-      }
+      rot_mat.convertTo(rot_mat, CV_32F);  // Get rotation matrix in 32-bit float.
 
       // Define all matrix variables & other//
       float Z_pr = tvec[2];
       float Z = 0; // Marker center position in G-Frame.
-      Mat X = (Mat1f(3,1) << .2/2, .2/2 ,0);  // Position of marker in G-Frame.
-      Mat X_h = (Mat1f(4,1) << 0, 0, 0, 1); // (Homogeneous coords. position of marker in G-Frame).
-      Mat T = (Mat1f(3,1) << 0, 0, 0);  // Translation matrix; 3D B-Frame WRT GFrame (marker center)
 
-      Mat RT = Mat(3, 4, CV_32F, float(0)); // Rotation and Translation matrix for 3D homogeneous coordinates. G-Frame --> B-Frame (camera).
       // Populate RT Matrix:
       for (int i = 0; i < 3; i++) { // iterate rows.
         RT.at<float>(i,3) = tvec[i];  // Including translation vector
@@ -143,7 +121,6 @@ public:
       float yaw = atan2(rot_mat.at<float>(1,0) / cos(theta), rot_mat.at<float>(0,0) / cos(theta));
 
       // Populate Z-rotation matrix //
-      Mat rot_mat_yaw = (Mat1f(3,3) << 0, 0, 0);
       rot_mat_yaw.at<float>(0,0) = cos(yaw);
       rot_mat_yaw.at<float>(1,0) = sin(yaw);
       rot_mat_yaw.at<float>(0,1) = -sin(yaw);
@@ -165,7 +142,7 @@ int main(int argc, char** argv)
 {
   ros::init(argc, argv, "image_converter");
   ImageConverter ic;
-  ros::Rate r(20); // 1 Hertz for easy testing.
+  ros::Rate r(20); // Repeat loop 20 times/sec.
   while (ros::ok()) {
     ros::spinOnce();
     r.sleep();

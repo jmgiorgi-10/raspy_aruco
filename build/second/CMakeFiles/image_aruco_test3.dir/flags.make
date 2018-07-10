@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"second\"
 
-CXX_INCLUDES = -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.2.0-dev -I/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv 
+CXX_INCLUDES = -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv 
 

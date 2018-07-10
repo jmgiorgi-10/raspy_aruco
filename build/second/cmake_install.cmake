@@ -1,8 +1,8 @@
-# Install script for directory: /home/joaquin/catkin_ws/src/second
+# Install script for directory: /home/jmgiorgi-10/catkin_ws/src/second
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/joaquin/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jmgiorgi-10/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/joaquin/catkin_ws/build/second/catkin_generated/installspace/second.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jmgiorgi-10/catkin_ws/build/second/catkin_generated/installspace/second.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/second/cmake" TYPE FILE FILES
-    "/home/joaquin/catkin_ws/build/second/catkin_generated/installspace/secondConfig.cmake"
-    "/home/joaquin/catkin_ws/build/second/catkin_generated/installspace/secondConfig-version.cmake"
+    "/home/jmgiorgi-10/catkin_ws/build/second/catkin_generated/installspace/secondConfig.cmake"
+    "/home/jmgiorgi-10/catkin_ws/build/second/catkin_generated/installspace/secondConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/second" TYPE FILE FILES "/home/joaquin/catkin_ws/src/second/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/second" TYPE FILE FILES "/home/jmgiorgi-10/catkin_ws/src/second/package.xml")
 endif()
 
