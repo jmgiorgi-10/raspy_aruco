@@ -30,15 +30,12 @@ class Controller:
     #sign flip experiment
 		self.pid_x = PID(1.5, 0, .4, 1, 0);
 		self.pid_y = PID(1.5, 0, .4, 1, 0);
-		self.pid_z = PID(.8, 0, .2, .4, 1.5);
+		self.pid_z = PID(.8, 0, .2, .4, 2.3);
 
 	def callback(self, array):
 		if len(array.data) > 0:
-			# self.Tx = array.data[1];  # Body frame: z point ups; Marker frame: z points down (both right handed frames).
-			# self.Ty = array.data[0];
-			# self.Tz = array.data[2];
+	  # Body frame: z point ups; Marker frame: z points down (both right handed frames).
 
-			# Put back 'correct' order experiment #
 			self.Tx = array.data[1];
 			self.Ty = array.data[0];
 			self.Tz = array.data[2];

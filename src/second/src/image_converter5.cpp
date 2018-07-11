@@ -125,7 +125,7 @@ public:
       rot_mat_yaw.at<float>(2,2) = float(1);
 
       T = -rot_mat_yaw * X + cameraMatrix.inv() * (Z - Z_pr) * u;
-    }
+    
 
       for (int i = 0; i < 2; i++) {
         array.data.push_back(T.at<float>(i, 0));  // Tx, Ty from VPHEA.

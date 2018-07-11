@@ -94,7 +94,7 @@ int main(int argc, char **argv)
 
   pose.pose.position.x = 0;
   pose.pose.position.y = 0;
-  pose.pose.position.z = 1.5;
+  pose.pose.position.z = 2.3;
 
   //send a few setpoints before starting
   for(int i = 100; ros::ok() && i > 0; --i){
@@ -116,7 +116,8 @@ int main(int argc, char **argv)
     if( current_state.mode != "OFFBOARD" && (ros::Time::now() - last_request > ros::Duration(5.0))){
         if( set_mode_client.call(offb_set_mode) &&
             offb_set_mode.response.mode_sent){
-             ROS_INFO("Offboard enabled");
+            ROS_INFO("Offboard enabled");
+            break;  // Once offboard is enabled, start sending velocity commands in next loop
         }
         last_request = ros::Time::now();
       } else {
@@ -124,18 +125,13 @@ int main(int argc, char **argv)
           if( arming_client.call(arm_cmd) &&
             arm_cmd.response.success){
             ROS_INFO("Vehicle armed");
-              
+          }
             last_request = ros::Time::now();
           }
-          }
         }
-       if (ros::Time::now() - last_request < ros::Duration(7)) {
-         local_pos_pub.publish(pose);
-         cout << ros::Time::now() - last_request << "\n";
-       } else {
-           last_request = ros::Time::now();
-           break;
-       }
+
+    local_pos_pub.publish(pose);
+
     ros::spinOnce();
     rate.sleep();
   }
@@ -144,17 +140,9 @@ int main(int argc, char **argv)
   float yaw = 0;
 
   while(ros::ok()) {
-    ///if (ros::Time::now() - last_request < ros::Duration(4)) {
-      vel_pub.publish(vel_msg);
-      //cout << "linear" << '\n';
-  //   } else if (ros::Time::now() - last_request < ros::Duration(7)) {
-  //     yaw += .03;
-  //     pose.pose.orientation = tf::createQuaternionMsgFromYaw(yaw);
-  //     local_pos_pub.publish(pose);
-  //     cout << "angular" << '\n';
-  //   } else {
-  //     last_request = ros::Time::now();
-  //   }
+ 
+    vel_pub.publish(vel_msg);
+
     ros::spinOnce();
     rate.sleep();
    }
