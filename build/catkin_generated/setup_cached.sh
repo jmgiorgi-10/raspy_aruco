@@ -7,9 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/joaquin/raspy_aruco/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/joaquin/raspy_aruco/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/joaquin/raspy_aruco/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
-export PWD="/home/joaquin/raspy_aruco/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/joaquin/raspy_aruco/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/joaquin/raspy_aruco/src:$ROS_PACKAGE_PATH"
+export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/arm-linux-gnueabihf"
+export PATH="/opt/ros/kinetic/bin:/home/jmgiorgi-10/bin:/home/jmgiorgi-10/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/arm-linux-gnueabihf/pkgconfig"
+export PWD="/home/jmgiorgi-10/catkin_ws/build"

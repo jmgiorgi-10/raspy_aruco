@@ -1,8 +1,8 @@
-prefix=/home/joaquin/raspy_aruco/devel
+prefix=/home/jmgiorgi-10/catkin_ws/devel
 
 Name: third
 Description: Description of third
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/joaquin/raspy_aruco/devel/lib 
+Libs: -L/home/jmgiorgi-10/catkin_ws/devel/lib 
 Requires: 

@@ -121,7 +121,7 @@ int main(int argc, char **argv)
         }
         local_pos_pub.publish(pose);
         last_request = ros::Time::now();
-       } else {
+       } else if(current_state.mode == "OFFBOARD") {
       //   if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0))){
       //     if( arming_client.call(arm_cmd) &&
       //       arm_cmd.response.success){
@@ -132,7 +132,9 @@ int main(int argc, char **argv)
       //   local_pos_pub.publish(pose);
       //   } else {
           vel_pub.publish(vel_msg);
-        }
+        } else {
+	    local_pos_pub.publish(pose);
+	}
 
     ros::spinOnce();
     rate.sleep();

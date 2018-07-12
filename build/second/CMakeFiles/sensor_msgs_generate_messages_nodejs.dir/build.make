@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joaquin/raspy_aruco/src
+CMAKE_SOURCE_DIR = /home/jmgiorgi-10/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joaquin/raspy_aruco/build
+CMAKE_BINARY_DIR = /home/jmgiorgi-10/catkin_ws/build
 
 # Utility rule file for sensor_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build: sensor_msgs_ge
 .PHONY : second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 
 second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/joaquin/raspy_aruco/build/second && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/jmgiorgi-10/catkin_ws/build/second && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/joaquin/raspy_aruco/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/joaquin/raspy_aruco/src /home/joaquin/raspy_aruco/src/second /home/joaquin/raspy_aruco/build /home/joaquin/raspy_aruco/build/second /home/joaquin/raspy_aruco/build/second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jmgiorgi-10/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jmgiorgi-10/catkin_ws/src /home/jmgiorgi-10/catkin_ws/src/second /home/jmgiorgi-10/catkin_ws/build /home/jmgiorgi-10/catkin_ws/build/second /home/jmgiorgi-10/catkin_ws/build/second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 

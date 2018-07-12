@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.o"
-  "/home/joaquin/raspy_aruco/devel/lib/second/image_aruco_test3.pdb"
-  "/home/joaquin/raspy_aruco/devel/lib/second/image_aruco_test3"
+  "/home/jmgiorgi-10/catkin_ws/devel/lib/second/image_aruco_test3.pdb"
+  "/home/jmgiorgi-10/catkin_ws/devel/lib/second/image_aruco_test3"
 )
 
 # Per-language clean rules from dependency scanning.

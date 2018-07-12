@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/joaquin/raspy_aruco/install/setup.sh
+    local-name: /home/jmgiorgi-10/catkin_ws/install/setup.sh
