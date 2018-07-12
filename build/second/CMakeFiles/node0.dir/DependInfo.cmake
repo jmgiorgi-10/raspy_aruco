@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jmgiorgi-10/catkin_ws/src/second/src/node0.cpp" "/home/jmgiorgi-10/catkin_ws/build/second/CMakeFiles/node0.dir/src/node0.cpp.o"
+  "/home/joaquin/raspy_aruco/src/second/src/node0.cpp" "/home/joaquin/raspy_aruco/build/second/CMakeFiles/node0.dir/src/node0.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,8 +19,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
+  "/opt/ros/kinetic/include/opencv-3.2.0-dev"
+  "/opt/ros/kinetic/include/opencv-3.2.0-dev/opencv"
   )
 
 # Targets to which this target links.

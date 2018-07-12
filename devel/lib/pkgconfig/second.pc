@@ -1,8 +1,8 @@
-prefix=/home/jmgiorgi-10/catkin_ws/devel
+prefix=/home/joaquin/raspy_aruco/devel
 
 Name: second
 Description: Description of second
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/jmgiorgi-10/catkin_ws/devel/lib 
+Libs: -L/home/joaquin/raspy_aruco/devel/lib 
 Requires: 

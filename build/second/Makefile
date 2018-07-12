@@ -48,13 +48,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jmgiorgi-10/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/joaquin/raspy_aruco/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jmgiorgi-10/catkin_ws/build
+CMAKE_BINARY_DIR = /home/joaquin/raspy_aruco/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -66,38 +78,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -121,28 +101,48 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/jmgiorgi-10/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jmgiorgi-10/catkin_ws/build/CMakeFiles /home/jmgiorgi-10/catkin_ws/build/second/CMakeFiles/progress.marks
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jmgiorgi-10/catkin_ws/build/CMakeFiles 0
+	cd /home/joaquin/raspy_aruco/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/raspy_aruco/build/CMakeFiles /home/joaquin/raspy_aruco/build/second/CMakeFiles/progress.marks
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joaquin/raspy_aruco/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/clean
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,292 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/preinstall
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/preinstall
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/joaquin/raspy_aruco/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-second/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : second/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: second/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_py.dir/build.make second/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-second/CMakeFiles/image_converter5.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_converter5.dir/rule
-.PHONY : second/CMakeFiles/image_converter5.dir/rule
-
-# Convenience name for target.
-image_converter5: second/CMakeFiles/image_converter5.dir/rule
-
-.PHONY : image_converter5
-
-# fast build rule for target.
-image_converter5/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/build
-.PHONY : image_converter5/fast
-
-# Convenience name for target.
-second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make second/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-second/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : second/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: second/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_eus.dir/build.make second/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make second/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make second/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-second/CMakeFiles/node0.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/node0.dir/rule
-.PHONY : second/CMakeFiles/node0.dir/rule
-
-# Convenience name for target.
-node0: second/CMakeFiles/node0.dir/rule
-
-.PHONY : node0
-
-# fast build rule for target.
-node0/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/build
-.PHONY : node0/fast
-
-# Convenience name for target.
-second/CMakeFiles/image_aruco_test3.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test3.dir/rule
-.PHONY : second/CMakeFiles/image_aruco_test3.dir/rule
-
-# Convenience name for target.
-image_aruco_test3: second/CMakeFiles/image_aruco_test3.dir/rule
-
-.PHONY : image_aruco_test3
-
-# fast build rule for target.
-image_aruco_test3/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/build
-.PHONY : image_aruco_test3/fast
-
-# Convenience name for target.
 second/CMakeFiles/node3.dir/rule:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/node3.dir/rule
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/node3.dir/rule
 .PHONY : second/CMakeFiles/node3.dir/rule
 
 # Convenience name for target.
@@ -447,8 +177,428 @@ node3: second/CMakeFiles/node3.dir/rule
 
 # fast build rule for target.
 node3/fast:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/build
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/build
 .PHONY : node3/fast
+
+# Convenience name for target.
+second/CMakeFiles/image_aruco_test3.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_aruco_test3.dir/rule
+.PHONY : second/CMakeFiles/image_aruco_test3.dir/rule
+
+# Convenience name for target.
+image_aruco_test3: second/CMakeFiles/image_aruco_test3.dir/rule
+
+.PHONY : image_aruco_test3
+
+# fast build rule for target.
+image_aruco_test3/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/build
+.PHONY : image_aruco_test3/fast
+
+# Convenience name for target.
+second/CMakeFiles/image_converter5.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/image_converter5.dir/rule
+.PHONY : second/CMakeFiles/image_converter5.dir/rule
+
+# Convenience name for target.
+image_converter5: second/CMakeFiles/image_converter5.dir/rule
+
+.PHONY : image_converter5
+
+# fast build rule for target.
+image_converter5/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/build
+.PHONY : image_converter5/fast
+
+# Convenience name for target.
+second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: second/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+second/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : second/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: second/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make second/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make second/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: second/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make second/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+second/CMakeFiles/node0.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/node0.dir/rule
+.PHONY : second/CMakeFiles/node0.dir/rule
+
+# Convenience name for target.
+node0: second/CMakeFiles/node0.dir/rule
+
+.PHONY : node0
+
+# fast build rule for target.
+node0/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/build
+.PHONY : node0/fast
+
+# Convenience name for target.
+second/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : second/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: second/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/std_msgs_generate_messages_py.dir/build.make second/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+second/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : second/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: second/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make second/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make second/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: second/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: second/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make second/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make second/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+second/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : second/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: second/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_eus.dir/build.make second/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+second/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : second/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: second/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_py.dir/build.make second/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+second/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : second/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: second/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make second/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: second/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make second/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make second/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f CMakeFiles/Makefile2 second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make second/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
 
 src/image_aruco_test3.o: src/image_aruco_test3.cpp.o
 
@@ -456,7 +606,7 @@ src/image_aruco_test3.o: src/image_aruco_test3.cpp.o
 
 # target to build an object file
 src/image_aruco_test3.cpp.o:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.o
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.o
 .PHONY : src/image_aruco_test3.cpp.o
 
 src/image_aruco_test3.i: src/image_aruco_test3.cpp.i
@@ -465,7 +615,7 @@ src/image_aruco_test3.i: src/image_aruco_test3.cpp.i
 
 # target to preprocess a source file
 src/image_aruco_test3.cpp.i:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.i
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.i
 .PHONY : src/image_aruco_test3.cpp.i
 
 src/image_aruco_test3.s: src/image_aruco_test3.cpp.s
@@ -474,7 +624,7 @@ src/image_aruco_test3.s: src/image_aruco_test3.cpp.s
 
 # target to generate assembly for a file
 src/image_aruco_test3.cpp.s:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.s
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_aruco_test3.dir/build.make second/CMakeFiles/image_aruco_test3.dir/src/image_aruco_test3.cpp.s
 .PHONY : src/image_aruco_test3.cpp.s
 
 src/image_converter5.o: src/image_converter5.cpp.o
@@ -483,7 +633,7 @@ src/image_converter5.o: src/image_converter5.cpp.o
 
 # target to build an object file
 src/image_converter5.cpp.o:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.o
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.o
 .PHONY : src/image_converter5.cpp.o
 
 src/image_converter5.i: src/image_converter5.cpp.i
@@ -492,7 +642,7 @@ src/image_converter5.i: src/image_converter5.cpp.i
 
 # target to preprocess a source file
 src/image_converter5.cpp.i:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.i
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.i
 .PHONY : src/image_converter5.cpp.i
 
 src/image_converter5.s: src/image_converter5.cpp.s
@@ -501,7 +651,7 @@ src/image_converter5.s: src/image_converter5.cpp.s
 
 # target to generate assembly for a file
 src/image_converter5.cpp.s:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.s
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/image_converter5.dir/build.make second/CMakeFiles/image_converter5.dir/src/image_converter5.cpp.s
 .PHONY : src/image_converter5.cpp.s
 
 src/node0.o: src/node0.cpp.o
@@ -510,7 +660,7 @@ src/node0.o: src/node0.cpp.o
 
 # target to build an object file
 src/node0.cpp.o:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.o
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.o
 .PHONY : src/node0.cpp.o
 
 src/node0.i: src/node0.cpp.i
@@ -519,7 +669,7 @@ src/node0.i: src/node0.cpp.i
 
 # target to preprocess a source file
 src/node0.cpp.i:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.i
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.i
 .PHONY : src/node0.cpp.i
 
 src/node0.s: src/node0.cpp.s
@@ -528,7 +678,7 @@ src/node0.s: src/node0.cpp.s
 
 # target to generate assembly for a file
 src/node0.cpp.s:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.s
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node0.dir/build.make second/CMakeFiles/node0.dir/src/node0.cpp.s
 .PHONY : src/node0.cpp.s
 
 src/node3.o: src/node3.cpp.o
@@ -537,7 +687,7 @@ src/node3.o: src/node3.cpp.o
 
 # target to build an object file
 src/node3.cpp.o:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.o
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.o
 .PHONY : src/node3.cpp.o
 
 src/node3.i: src/node3.cpp.i
@@ -546,7 +696,7 @@ src/node3.i: src/node3.cpp.i
 
 # target to preprocess a source file
 src/node3.cpp.i:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.i
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.i
 .PHONY : src/node3.cpp.i
 
 src/node3.s: src/node3.cpp.s
@@ -555,7 +705,7 @@ src/node3.s: src/node3.cpp.s
 
 # target to generate assembly for a file
 src/node3.cpp.s:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.s
+	cd /home/joaquin/raspy_aruco/build && $(MAKE) -f second/CMakeFiles/node3.dir/build.make second/CMakeFiles/node3.dir/src/node3.cpp.s
 .PHONY : src/node3.cpp.s
 
 # Help Target
@@ -564,32 +714,42 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... install/strip"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... image_converter5"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... install/local"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... node0"
-	@echo "... edit_cache"
-	@echo "... image_aruco_test3"
-	@echo "... test"
-	@echo "... node3"
 	@echo "... install"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... node3"
+	@echo "... image_aruco_test3"
+	@echo "... image_converter5"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... node0"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... list_install_components"
+	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... src/image_aruco_test3.o"
 	@echo "... src/image_aruco_test3.i"
 	@echo "... src/image_aruco_test3.s"
@@ -613,6 +773,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/jmgiorgi-10/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/joaquin/raspy_aruco/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

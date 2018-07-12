@@ -1,8 +1,8 @@
-# Install script for directory: /home/jmgiorgi-10/catkin_ws/src/third
+# Install script for directory: /home/joaquin/raspy_aruco/src/third
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jmgiorgi-10/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/joaquin/raspy_aruco/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jmgiorgi-10/catkin_ws/build/third/catkin_generated/installspace/third.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/joaquin/raspy_aruco/build/third/catkin_generated/installspace/third.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/third/cmake" TYPE FILE FILES
-    "/home/jmgiorgi-10/catkin_ws/build/third/catkin_generated/installspace/thirdConfig.cmake"
-    "/home/jmgiorgi-10/catkin_ws/build/third/catkin_generated/installspace/thirdConfig-version.cmake"
+    "/home/joaquin/raspy_aruco/build/third/catkin_generated/installspace/thirdConfig.cmake"
+    "/home/joaquin/raspy_aruco/build/third/catkin_generated/installspace/thirdConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/third" TYPE FILE FILES "/home/jmgiorgi-10/catkin_ws/src/third/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/third" TYPE FILE FILES "/home/joaquin/raspy_aruco/src/third/package.xml")
 endif()
 

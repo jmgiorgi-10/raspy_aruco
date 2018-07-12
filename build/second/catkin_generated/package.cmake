@@ -10,7 +10,4 @@ set(second_EXEC_DEPENDS "geometry_msgs" "roscpp" "rospy" "std_msgs" "image_geome
 set(second_RUN_DEPENDS "geometry_msgs" "roscpp" "rospy" "std_msgs" "image_geometry" "image_transport" "cv_bridge")
 set(second_TEST_DEPENDS )
 set(second_DOC_DEPENDS )
-set(second_URL_WEBSITE "")
-set(second_URL_BUGTRACKER "")
-set(second_URL_REPOSITORY "")
 set(second_DEPRECATED "")

@@ -63,7 +63,7 @@ int main(int argc, char **argv)
   ros::ServiceClient set_mode_client = nh.serviceClient<mavros_msgs::SetMode>
           ("mavros/set_mode");
 
-  ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>("/mavros/setpoint_attitude/attitude", 10);
+  ros::Publisher att_pub = nh.advertise<geometry_msgs::PoseStamped>("mavros/setpoint_attitude/attitude", 10);
 
   ros::Subscriber vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("vel", 5, vel_CB);
 
@@ -117,35 +117,29 @@ int main(int argc, char **argv)
         if( set_mode_client.call(offb_set_mode) &&
             offb_set_mode.response.mode_sent){
             ROS_INFO("Offboard enabled");
-            break;  // Once offboard is enabled, start sending velocity commands in next loop
+            //break;  // Once offboard is enabled, start sending velocity commands in next loop
         }
+        local_pos_pub.publish(pose);
         last_request = ros::Time::now();
-      } else {
-        if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0))){
-          if( arming_client.call(arm_cmd) &&
-            arm_cmd.response.success){
-            ROS_INFO("Vehicle armed");
-          }
-            last_request = ros::Time::now();
-          }
+       } else {
+      //   if( !current_state.armed && (ros::Time::now() - last_request > ros::Duration(5.0))){
+      //     if( arming_client.call(arm_cmd) &&
+      //       arm_cmd.response.success){
+      //       ROS_INFO("Vehicle armed");
+      //     }
+      //       last_request = ros::Time::now();
+      //     }
+      //   local_pos_pub.publish(pose);
+      //   } else {
+          vel_pub.publish(vel_msg);
         }
-
-    local_pos_pub.publish(pose);
 
     ros::spinOnce();
     rate.sleep();
   }
 
   // LOOP 2 -> VELOCITY COMMANDS
-  float yaw = 0;
 
-  while(ros::ok()) {
- 
-    vel_pub.publish(vel_msg);
-
-    ros::spinOnce();
-    rate.sleep();
-   }
 
   return 0;
 }

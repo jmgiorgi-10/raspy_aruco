@@ -1,2 +1,2 @@
 second:third
--DCATKIN_DEVEL_PREFIX=/home/jmgiorgi-10/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jmgiorgi-10/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/joaquin/raspy_aruco/devel -DCMAKE_INSTALL_PREFIX=/home/joaquin/raspy_aruco/install -G Unix Makefiles
