@@ -131,7 +131,14 @@ int main(int argc, char **argv)
       //     }
       //   local_pos_pub.publish(pose);
       //   } else {
-          vel_pub.publish(vel_msg);
+
+          cout << "we are in offboard" << "\n";
+	  
+          if (ros::Time::now() - last_request < ros::Duration(5.0)) {
+            local_pos_pub.publish(pose);  // After entering offboard, publish pose for first 5 seconds.
+          } else {
+              vel_pub.publish(vel_msg);
+          }
         } else {
 	    local_pos_pub.publish(pose);
 	}
